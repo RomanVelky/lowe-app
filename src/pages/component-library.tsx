@@ -37,12 +37,43 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useForm, handleSubmit } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+const formSchema = z.object({
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+});
 
 export default function ComponentLibrary() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+    },
+  });
+
+  // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+  }
+
   return (
     <>
       <div>ComponentLibrary</div>
-
       {/*ACCORDION  */}
       <div className="py-11 px-11">
         <Accordion type="single" collapsible>
@@ -61,7 +92,6 @@ export default function ComponentLibrary() {
           </AccordionItem>
         </Accordion>
       </div>
-
       {/* BUTTONS */}
       <div className="flex justify-between px-11 py-3">
         <div>
@@ -79,7 +109,6 @@ export default function ComponentLibrary() {
           </Button>
         </div>
       </div>
-
       {/* CARD */}
       <div className="px-11 py-4">
         <Card className="w-[350px]">
@@ -119,7 +148,6 @@ export default function ComponentLibrary() {
           </CardFooter>
         </Card>
       </div>
-
       {/* ALERT  TODO */}
       <div className="px-11 py-4">
         <Alert className="w-96" variant="destructive">
@@ -130,7 +158,6 @@ export default function ComponentLibrary() {
           </AlertDescription>
         </Alert>
       </div>
-
       {/* ALERT DIALOG POPUP */}
       <div className="px-11 py-4">
         <AlertDialog>
@@ -152,7 +179,6 @@ export default function ComponentLibrary() {
           </AlertDialogContent>
         </AlertDialog>
       </div>
-
       {/* CHECKBOX */}
       <div className="items-top flex space-x-2 px-11 py-5">
         <Checkbox id="terms1" />
@@ -165,6 +191,39 @@ export default function ComponentLibrary() {
           <p className="text-sm text-muted-foreground">
             You agree to our Terms of Service and Privacy Policy.
           </p>
+        </div>
+      </div>
+      {/* iframe */}
+      <iframe
+        src="https://widget.penize.cz/vypocet-ciste-mzdy-2"
+        width="100%"
+        height="400"
+        scrolling="no"></iframe>
+
+      {/* FORM SHADCN */}
+      <div className="px-16 py-5">
+        <div className="w-96 border-2 py-5 px-5 border-gray-950 rounded-lg">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Username</FormLabel>
+                    <FormControl>
+                      <Input placeholder="shadcn" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display name.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button type="submit">Submit</Button>
+            </form>
+          </Form>
         </div>
       </div>
     </>
