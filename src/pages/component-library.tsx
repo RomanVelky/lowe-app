@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -37,7 +38,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useForm, handleSubmit } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -49,6 +50,25 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { useToast } from "@/components/ui/use-toast";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -71,9 +91,12 @@ export default function ComponentLibrary() {
     console.log(values);
   }
 
+  const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
   return (
     <>
       <div>ComponentLibrary</div>
+
       {/*ACCORDION  */}
       <div className="py-11 px-11">
         <Accordion type="single" collapsible>
@@ -92,13 +115,23 @@ export default function ComponentLibrary() {
           </AccordionItem>
         </Accordion>
       </div>
-      {/* BUTTONS */}
+
+      {/* BUTTONS + TOAST*/}
       <div className="flex justify-between px-11 py-3">
         <div>
           <Button>Primary</Button>
         </div>
         <div>
-          <Button variant="secondary">Secondary</Button>
+          <Button
+            variant="outline"
+            onClick={() => {
+              toast({
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem with your request.",
+              });
+            }}>
+            Show Toast
+          </Button>
         </div>
         <div>
           <Button variant="destructive">destructive</Button>
@@ -109,6 +142,7 @@ export default function ComponentLibrary() {
           </Button>
         </div>
       </div>
+
       {/* CARD */}
       <div className="px-11 py-4">
         <Card className="w-[350px]">
@@ -148,6 +182,7 @@ export default function ComponentLibrary() {
           </CardFooter>
         </Card>
       </div>
+
       {/* ALERT  TODO */}
       <div className="px-11 py-4">
         <Alert className="w-96" variant="destructive">
@@ -158,6 +193,7 @@ export default function ComponentLibrary() {
           </AlertDescription>
         </Alert>
       </div>
+
       {/* ALERT DIALOG POPUP */}
       <div className="px-11 py-4">
         <AlertDialog>
@@ -179,6 +215,7 @@ export default function ComponentLibrary() {
           </AlertDialogContent>
         </AlertDialog>
       </div>
+
       {/* CHECKBOX */}
       <div className="items-top flex space-x-2 px-11 py-5">
         <Checkbox id="terms1" />
@@ -193,7 +230,8 @@ export default function ComponentLibrary() {
           </p>
         </div>
       </div>
-      {/* iframe */}
+
+      {/* iframe kalkulacka */}
       <iframe
         src="https://widget.penize.cz/vypocet-ciste-mzdy-2"
         width="100%"
@@ -225,6 +263,118 @@ export default function ComponentLibrary() {
             </form>
           </Form>
         </div>
+      </div>
+
+      {/* CAROUSEL */}
+      <div className="px-48 py-6">
+        <Carousel className="w-full max-w-xs">
+          <CarouselContent>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-4xl font-semibold">
+                        {index + 1}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+
+      {/* DRAWER */}
+      <div className="px-48 py-10">
+        <div className="border-2 rounded-lg border-slate-950">
+          <Drawer isOpen={isOpen}>
+            <DrawerTrigger onClick={() => setIsOpen(true)}>Open</DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                <DrawerDescription>
+                  This action cannot be undone.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <Button>Submit</Button>
+                <Button variant="outline" onClick={() => setIsOpen(false)}>
+                  Cancel
+                </Button>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+        </div>
+      </div>
+
+      {/* SKELETON */}
+      <div className="flex items-center space-x-4">
+        <Skeleton className="h-12 w-12 rounded-full" />
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-[250px]" />
+          <Skeleton className="h-4 w-[200px]" />
+        </div>
+      </div>
+
+      {/* TABS */}
+      <div>
+        <Tabs defaultValue="account" className="w-[400px]">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="account">Account</TabsTrigger>
+            <TabsTrigger value="password">Password</TabsTrigger>
+          </TabsList>
+          <TabsContent value="account">
+            <Card>
+              <CardHeader>
+                <CardTitle>Account</CardTitle>
+                <CardDescription>
+                  Make changes to your account here. Click save when you're
+                  done.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" defaultValue="Pedro Duarte" />
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="username">Username</Label>
+                  <Input id="username" defaultValue="@peduarte" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Save changes</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+          <TabsContent value="password">
+            <Card>
+              <CardHeader>
+                <CardTitle>Password</CardTitle>
+                <CardDescription>
+                  Change your password here. After saving, you'll be logged out.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="current">Current password</Label>
+                  <Input id="current" type="password" />
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="new">New password</Label>
+                  <Input id="new" type="password" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Save password</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+        </Tabs>
       </div>
     </>
   );
