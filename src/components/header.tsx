@@ -15,8 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
 export default function Header() {
@@ -24,26 +22,27 @@ export default function Header() {
     <nav className=" border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div>
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src="/logo.svg" alt="Love Logo" width={45} height={45} />
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:block">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>MZDY</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <Link href="/wages">MZDY</Link>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
+                        href="/wages#net-salary"
                         className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
-                          href="#">
+                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md">
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
                             ČISTÁ MZDA
                           </div>
@@ -53,13 +52,15 @@ export default function Header() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="#" title="HRUBÁ MZDA">
+                    <ListItem href="/wages#gross-salary" title="HRUBÁ MZDA">
                       Výpočet hrubej mzdy
                     </ListItem>
-                    <ListItem href="#" title="SUPERHRUBÁ MZDA">
+                    <ListItem
+                      href="/wages#price-of-work"
+                      title="SUPERHRUBÁ MZDA">
                       Výpočet superhrubej mzdy
                     </ListItem>
-                    <ListItem href="#" title="MZDY JEDNODUCHO">
+                    <ListItem href="/wages" title="MZDY JEDNODUCHO">
                       Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa
                       udávajú Porovnanie priemernej mzdy naprieč krajinami.
                     </ListItem>
@@ -67,16 +68,17 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>SPORENIE</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <Link href="/savings">SPORENIE</Link>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
+                        href="/investments"
                         className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md  p-6 no-underline outline-none focus:shadow-md"
-                          href="#">
+                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md  p-6 no-underline outline-none focus:shadow-md">
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
                             INVESTÍCIE
                           </div>
@@ -92,29 +94,36 @@ export default function Header() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="#" title="SPORIACE ÚČTY">
+                    <ListItem
+                      href="/savings#savings-accounts"
+                      title="SPORIACE ÚČTY">
                       Typy a fungovanie sporiacich účtov
                     </ListItem>
-                    <ListItem href="#" title="STAVEBNÉ SPORENIE">
+                    <ListItem
+                      href="/savings#building-savings"
+                      title="STAVEBNÉ SPORENIE">
                       Čo je to stavebné sporenie?
                     </ListItem>
-                    <ListItem href="#" title="SPORENIE NA DÔCHODOK">
+                    <ListItem
+                      href="/savings#retirement-savings"
+                      title="SPORENIE NA DÔCHODOK">
                       Možnosti sporenia na dôchodok
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>DANE</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <Link href="/taxes">DANE</Link>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
+                        href="/taxes#dph"
                         className="bg-gradient-to-b  from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md  text-white  p-6 no-underline outline-none focus:shadow-md"
-                          href="#">
+                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md  text-white  p-6 no-underline outline-none focus:shadow-md">
                           <div className="mb-2 mt-4 text-lg font-medium">
                             DPH
                           </div>
@@ -124,17 +133,19 @@ export default function Header() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="#" title="DAŇ Z PRÍJMU">
+                    <ListItem href="/taxes#income-tax" title="DAŇ Z PRÍJMU">
                       Čo je to daň z príjmu? Od čoho závisí jej výška?
                     </ListItem>
-                    <ListItem href="#" title="DAŇOVÝ KALENDÁR">
+                    <ListItem
+                      href="/taxes#tax-calendar"
+                      title="DAŇOVÝ KALENDÁR">
                       Kalendár obsahujúci informácie dokedy a aké dane zaplatiť
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
+                <Link href="/news" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     ČLÁNKY
                   </NavigationMenuLink>
@@ -168,18 +179,28 @@ export default function Header() {
               <div className="grid gap-4 p-4">
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="#">
-                  Item 1
+                  href="/wages">
+                  MDZY
                 </Link>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="#">
-                  Item 2
+                  href="/savings">
+                  SPORENIE
                 </Link>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="#">
-                  Item 3
+                  href="/investments">
+                  INVESTÍCIE
+                </Link>
+                <Link
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                  href="/taxes">
+                  DANE
+                </Link>
+                <Link
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                  href="/news">
+                  ČLÁNKY
                 </Link>
               </div>
             </SheetContent>

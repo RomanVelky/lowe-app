@@ -28,22 +28,24 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/wages#net-salary" className="hover:underline">
                     SZČO
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/wages#net-salary" className="hover:underline">
                     ČISTÁ MZDA
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    href="/savings#savings-accounts"
+                    className="hover:underline">
                     ÚROKOVÁ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/taxes#dph" className="hover:underline">
                     DPH
                   </a>
                 </li>
@@ -55,22 +57,28 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline ">
+                  <a
+                    href="/savings#savings-accounts"
+                    className="hover:underline ">
                     SPORIACE ÚČTY
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    href="/savings#building-savings"
+                    className="hover:underline">
                     STAVEBNÉ SPORENIE
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    href="/savings#retirement-savings"
+                    className="hover:underline">
                     SPORENIE NA DÔCHODOK
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/investments" className="hover:underline">
                     INVESTÍCIE
                   </a>
                 </li>
@@ -82,12 +90,12 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/taxes#income-tax" className="hover:underline">
                     DAŇ Z PRÍJMU
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/taxes#dph" className="hover:underline">
                     DPH
                   </a>
                 </li>
