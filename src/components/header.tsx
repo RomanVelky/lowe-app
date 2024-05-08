@@ -59,8 +59,9 @@ export default function Header() {
                     <ListItem href="#" title="SUPERHRUBÁ MZDA">
                       Výpočet superhrubej mzdy
                     </ListItem>
-                    <ListItem href="#" title="PRIEMERNÁ MZDA">
-                      Porovnanie priemernej mzdy naprieč krajinami
+                    <ListItem href="#" title="MZDY JEDNODUCHO">
+                      Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa
+                      udávajú Porovnanie priemernej mzdy naprieč krajinami.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
