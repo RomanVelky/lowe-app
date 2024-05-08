@@ -15,6 +15,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
 export default function Header() {
   return (
@@ -36,15 +39,15 @@ export default function Header() {
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
-                        className="bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500"
+                        className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
                           href="#">
-                          <div className="mb-2 mt-4 text-lg font-medium">
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
                             ČISTÁ MZDA
                           </div>
-                          <p className="text-sm leading-tight text-slate-50">
+                          <p className="text-sm leading-tight text-white">
                             Jednoduchá a prehľadná kalkulačka na výpočet čistej
                           </p>
                         </a>
@@ -68,21 +71,21 @@ export default function Header() {
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
-                        className="bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500"
+                        className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md  p-6 no-underline outline-none focus:shadow-md"
                           href="#">
-                          <div className="mb-2 mt-4 text-lg font-medium">
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
                             INVESTÍCIE
                           </div>
-                          <p className="text-sm leading-tight text-slate-50">
+                          <p className="text-sm leading-tight text-white">
                             Podielové fondy Nehnutelnosti
                           </p>
-                          <p className="text-sm leading-tight text-slate-50">
+                          <p className="text-sm leading-tight text-white">
                             Akcie
                           </p>
-                          <p className="text-sm leading-tight text-slate-50">
+                          <p className="text-sm leading-tight text-white">
                             Kryptomeny
                           </p>
                         </a>
@@ -106,15 +109,15 @@ export default function Header() {
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink
-                        className="bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500"
+                        className="bg-gradient-to-b  from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
                         asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md  text-white  p-6 no-underline outline-none focus:shadow-md"
                           href="#">
                           <div className="mb-2 mt-4 text-lg font-medium">
                             DPH
                           </div>
-                          <p className="text-sm leading-tight text-slate-50">
+                          <p className="text-sm leading-tight">
                             Dôležité informácie o dani z pridanej hodnoty
                           </p>
                         </a>
@@ -146,13 +149,40 @@ export default function Header() {
           </div>
           <Button variant="outline" size="icon">
             <HelpOutlineIcon />
+            <span className="sr-only">Support</span>
           </Button>
           <Button variant="outline" size="icon">
             <LanguageIcon />
+            <span className="sr-only">Choose Language</span>
           </Button>
-          <Button variant="outline" size="icon">
-            <MenuIcon />
-          </Button>
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button className="lg:hidden" variant="outline" size="icon">
+                <MenuIcon />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="grid gap-4 p-4">
+                <Link
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                  href="#">
+                  Item 1
+                </Link>
+                <Link
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                  href="#">
+                  Item 2
+                </Link>
+                <Link
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                  href="#">
+                  Item 3
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>

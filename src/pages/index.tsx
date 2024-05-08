@@ -1,83 +1,82 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Homepage() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+      <div className="py-11 px-11">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Nerozumieš niečomu?</AccordionTrigger>
+            <AccordionContent>
+              Ak niečomu nerozumieš, skús pogooogliť na webe, ak nenájdeš
+              odpoveď, tak sa nás spýtaj na našej zákazníckej podpore (ikona
+              otázkinu v hornom menu).
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              Ako môžeš poskytnúť spätnú väzbu na vylepšenie stránky?
+            </AccordionTrigger>
+            <AccordionContent>
+              Klikni hore v menu na otáznik a napíš čo máš na srdci, poprípade
+              čo by si zmmenil alebo spravil inak, budeme ti vďační.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              Prečo používať kalkulačky na tejto stránke?
+            </AccordionTrigger>
+            <AccordionContent>
+              Programoval ich človek čo sa v daniach vôbec nevyznal a snažil sa
+              ich pochopiť, a preto dbal na to aby boli jednoduché a aj laik
+              rozumel ich výstupnému výpočtu.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="py-11 px-11">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              Prečo je viacero funkcíí vo fáze “bude už čoskoro”?
+            </AccordionTrigger>
+            <AccordionContent>
+              Dôvodom je, že na vývoji pracuje len jeden developer vo voľnom
+              čase a funkcionality sa snaží dodávať plne funkčné a pretestované
+              a to chce čas.
+            </AccordionContent>
+          </AccordionItem>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Čo plánujeme do budúcna?</AccordionTrigger>
+            <AccordionContent>
+              Chceli by sme časom pridávať články, ktoré by vysvetľovali veci zo
+              sveta financií a daní, aby ste sa obyčajný človek v tom dokázal
+              lepšie zorientovať, bez rozsiahleho študovania. Do budúcna
+              plánujeme spraviť napr. návody ako začať s kryptomenami,
+              integrovať pripojenie crypto penaženiek na našu platformu a mnoho
+              iných.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              Kto by mohol využiť kalkulačky a poskytované informácie?
+            </AccordionTrigger>
+            <AccordionContent>
+              Každý. Či už si môžete porovnať platové podmienky voči priemernej
+              mzde, alebo vidieť rozdiel medzi platom zamestnanca, SZČO. Ak vás
+              zaujímajú financie, alebo by ste si radi rozšírili svoje obzory.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </main>
   );
