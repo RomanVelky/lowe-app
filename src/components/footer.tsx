@@ -1,7 +1,66 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Footer() {
+  const footerMenuList = [
+    {
+      header: "KALKULAČKY",
+      items: [
+        {
+          link: "/wages#net-salary",
+          text: "SZČO",
+        },
+        {
+          link: "/wages#net-salary",
+          text: "ČISTÁ MZDA",
+        },
+        {
+          link: "/savings#savings-accounts",
+          text: "ÚROKOVÁ",
+        },
+        {
+          link: "/taxes#dph",
+          text: "DPH ",
+        },
+      ],
+    },
+    {
+      header: "SPORENIE",
+      items: [
+        {
+          link: "/savings#savings-accounts",
+          text: "SPORIACE ÚČTY",
+        },
+        {
+          link: "/wages#net-salary",
+          text: "STAVEBNÉ SPORENIE",
+        },
+        {
+          link: "/savings#retirement-savings",
+          text: " SPORENIE NA DÔCHODOK",
+        },
+        {
+          link: "/investments",
+          text: "INVESTÍCIE ",
+        },
+      ],
+    },
+    {
+      header: "DANE",
+      items: [
+        {
+          link: "/taxes#income-tax",
+          text: "DAŇ Z PRÍJMU",
+        },
+        {
+          link: "/taxes#dph",
+          text: "DPH ",
+        },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-white dark:bg-gray-900">
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3 w-full max-w-screen-xl" />
@@ -15,92 +74,31 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex md:justify-start justify-center items-center gap-28 md:pt-6">
-              <a href="#">
+              <Link href="/">
                 <Image src="/logo.svg" alt="Love Logo" width={75} height={75} />
-              </a>
+              </Link>
               <Button> Prihlásenie</Button>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-center md:text-start">
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                KALKULAČKY
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="/wages#net-salary" className="hover:underline">
-                    SZČO
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/wages#net-salary" className="hover:underline">
-                    ČISTÁ MZDA
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="/savings#savings-accounts"
-                    className="hover:underline">
-                    ÚROKOVÁ
-                  </a>
-                </li>
-                <li>
-                  <a href="/taxes#dph" className="hover:underline">
-                    DPH
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                SPORENIE
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="/savings#savings-accounts"
-                    className="hover:underline ">
-                    SPORIACE ÚČTY
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="/savings#building-savings"
-                    className="hover:underline">
-                    STAVEBNÉ SPORENIE
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="/savings#retirement-savings"
-                    className="hover:underline">
-                    SPORENIE NA DÔCHODOK
-                  </a>
-                </li>
-                <li>
-                  <a href="/investments" className="hover:underline">
-                    INVESTÍCIE
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                DANE
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="/taxes#income-tax" className="hover:underline">
-                    DAŇ Z PRÍJMU
-                  </a>
-                </li>
-                <li>
-                  <a href="/taxes#dph" className="hover:underline">
-                    DPH
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {footerMenuList.map((footerSection, key) => (
+              <div key={key}>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  {footerSection.header}
+                </h2>
+                {footerSection.items.map((item, itemKey) => (
+                  <ul
+                    key={itemKey}
+                    className="text-gray-500 dark:text-gray-400 font-medium">
+                    <li className="mb-4">
+                      <Link href={item.link} className="hover:underline">
+                        {item.text}
+                      </Link>
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -130,3 +128,20 @@ export default function Footer() {
     </footer>
   );
 }
+
+// {footerMenuList.map((footerSection: FooterSection, key: number) => (
+//   // ...
+//   {footerSection.items.map((item: FooterItem, itemKey: number) => (
+//     // ...
+//   ))}
+// ))}
+
+// interface FooterItem {
+//   link: string;
+//   text: string;
+// }
+
+// interface FooterSection {
+//   group: string;
+//   items: FooterItem[];
+// }

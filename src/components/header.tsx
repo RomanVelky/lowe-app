@@ -18,6 +18,89 @@ import {
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
 export default function Header() {
+  const hamburgerList = [
+    { text: "MZDY", link: "/wages" },
+    { text: "SPORENIE", link: "/savings" },
+    { text: "INVESÍCIE", link: "/investments" },
+    { text: "DANE", link: "/taxes" },
+    { text: "ČLÁNKY", link: "/news" },
+  ];
+  const headerMenuList = [
+    {
+      header: "MZDY",
+      link: "/wages",
+      colorSubMenu: {
+        link: "/wages#net-salary",
+        subHeader: " ČISTÁ MZDA",
+        text: " Jednoduchá a prehľadná kalkulačka na výpočet čistej",
+      },
+      items: [
+        {
+          link: "/wages#gross-salary",
+          subHeader: "HRUBÁ MZDA",
+          text: "Výpočet hrubej mzdy",
+        },
+        {
+          link: "/wages#price-of-work",
+          subHeader: "SUPERHRUBÁ MZDA",
+          text: "Výpočet superhrubej mzdy",
+        },
+        {
+          link: "/wages",
+          subHeader: "MZDY JEDNODUCHO",
+          text: " Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa udávajú Porovnanie priemernej mzdy naprieč krajinami.",
+        },
+      ],
+    },
+    {
+      header: "SPORENIE",
+      link: "/savings",
+      colorSubMenu: {
+        link: "/investments",
+        subHeader: "INVESTÍCIE",
+        text: "Podielové fondy, nehnutelnosti, akcie, kryptomeny",
+      },
+      items: [
+        {
+          link: "/savings#savings-accounts",
+          subHeader: "SPORIACE ÚČTY",
+          text: "Typy a fungovanie sporiacich účtov",
+        },
+        {
+          link: "/savings#building-savings",
+          subHeader: "STAVEBNÉ SPORENIE",
+          text: "Čo je to stavebné sporenie?",
+        },
+        {
+          link: "/savings#retirement-savings",
+          subHeader: "SPORENIE NA DÔCHODOK",
+          text: "Možnosti sporenia na dôchodok",
+        },
+      ],
+    },
+    {
+      header: "DANE",
+      link: "/taxes",
+      colorSubMenu: {
+        link: "/taxes#dph",
+        subHeader: "DPH",
+        text: "Dôležité informácie o dani z pridanej hodnoty",
+      },
+      items: [
+        {
+          link: "/taxes#income-tax",
+          subHeader: "DAŇ Z PRÍJMU",
+          text: "Čo je to daň z príjmu? Od čoho závisí jej výška?",
+        },
+        {
+          link: "/taxes#tax-calendar",
+          subHeader: "DAŇOVÝ KALENDÁR",
+          text: "Kalendár obsahujúci informácie do kedy a aké dane zaplatiť",
+        },
+      ],
+    },
+  ];
+
   return (
     <nav className=" border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -31,119 +114,42 @@ export default function Header() {
         <div className="hidden lg:block">
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  <Link href="/wages">MZDY</Link>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink
-                        href="/wages#net-salary"
-                        className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
-                        asChild>
-                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md">
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            ČISTÁ MZDA
-                          </div>
-                          <p className="text-sm leading-tight text-white">
-                            Jednoduchá a prehľadná kalkulačka na výpočet čistej
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem href="/wages#gross-salary" title="HRUBÁ MZDA">
-                      Výpočet hrubej mzdy
-                    </ListItem>
-                    <ListItem
-                      href="/wages#price-of-work"
-                      title="SUPERHRUBÁ MZDA">
-                      Výpočet superhrubej mzdy
-                    </ListItem>
-                    <ListItem href="/wages" title="MZDY JEDNODUCHO">
-                      Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa
-                      udávajú Porovnanie priemernej mzdy naprieč krajinami.
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  <Link href="/savings">SPORENIE</Link>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink
-                        href="/investments"
-                        className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
-                        asChild>
-                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md  p-6 no-underline outline-none focus:shadow-md">
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            INVESTÍCIE
-                          </div>
-                          <p className="text-sm leading-tight text-white">
-                            Podielové fondy Nehnutelnosti
-                          </p>
-                          <p className="text-sm leading-tight text-white">
-                            Akcie
-                          </p>
-                          <p className="text-sm leading-tight text-white">
-                            Kryptomeny
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem
-                      href="/savings#savings-accounts"
-                      title="SPORIACE ÚČTY">
-                      Typy a fungovanie sporiacich účtov
-                    </ListItem>
-                    <ListItem
-                      href="/savings#building-savings"
-                      title="STAVEBNÉ SPORENIE">
-                      Čo je to stavebné sporenie?
-                    </ListItem>
-                    <ListItem
-                      href="/savings#retirement-savings"
-                      title="SPORENIE NA DÔCHODOK">
-                      Možnosti sporenia na dôchodok
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  <Link href="/taxes">DANE</Link>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink
-                        href="/taxes#dph"
-                        className="bg-gradient-to-b  from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
-                        asChild>
-                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md  text-white  p-6 no-underline outline-none focus:shadow-md">
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            DPH
-                          </div>
-                          <p className="text-sm leading-tight">
-                            Dôležité informácie o dani z pridanej hodnoty
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem href="/taxes#income-tax" title="DAŇ Z PRÍJMU">
-                      Čo je to daň z príjmu? Od čoho závisí jej výška?
-                    </ListItem>
-                    <ListItem
-                      href="/taxes#tax-calendar"
-                      title="DAŇOVÝ KALENDÁR">
-                      Kalendár obsahujúci informácie dokedy a aké dane zaplatiť
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+              {headerMenuList.map((headerSection, key) => (
+                <NavigationMenuItem key={key}>
+                  <NavigationMenuTrigger>
+                    <Link href={headerSection.link}>
+                      {headerSection.header}
+                    </Link>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                      <li className="row-span-3">
+                        <NavigationMenuLink
+                          href={headerSection.colorSubMenu.link}
+                          className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
+                          asChild>
+                          <a className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md">
+                            <div className="mb-2 mt-4 text-lg font-medium text-white">
+                              {headerSection.colorSubMenu.subHeader}
+                            </div>
+                            <p className="text-sm leading-tight text-white">
+                              {headerSection.colorSubMenu.text}
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      {headerSection.items.map((item, key) => (
+                        <ListItem
+                          key={key}
+                          href={item.link}
+                          title={item.subHeader}>
+                          {item.text}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
               <NavigationMenuItem>
                 <Link href="/news" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -177,31 +183,14 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent>
               <div className="grid gap-4 p-4">
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="/wages">
-                  MDZY
-                </Link>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="/savings">
-                  SPORENIE
-                </Link>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="/investments">
-                  INVESTÍCIE
-                </Link>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="/taxes">
-                  DANE
-                </Link>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                  href="/news">
-                  ČLÁNKY
-                </Link>
+                {hamburgerList.map((link, key) => (
+                  <Link
+                    key={key}
+                    className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
+                    href={link.link}>
+                    {link.text}
+                  </Link>
+                ))}
               </div>
             </SheetContent>
           </Sheet>
