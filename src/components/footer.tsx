@@ -4,8 +4,11 @@ import Link from "next/link";
 import Github from "../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
 
+type SubPath = { link: string; text: string };
+type Item = SubPath | { link: string; description: string };
+
 export default function Footer() {
-  const footerMenuList = [
+  const footerMenuList: { header: string; items: Item[] }[] = [
     {
       header: PATHS.WAGES.description,
       items: [
@@ -60,7 +63,7 @@ export default function Footer() {
                     className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="mb-4">
                       <Link href={item.link} className="hover:underline">
-                        {item.text}
+                        {"text" in item ? item.text : item.description}
                       </Link>
                     </li>
                   </ul>

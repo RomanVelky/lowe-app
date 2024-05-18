@@ -1,5 +1,3 @@
-// utils/paths.js
-
 export const PATHS = {
   WAGES: {
     link: "/wages",
