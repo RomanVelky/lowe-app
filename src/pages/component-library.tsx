@@ -1,4 +1,7 @@
 import { useState } from "react";
+import LanguageIcon from "@mui/icons-material/Language";
+import MenuIcon from "@mui/icons-material/Menu";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import {
   Accordion,
   AccordionContent,
@@ -332,8 +335,7 @@ export default function ComponentLibrary() {
               <CardHeader>
                 <CardTitle>Account</CardTitle>
                 <CardDescription>
-                  Make changes to your account here. Click save when you're
-                  done.
+                  Make changes to your account here. Click save when youre done.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -356,7 +358,7 @@ export default function ComponentLibrary() {
               <CardHeader>
                 <CardTitle>Password</CardTitle>
                 <CardDescription>
-                  Change your password here. After saving, you'll be logged out.
+                  Change your password here. After saving, you ll be logged out.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -375,6 +377,14 @@ export default function ComponentLibrary() {
             </Card>
           </TabsContent>
         </Tabs>
+      </div>
+
+      {/* ICONS  */}
+      <div className="px-48 py-10">
+        <div className="flex gap-60">
+          <LanguageIcon className="h-10 w-10 text-blue-500" />
+          <MenuIcon className="h-10 w-10 text-blue-500" />
+        </div>
       </div>
     </>
   );
