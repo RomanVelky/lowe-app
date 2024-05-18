@@ -105,15 +105,15 @@ export default function Header() {
 
   return (
     <nav className=" border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div>
+      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="w-2/6">
           <Link
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src="/logo.svg" alt="Love Logo" width={45} height={45} />
           </Link>
         </div>
-        <div className="hidden lg:block">
+        <div className="w-2/6 hidden lg:block">
           <NavigationMenu>
             <NavigationMenuList>
               {headerMenuList.map((headerSection, key) => (
@@ -163,7 +163,7 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        <div className="flex gap-3">
+        <div className="w-2/6 flex gap-3 justify-end">
           <div className="px-6 hidden sm:block">
             <Button>Prihlásenie</Button>
           </div>
