@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
-import Github from "../../public/assets/github.svg";
+import Github from "../../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
 
 type SubPath = { link: string; text: string };

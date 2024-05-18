@@ -4,7 +4,7 @@ import Link from "next/link";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 import { PATHS } from "@/lib/paths";
-import ListItem from "./ListItem";
+import ListItem from "../ListItem";
 
 export default function Header() {
   const hamburgerList = [
