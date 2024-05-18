@@ -16,85 +16,87 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
+import { PATHS } from "@/lib/paths";
 
 export default function Header() {
   const hamburgerList = [
-    { text: "MZDY", link: "/wages" },
-    { text: "SPORENIE", link: "/savings" },
-    { text: "INVESÍCIE", link: "/investments" },
-    { text: "DANE", link: "/taxes" },
-    { text: "ČLÁNKY", link: "/news" },
+    { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
+    { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
+    { text: PATHS.INVESTMENTS.description, link: PATHS.INVESTMENTS.link },
+    { text: PATHS.TAXES.description, link: PATHS.TAXES.link },
+    { text: PATHS.NEWS.description, link: PATHS.NEWS.link },
   ];
+
   const headerMenuList = [
     {
-      header: "MZDY",
-      link: "/wages",
+      header: PATHS.WAGES.description,
+      link: PATHS.WAGES.link,
       colorSubMenu: {
-        link: "/wages#net-salary",
-        subHeader: " ČISTÁ MZDA",
-        text: " Jednoduchá a prehľadná kalkulačka na výpočet čistej",
+        link: PATHS.WAGES.subPaths.NET_SALARY.link,
+        subHeader: PATHS.WAGES.subPaths.NET_SALARY.text,
+        text: "Jednoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
       },
       items: [
         {
-          link: "/wages#gross-salary",
-          subHeader: "HRUBÁ MZDA",
+          link: PATHS.WAGES.subPaths.GROSS_SALARY.link,
+          subHeader: PATHS.WAGES.subPaths.GROSS_SALARY.text,
           text: "Výpočet hrubej mzdy",
         },
         {
-          link: "/wages#price-of-work",
-          subHeader: "SUPERHRUBÁ MZDA",
+          link: PATHS.WAGES.subPaths.PRICE_OF_WORK.link,
+          subHeader: PATHS.WAGES.subPaths.PRICE_OF_WORK.text,
           text: "Výpočet superhrubej mzdy",
         },
         {
-          link: "/wages",
+          link: PATHS.WAGES.link,
           subHeader: "MZDY JEDNODUCHO",
-          text: " Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa udávajú Porovnanie priemernej mzdy naprieč krajinami.",
+          text: "Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa udávajú. Porovnanie priemernej mzdy naprieč krajinami.",
         },
       ],
     },
     {
-      header: "SPORENIE",
-      link: "/savings",
+      header: PATHS.SAVINGS.description,
+      link: PATHS.SAVINGS.link,
       colorSubMenu: {
-        link: "/investments",
-        subHeader: "INVESTÍCIE",
-        text: "Podielové fondy, nehnutelnosti, akcie, kryptomeny",
+        link: PATHS.INVESTMENTS.link,
+        subHeader: PATHS.INVESTMENTS.description,
+        text: "Podielové fondy, nehnuteľnosti, akcie, kryptomeny",
       },
       items: [
         {
-          link: "/savings#savings-accounts",
-          subHeader: "SPORIACE ÚČTY",
+          link: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.link,
+          subHeader: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.text,
           text: "Typy a fungovanie sporiacich účtov",
         },
         {
-          link: "/savings#building-savings",
-          subHeader: "STAVEBNÉ SPORENIE",
+          link: PATHS.SAVINGS.subPaths.BUILDING_SAVINGS.link,
+          subHeader: PATHS.SAVINGS.subPaths.BUILDING_SAVINGS.text,
           text: "Čo je to stavebné sporenie?",
         },
         {
-          link: "/savings#retirement-savings",
-          subHeader: "SPORENIE NA DÔCHODOK",
+          link: PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS.link,
+          subHeader: PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS.text,
           text: "Možnosti sporenia na dôchodok",
         },
       ],
     },
     {
-      header: "DANE",
-      link: "/taxes",
+      header: PATHS.TAXES.description,
+      link: PATHS.TAXES.link,
       colorSubMenu: {
-        link: "/taxes#dph",
-        subHeader: "DPH",
+        link: PATHS.TAXES.subPaths.VAT.link,
+        subHeader: PATHS.TAXES.subPaths.VAT.text,
         text: "Dôležité informácie o dani z pridanej hodnoty",
       },
       items: [
         {
-          link: "/taxes#income-tax",
-          subHeader: "DAŇ Z PRÍJMU",
+          link: PATHS.TAXES.subPaths.INCOME_TAX.link,
+          subHeader: PATHS.TAXES.subPaths.INCOME_TAX.text,
           text: "Čo je to daň z príjmu? Od čoho závisí jej výška?",
         },
         {
-          link: "/taxes#tax-calendar",
-          subHeader: "DAŇOVÝ KALENDÁR",
+          link: PATHS.TAXES.subPaths.TAX_CALENDAR.link,
+          subHeader: PATHS.TAXES.subPaths.TAX_CALENDAR.text,
           text: "Kalendár obsahujúci informácie do kedy a aké dane zaplatiť",
         },
       ],
