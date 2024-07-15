@@ -12,101 +12,37 @@ import { Switch } from "../ui/switch";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { CALCULATOR_CONSTANTS } from "@/lib/calculatorConstants";
 
-type Deductions = {
-  type: string;
-  employeeContribution: number;
-  employerContribution: number;
-};
-
-const Deductions: Deductions[] = [
-  {
-    type: "Sickness Insurance",
-    employeeContribution: 0.014,
-    employerContribution: 0.014,
-  },
-  {
-    type: "Old Age Insurance",
-    employeeContribution: 0.04,
-    employerContribution: 0.14,
-  },
-  {
-    type: "Disability Insurance",
-    employeeContribution: 0.03,
-    employerContribution: 0.03,
-  },
-  {
-    type: "Unemployment Insurance",
-    employeeContribution: 0.01,
-    employerContribution: 0.005,
-  },
-  {
-    type: "Insurance for Financing Support During Short-Time Work",
-    employeeContribution: 0,
-    employerContribution: 0.005,
-  },
-  {
-    type: "Guarantee Fund",
-    employeeContribution: 0,
-    employerContribution: 0.0025,
-  },
-  {
-    type: "Reserve Fund",
-    employeeContribution: 0,
-    employerContribution: 0.0475,
-  },
-  {
-    type: "Accident Insurance",
-    employeeContribution: 0,
-    employerContribution: 0.008,
-  },
-  {
-    type: "Health Insurance",
-    employeeContribution: 0.04,
-    employerContribution: 0.11,
-  },
-];
-
-type ChildAllowanceRate = {
-  numberOfChildren: number;
-  rate: number;
-};
-
-const childAllowanceRates: ChildAllowanceRate[] = [
-  { numberOfChildren: 0, rate: 1 },
-  { numberOfChildren: 1, rate: 0.2 },
-  { numberOfChildren: 2, rate: 0.27 },
-  { numberOfChildren: 3, rate: 0.34 },
-  { numberOfChildren: 4, rate: 0.41 },
-  { numberOfChildren: 5, rate: 0.48 },
-  { numberOfChildren: 6, rate: 0.55 },
-];
-
-const minWage = 750; // refactotor into some CONST file  along with other constants
-const nonTaxableAmountOfTaxBasis = 470.54; //470,54/month    5646,48/year - when under 24 952,06/year
-const incomeTax = 0.19; // 25% when 47 537,98 eur/year +
+const minWage = CALCULATOR_CONSTANTS.MIN_WAGE;
+const nonTaxableAmountOfTaxBasis =
+  CALCULATOR_CONSTANTS.NON_TAXABLE_AMOUNT_OF_TAX_BASIS;
+const incomeTax = CALCULATOR_CONSTANTS.INCOME_TAX;
 const employeeDeduction = Number(
-  Deductions.reduce(
+  CALCULATOR_CONSTANTS.DEDUCTIONS.reduce(
     (sum, deduction) => sum + deduction.employeeContribution,
     0
   ).toFixed(3)
 );
 const companyDeduction = Number(
-  Deductions.reduce(
+  CALCULATOR_CONSTANTS.DEDUCTIONS.reduce(
     (sum, deduction) => sum + deduction.employerContribution,
     0
   ).toFixed(3)
 );
-const maxOneChildrenUnderDeduction = 140;
-const maxOneChildrenOverDeduction = 50;
+const maxOneChildrenUnderDeduction =
+  CALCULATOR_CONSTANTS.MAX_ONE_CHILDREN_UNDER_DEDUCTION;
+const maxOneChildrenOverDeduction =
+  CALCULATOR_CONSTANTS.MAX_ONE_CHILDREN_OVER_DEDUCTION;
 
 //total children rates based on numbers from form
 function calculateChildAllowanceRate(totalChildren: number): number {
   if (totalChildren > 6) {
-    return childAllowanceRates.find((rate) => rate.numberOfChildren === 6)!
-      .rate;
+    return CALCULATOR_CONSTANTS.CHILD_ALLOWANCE_RATES.find(
+      (rate) => rate.numberOfChildren === 6
+    )!.rate;
   }
-  const rate = childAllowanceRates.find(
+  const rate = CALCULATOR_CONSTANTS.CHILD_ALLOWANCE_RATES.find(
     (rate) => rate.numberOfChildren === totalChildren
   );
   return rate ? rate.rate : 0;
@@ -196,7 +132,7 @@ export default function CalculatorPreview() {
     mode: "onChange",
     resolver: zodResolver(formSchema),
     defaultValues: {
-      grossWage: 750,
+      grossWage: CALCULATOR_CONSTANTS.MIN_WAGE,
       nonTaxablePart: true,
       childrenUnder18: 0,
       childrenOver18: 0,
@@ -239,7 +175,7 @@ export default function CalculatorPreview() {
 
   return (
     <div className="px-16 py-5">
-      <div className="w-96 border-2 py-5 px-5 border-gray-950 rounded-lg">
+      <div className="w-64 border-2 py-5 px-5 border-gray-950 rounded-lg">
         <Form {...form}>
           <form>
             {/* GROSS WAGE INPUT */}

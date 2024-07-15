@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
         <hr className="my-4  sm:mx-auto  lg:my-6" />
         <div>
-          <div className="flex sm:justify-center sm:mt-0">
+          <div className="flex justify-center sm:mt-0">
             <a
               href="https://github.com/RomanVelky/kalkulacka"
               target="_blank"
