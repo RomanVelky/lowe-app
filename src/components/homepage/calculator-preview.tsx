@@ -7,6 +7,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "../ui/input";
 import { Switch } from "../ui/switch";
 import { useForm } from "react-hook-form";
@@ -175,75 +183,24 @@ export default function CalculatorPreview() {
 
   return (
     <div className="px-16 py-5">
-      <div className="w-64 border-2 py-5 px-5 border-gray-950 rounded-lg">
-        <Form {...form}>
-          <form>
-            {/* GROSS WAGE INPUT */}
-            <FormField
-              control={form.control}
-              name="grossWage"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Hrubá mzda (€)</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      placeholder={minWage.toString()}
-                      inputMode="numeric"
-                      {...field}
-                      value={field.value || ""}
-                      onChange={(
-                        e: React.ChangeEvent<HTMLInputElement>
-                      ): void => {
-                        const value = e.target.value;
-                        field.onChange(
-                          value === "" ? "" : e.target.valueAsNumber
-                        );
-                      }}
-                      onWheel={(e) => e.preventDefault()}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* NON TAXABLE PART SWITCH */}
-            <FormField
-              control={form.control}
-              name="nonTaxablePart"
-              render={({ field }) => (
-                <FormItem className="flex gap-2">
-                  <div className=" flex items-end">
-                    <FormLabel className="text-base">Nezdaň. časť</FormLabel>
-                  </div>
-                  <FormControl>
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-
-            {/* CHILDREN UNDER 18 INPUT */}
-            <FormField
-              control={form.control}
-              name="childrenUnder18"
-              render={({ field }) => (
-                <FormItem className="flex gap-2 ">
-                  <div className=" flex items-center">
-                    <FormLabel className="text-base pt-1">Deti 18-</FormLabel>
-                  </div>
-                  <div className="flex flex-col">
+      <Card className="w-64">
+        <CardContent className="pt-6">
+          <Form {...form}>
+            <form>
+              {/* GROSS WAGE INPUT */}
+              <FormField
+                control={form.control}
+                name="grossWage"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Hrubá mzda (€)</FormLabel>
                     <FormControl>
                       <Input
-                        className="w-10"
-                        inputMode="numeric"
                         type="number"
+                        placeholder={minWage.toString()}
+                        inputMode="numeric"
                         {...field}
-                        value={field.value !== undefined ? field.value : ""}
+                        value={field.value || ""}
                         onChange={(
                           e: React.ChangeEvent<HTMLInputElement>
                         ): void => {
@@ -252,49 +209,104 @@ export default function CalculatorPreview() {
                             value === "" ? "" : e.target.valueAsNumber
                           );
                         }}
+                        onWheel={(e) => e.preventDefault()}
                       />
                     </FormControl>
                     <FormMessage />
-                  </div>
-                </FormItem>
-              )}
-            />
+                  </FormItem>
+                )}
+              />
 
-            {/* CHILDREN OVER 18 INPUT */}
-            <FormField
-              control={form.control}
-              name="childrenOver18"
-              render={({ field }) => (
-                <FormItem className="flex  gap-2">
-                  <div className=" flex items-center">
-                    <FormLabel className="text-base pt-1">Deti 18+</FormLabel>
-                  </div>
-                  <div className="flex flex-col">
-                    <FormControl className="">
-                      <Input
-                        className="w-10"
-                        inputMode="numeric"
-                        type="number"
-                        {...field}
-                        value={field.value !== undefined ? field.value : ""}
-                        onChange={(
-                          e: React.ChangeEvent<HTMLInputElement>
-                        ): void => {
-                          const value = e.target.value;
-                          field.onChange(
-                            value === "" ? "" : e.target.valueAsNumber
-                          );
-                        }}
+              {/* NON TAXABLE PART SWITCH */}
+              <FormField
+                control={form.control}
+                name="nonTaxablePart"
+                render={({ field }) => (
+                  <FormItem className="flex gap-2">
+                    <div className=" flex items-end">
+                      <FormLabel className="text-base">Nezdaň. časť</FormLabel>
+                    </div>
+                    <FormControl>
+                      <Switch
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
                       />
                     </FormControl>
-                    <FormMessage className="text-center" />
-                  </div>
-                </FormItem>
-              )}
-            />
-          </form>
-        </Form>
-      </div>
+                  </FormItem>
+                )}
+              />
+
+              {/* CHILDREN UNDER 18 INPUT */}
+              <FormField
+                control={form.control}
+                name="childrenUnder18"
+                render={({ field }) => (
+                  <FormItem className="flex gap-2 ">
+                    <div className=" flex items-center">
+                      <FormLabel className="text-base pt-1">Deti 18-</FormLabel>
+                    </div>
+                    <div className="flex flex-col">
+                      <FormControl>
+                        <Input
+                          className="w-10"
+                          inputMode="numeric"
+                          type="number"
+                          {...field}
+                          value={field.value !== undefined ? field.value : ""}
+                          onChange={(
+                            e: React.ChangeEvent<HTMLInputElement>
+                          ): void => {
+                            const value = e.target.value;
+                            field.onChange(
+                              value === "" ? "" : e.target.valueAsNumber
+                            );
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </div>
+                  </FormItem>
+                )}
+              />
+
+              {/* CHILDREN OVER 18 INPUT */}
+              <FormField
+                control={form.control}
+                name="childrenOver18"
+                render={({ field }) => (
+                  <FormItem className="flex  gap-2">
+                    <div className=" flex items-center">
+                      <FormLabel className="text-base pt-1">Deti 18+</FormLabel>
+                    </div>
+                    <div className="flex flex-col">
+                      <FormControl className="">
+                        <Input
+                          className="w-10"
+                          inputMode="numeric"
+                          type="number"
+                          {...field}
+                          value={field.value !== undefined ? field.value : ""}
+                          onChange={(
+                            e: React.ChangeEvent<HTMLInputElement>
+                          ): void => {
+                            const value = e.target.value;
+                            field.onChange(
+                              value === "" ? "" : e.target.valueAsNumber
+                            );
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-center" />
+                    </div>
+                  </FormItem>
+                )}
+              />
+            </form>
+          </Form>
+        </CardContent>
+      </Card>
+
+      <div className="w-64 border-2 py-5 px-5 border-gray-950 rounded-lg"></div>
 
       {/* DISPLAY CALCULATED VALUES SECTION */}
       <div className="pt-16 space-y-4">
