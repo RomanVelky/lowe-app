@@ -16,6 +16,7 @@ export default function ThemeButton() {
   const handleSetTheme = (newTheme: any) => {
     console.log(`Setting theme to: ${newTheme}`);
     setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (

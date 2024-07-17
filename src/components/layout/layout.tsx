@@ -14,7 +14,12 @@ export default function Layout({ children }: LayoutProps) {
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
-    setTheme("system"); // Set initial theme after component mounts
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      setTheme("system"); // Default
+    }
   }, [setTheme]);
 
   return (
