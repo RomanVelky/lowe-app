@@ -105,7 +105,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full  bg-opacity-90 backdrop-blur-sm shadow-xl z-50 transition-opacity duration-300">
+    <nav className="fixed top-0 left-0 w-full  bg-opacity-90 backdrop-blur-sm shadow-sm dark:shadow-xl z-50 transition-opacity duration-300">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="w-2/6">
           <Link
