@@ -335,6 +335,7 @@ export default function CalculatorPreview() {
         </Card>
       </div>
 
+      {/* ANIMATED PART WITH MORE DETAILS */}
       {isVisible && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -361,27 +362,6 @@ export default function CalculatorPreview() {
           </Card>
         </motion.div>
       )}
-
-      {/*  <div className="flex-1">
-        <Card className="">
-          <CardContent className="pt-6">
-            <h1 className="text-2xl font-bold">Odvody</h1>
-            <h2 className="text-gray-500">{deductions}</h2>
-
-            <h1 className="text-2xl font-bold">zaklad dane</h1>
-            <h2 className="text-gray-500">{incomeWithoutDeductions}</h2>
-            <h1 className="text-2xl font-bold">nezdanitelna cast </h1>
-            <h2 className="text-gray-500">{nonTaxableAmount}</h2>
-            <h1 className="text-2xl font-bold">zaklad dane pred</h1>
-            <h2 className="text-gray-500">{taxableIncome.toFixed(2)}</h2>
-            <h1 className="text-2xl font-bold">dan z prijmu</h1>
-            <h2 className="text-gray-500">{incomeTaxAmount}</h2>
-
-            <h1 className="text-2xl font-bold">Danovy bonus</h1>
-            <h2 className="text-gray-500">{taxBonus}</h2>
-          </CardContent>
-        </Card>
-      </div> */}
     </div>
   );
 }
