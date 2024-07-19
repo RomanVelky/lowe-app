@@ -18,6 +18,7 @@ import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 import { PATHS } from "@/lib/paths";
 import ListItem from "../ListItem";
 import ThemeButton from "../unique/ThemeButton";
+import LangButton from "../unique/LangButton";
 
 export default function Header() {
   const hamburgerList = [
@@ -172,14 +173,11 @@ export default function Header() {
             <HelpOutlineIcon />
             <span className="sr-only">Support</span>
           </Button>
-          <Button variant="ghost" size="icon">
-            <LanguageIcon />
-            <span className="sr-only">Choose Language</span>
-          </Button>
+          <LangButton />
           <ThemeButton />
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="lg:hidden" variant="outline" size="icon">
+              <Button className="lg:hidden" variant="ghost" size="icon">
                 <MenuIcon />
                 <span className="sr-only">Toggle menu</span>
               </Button>

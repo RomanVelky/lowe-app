@@ -2,11 +2,13 @@ import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 import Accordions from "@/components/homepage/accordions";
 import CalculatorPreview from "@/components/homepage/calculator-preview";
+import LangButton from "@/components/unique/LangButton";
 
 export default function Homepage() {
   const t = useTranslations();
   return (
     <main className="min-h-svh">
+      <LangButton />
       <h1>{t("test")}</h1> {/* Example usage of translations */}
       <Accordions />
       <div className="py-60">
