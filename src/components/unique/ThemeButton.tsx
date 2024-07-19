@@ -11,10 +11,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const ThemeButton = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const handleSetTheme = (newTheme: any) => {
-    console.log(`Setting theme to: ${newTheme}`);
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
