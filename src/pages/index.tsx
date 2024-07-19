@@ -1,10 +1,10 @@
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
-import Accordions from "@/components/homepage/accordions";
-import CalculatorPreview from "@/components/homepage/calculator-preview";
+import Accordions from "@/components/homepage/Accordions";
+import CalculatorPreview from "@/components/homepage/CalculatorPreview";
 import LangButton from "@/components/unique/LangButton";
 
-export default function Homepage() {
+const Homepage = () => {
   const t = useTranslations();
   return (
     <main className="min-h-svh">
@@ -16,7 +16,9 @@ export default function Homepage() {
       </div>
     </main>
   );
-}
+};
+
+export default Homepage;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   // Import the messages for the current locale

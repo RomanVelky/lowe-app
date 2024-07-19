@@ -10,7 +10,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export default function Layout({ children }: LayoutProps) {
+const Layout = ({ children }: LayoutProps) => {
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -38,4 +38,6 @@ export default function Layout({ children }: LayoutProps) {
       </div>
     </>
   );
-}
+};
+
+export default Layout;

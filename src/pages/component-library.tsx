@@ -1,7 +1,6 @@
 import { useState } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import {
   Accordion,
   AccordionContent,
@@ -79,7 +78,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function ComponentLibrary() {
+const ComponentLibrary = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -388,4 +387,6 @@ export default function ComponentLibrary() {
       </div>
     </>
   );
-}
+};
+
+export default ComponentLibrary;

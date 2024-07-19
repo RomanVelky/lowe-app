@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Layout from "@/components/layout/layout";
+import Layout from "@/components/layout/Layout";
 import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   return (
@@ -23,4 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </NextIntlClientProvider>
   );
-}
+};
+
+export default App;

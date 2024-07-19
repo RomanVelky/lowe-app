@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export default function Accordions() {
+const Accordions = () => {
   return (
     <div className="flex gap-10">
       <div className="w-1/2">
@@ -80,4 +80,6 @@ export default function Accordions() {
       </div>
     </div>
   );
-}
+};
+
+export default Accordions;

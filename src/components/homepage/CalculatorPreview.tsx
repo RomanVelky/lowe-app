@@ -121,7 +121,7 @@ const formSchema = z.object({
     .max(10, { message: "Can't be more than 10" }),
 });
 
-export default function CalculatorPreview() {
+const CalculatorPreview = () => {
   const [superGrossWage, setSuperGrossWage] = useState(0);
   const [netWage, setNetWage] = useState(0);
   const [deductions, setDeductions] = useState(0);
@@ -364,4 +364,6 @@ export default function CalculatorPreview() {
       )}
     </div>
   );
-}
+};
+
+export default CalculatorPreview;

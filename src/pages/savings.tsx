@@ -1,4 +1,4 @@
-export default function Savings() {
+const Savings = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="py-11 px-11">
@@ -6,4 +6,6 @@ export default function Savings() {
       </div>
     </main>
   );
-}
+};
+
+export default Savings;

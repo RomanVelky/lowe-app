@@ -1,4 +1,4 @@
-export default function News() {
+const News = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="py-11 px-11">
@@ -6,4 +6,6 @@ export default function News() {
       </div>
     </main>
   );
-}
+};
+
+export default News;

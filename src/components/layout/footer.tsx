@@ -7,7 +7,7 @@ import { PATHS } from "@/lib/paths";
 type SubPath = { link: string; text: string };
 type Item = SubPath | { link: string; description: string };
 
-export default function Footer() {
+const Footer = () => {
   const footerMenuList: { header: string; items: Item[] }[] = [
     {
       header: PATHS.WAGES.description,
@@ -86,4 +86,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

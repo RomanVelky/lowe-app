@@ -20,7 +20,7 @@ import ListItem from "../ListItem";
 import ThemeButton from "../unique/ThemeButton";
 import LangButton from "../unique/LangButton";
 
-export default function Header() {
+const Header = () => {
   const hamburgerList = [
     { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
     { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
@@ -199,4 +199,6 @@ export default function Header() {
       </div>
     </nav>
   );
-}
+};
+
+export default Header;
