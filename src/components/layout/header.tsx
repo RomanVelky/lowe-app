@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Button } from "../ui/button";
@@ -15,9 +14,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 import { PATHS } from "@/lib/paths";
-import ListItem from "../ListItem";
-import ThemeButton from "../unique/ThemeButton";
-import LangButton from "../unique/LangButton";
+import ListItem from "../list-item";
+import ThemeButton from "../unique/theme-button";
+import LangButton from "../unique/lang-button";
 
 const Header = () => {
   const hamburgerList = [

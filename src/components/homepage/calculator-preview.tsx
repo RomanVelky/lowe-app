@@ -13,7 +13,7 @@ import { Switch } from "../ui/switch";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CALCULATOR_CONSTANTS } from "@/lib/calculatorConstants";
+import { CALCULATOR_CONSTANTS } from "@/lib/calculator-constants";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 

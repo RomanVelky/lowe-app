@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
-import Accordions from "@/components/homepage/Accordions";
-import CalculatorPreview from "@/components/homepage/CalculatorPreview";
-import LangButton from "@/components/unique/LangButton";
+import Accordions from "@/components/homepage/homepage-accordions";
+import CalculatorPreview from "@/components/homepage/calculator-preview";
+import LangButton from "@/components/unique/lang-button";
 
 const Homepage = () => {
   const t = useTranslations();
