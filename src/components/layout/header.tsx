@@ -1,5 +1,4 @@
 import Image from "next/image";
-import * as React from "react";
 import Link from "next/link";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";

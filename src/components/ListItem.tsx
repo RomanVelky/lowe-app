@@ -1,8 +1,8 @@
-import * as React from "react";
 import { NavigationMenuLink } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { forwardRef } from "react";
 
-const ListItem = React.forwardRef<
+const ListItem = forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
