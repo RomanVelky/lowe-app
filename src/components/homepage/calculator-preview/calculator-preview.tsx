@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Form,
   FormControl,
@@ -7,15 +7,15 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "../ui/input";
-import { Switch } from "../ui/switch";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { CALCULATOR_CONSTANTS as CC } from "@/lib/calculator-constants";
-import { Button } from "../ui/button";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
+import { Switch } from "../../ui/switch";
+import { formSchema, FormSchemaType } from "./calculator-preview.schema";
 
 const employeeDeduction = Number(
   CC.DEDUCTIONS.reduce(
@@ -84,27 +84,6 @@ function calculateNetWage(
   };
 }
 
-const formSchema = z.object({
-  grossWage: z.number().min(CC.MIN_WAGE, {
-    message: "Gross wage must be at least minimum wage (750€)",
-  }),
-  nonTaxablePart: z.boolean().optional(),
-  childrenUnder18: z
-    .number()
-    .int()
-    .min(0, {
-      message: "Must be at least 0",
-    })
-    .max(10, { message: "Can't be more than 10" }),
-  childrenOver18: z
-    .number()
-    .int()
-    .min(0, {
-      message: "Must be at least 0",
-    })
-    .max(10, { message: "Can't be more than 10" }),
-});
-
 const CalculatorPreview = () => {
   const [superGrossWage, setSuperGrossWage] = useState(0);
   const [netWage, setNetWage] = useState(0);
@@ -116,8 +95,8 @@ const CalculatorPreview = () => {
   const [taxBonus, setTaxBonus] = useState(0);
 
   const [isVisible, setIsVisible] = useState(false);
-  //form inicialization
-  const form = useForm<z.infer<typeof formSchema>>({
+
+  const form = useForm<FormSchemaType>({
     mode: "onChange",
     resolver: zodResolver(formSchema),
     defaultValues: {
