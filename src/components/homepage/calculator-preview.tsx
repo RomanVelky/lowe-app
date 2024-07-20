@@ -13,66 +13,49 @@ import { Switch } from "../ui/switch";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CALCULATOR_CONSTANTS } from "@/lib/calculator-constants";
+import { CALCULATOR_CONSTANTS as CC } from "@/lib/calculator-constants";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 
-const minWage = CALCULATOR_CONSTANTS.MIN_WAGE;
-const nonTaxableAmountOfTaxBasis =
-  CALCULATOR_CONSTANTS.NON_TAXABLE_AMOUNT_OF_TAX_BASIS;
-const incomeTax = CALCULATOR_CONSTANTS.INCOME_TAX;
 const employeeDeduction = Number(
-  CALCULATOR_CONSTANTS.DEDUCTIONS.reduce(
+  CC.DEDUCTIONS.reduce(
     (sum, deduction) => sum + deduction.employeeContribution,
     0
   ).toFixed(3)
 );
 const companyDeduction = Number(
-  CALCULATOR_CONSTANTS.DEDUCTIONS.reduce(
+  CC.DEDUCTIONS.reduce(
     (sum, deduction) => sum + deduction.employerContribution,
     0
   ).toFixed(3)
 );
-const maxOneChildrenUnderDeduction =
-  CALCULATOR_CONSTANTS.MAX_ONE_CHILDREN_UNDER_DEDUCTION;
-const maxOneChildrenOverDeduction =
-  CALCULATOR_CONSTANTS.MAX_ONE_CHILDREN_OVER_DEDUCTION;
 
-//total children rates based on numbers from form
 function calculateChildAllowanceRate(totalChildren: number): number {
   if (totalChildren > 6) {
-    return CALCULATOR_CONSTANTS.CHILD_ALLOWANCE_RATES.find(
-      (rate) => rate.numberOfChildren === 6
-    )!.rate;
+    return CC.CHILD_ALLOWANCE_RATES.find((rate) => rate.numberOfChildren === 6)!
+      .rate;
   }
-  const rate = CALCULATOR_CONSTANTS.CHILD_ALLOWANCE_RATES.find(
+  const rate = CC.CHILD_ALLOWANCE_RATES.find(
     (rate) => rate.numberOfChildren === totalChildren
   );
   return rate ? rate.rate : 0;
 }
 
-// calculate NET WAGE
 function calculateNetWage(
   grossWage: number,
   nonTaxablePart: boolean,
   childrenUnder18: number,
   childrenOver18: number
-): {
-  netWage: number;
-  deductions: number;
-  taxableIncome: number;
-  nonTaxableAmount: number;
-  incomeWithoutDeductions: number;
-  incomeTaxAmount: number;
-  taxBonus: number;
-} {
+) {
   const deductions = Number((grossWage * employeeDeduction).toFixed(2));
-  const nonTaxableAmount = nonTaxablePart ? nonTaxableAmountOfTaxBasis : 0;
+  const nonTaxableAmount = nonTaxablePart
+    ? CC.NON_TAXABLE_AMOUNT_OF_TAX_BASIS
+    : 0;
   const incomeWithoutDeductions = grossWage - deductions;
   const taxableIncome = Number(
     (grossWage - deductions - nonTaxableAmount).toFixed(2)
   );
-  const incomeTaxAmount = Number((taxableIncome * incomeTax).toFixed(2));
+  const incomeTaxAmount = Number((taxableIncome * CC.INCOME_TAX).toFixed(2));
   const childrenTotal = childrenUnder18 + childrenOver18;
   const taxBonusAmount = Number(
     (
@@ -81,11 +64,13 @@ function calculateNetWage(
     ).toFixed(2)
   );
   const maxTaxBonus =
-    childrenOver18 * maxOneChildrenOverDeduction +
-    childrenUnder18 * maxOneChildrenUnderDeduction;
+    childrenOver18 * CC.MAX_ONE_CHILDREN_OVER_DEDUCTION +
+    childrenUnder18 * CC.MAX_ONE_CHILDREN_UNDER_DEDUCTION;
   const taxBonus = taxBonusAmount > maxTaxBonus ? maxTaxBonus : taxBonusAmount;
   const netWage = Number(
-    (grossWage - deductions - taxableIncome * incomeTax + taxBonus).toFixed(2)
+    (grossWage - deductions - taxableIncome * CC.INCOME_TAX + taxBonus).toFixed(
+      2
+    )
   );
 
   return {
@@ -99,9 +84,8 @@ function calculateNetWage(
   };
 }
 
-//form schema
 const formSchema = z.object({
-  grossWage: z.number().min(minWage, {
+  grossWage: z.number().min(CC.MIN_WAGE, {
     message: "Gross wage must be at least minimum wage (750€)",
   }),
   nonTaxablePart: z.boolean().optional(),
@@ -137,7 +121,7 @@ const CalculatorPreview = () => {
     mode: "onChange",
     resolver: zodResolver(formSchema),
     defaultValues: {
-      grossWage: CALCULATOR_CONSTANTS.MIN_WAGE,
+      grossWage: CC.MIN_WAGE,
       nonTaxablePart: true,
       childrenUnder18: 0,
       childrenOver18: 0,
@@ -150,10 +134,8 @@ const CalculatorPreview = () => {
 
   const watchedValues = form.watch();
 
-  // CALCULATE WAGES
   useEffect(() => {
-    //when wage is lower than min wage dont calculate
-    if (minWage <= watchedValues.grossWage) {
+    if (CC.MIN_WAGE <= watchedValues.grossWage) {
       const superGrossWage = Number(
         (watchedValues.grossWage * (1 + companyDeduction)).toFixed(2)
       );
@@ -199,7 +181,7 @@ const CalculatorPreview = () => {
                       <FormControl>
                         <Input
                           type="number"
-                          placeholder={minWage.toString()}
+                          placeholder={CC.MIN_WAGE.toString()}
                           inputMode="numeric"
                           {...field}
                           value={field.value || ""}
@@ -211,7 +193,6 @@ const CalculatorPreview = () => {
                               value === "" ? "" : e.target.valueAsNumber
                             );
                           }}
-                          onWheel={(e) => e.preventDefault()}
                         />
                       </FormControl>
                       <FormMessage />
@@ -328,7 +309,7 @@ const CalculatorPreview = () => {
               Super hrubá mzda: {superGrossWage}€
             </h6>
             <h6 className="text-gray-500">
-              Hrubá mzda: {watchedValues.grossWage || minWage}€
+              Hrubá mzda: {watchedValues.grossWage || CC.MIN_WAGE}€
             </h6>
             <h6 className="text-gray-500">Čistá mzda: {netWage}€</h6>
           </CardContent>
@@ -339,7 +320,7 @@ const CalculatorPreview = () => {
       {isVisible && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 600 }}
+          animate={{ opacity: 1, x: 560 }}
           transition={{ duration: 0.5 }}
           className="absolute">
           <Card className="w-64">
