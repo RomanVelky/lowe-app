@@ -1,3 +1,84 @@
 {
-  "test": "Slovina"
+  "test": "Slovina",
+  "LAYOUT":{
+    "login-button":"Prihlásenie",
+    "wages":{
+      "header":"MZDY",
+      "h-1":"ČISTÁ MZDA",
+      "p-1":"Jedoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
+      "h-2":"HRUBÁ MZDA",
+      "p-2":"Výpočet hrubej mzdy",
+      "h-3":"SUPER HRUBÁ MZDA",
+      "p-3":"Výpočet super hrubej mzdy",
+      "h-4":"MZDY JEDNODUCHO",
+      "p-4":"Čo je to mzda. aké druhy sú a ako sa vypočítavajú a kde sa uvádzajú"
+    },
+    "savings":{
+      "header":"SPORENIE",
+      "h-1":"INVESTÍCIE",
+      "p-1":"Jedoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
+      "h-2":"SPORIACE ÚČTY",
+      "p-2":"Výpočet hrubej mzdy",
+      "h-3":"STAVEBNÉ SPORENIE",
+      "p-3":"Výpočet super hrubej mzdy",
+      "h-4":"SPORENIE NA  JEDNODUCHO",
+      "p-4":"Čo je to mzda. aké druhy sú a ako sa vypočítavajú a kde sa uvádzajú"
+    }
+  },
+  "FOOTER":{
+    "p":"Objav ciac jednoduchých a intuitívnych nástrojov na našej platforme",
+    "wages":{
+      "header":"MZDY",
+      "link-1":"ČISTÁ MZDA",
+      "link-2":"SZČO",
+      "link-3":"SPORIACE ÚČTY"
+    },
+    "savings":{
+      "header":"SPORENIE",
+      "link-1":"SPORACE ÚČTY",
+      "link-2":"STAVEBNÉ SPORENIE",
+      "link-3":"SPORENIE NA DÔCHODOK",
+      "link-4":"INVESTÍCIE"
+    },
+    "taxes":{
+      "header": "DANE",
+      "link-1":"DAŇ Z PRÍJMU",
+      "link-2":"DPH"
+    }
+  },
+  "ACCORDIONS":{
+    "1":{
+      "h-1":"Nerozumieš niečomu?",
+      "p-1":"Ak niečomu nerozumieš, skús pogooogliť na webe, ak nenájdeš odpoveď, tak sa nás spýtaj na našej zákazníckej podpore (ikona otázkinu v hornom menu).",
+      "h-2":"Ako môžeš poskytnúť spätnú väzbu na vylepšenie stránky?",
+      "p-2":"Klikni hore v menu na otáznik a napíš čo máš na srdci, poprípade čo by si zmmenil alebo spravil inak, budeme ti vďační.",
+      "h-3":"Prečo používať kalkulačky na tejto stránke?",
+      "p-3":"Programoval ich človek čo sa v daniach vôbec nevyznal a snažil sa ich pochopiť, a preto dbal na to aby boli jednoduché a aj laik rozumel ich výstupnému výpočtu."
+    },
+    "2":{
+      "h-1":"Prečo je viacero funkcií vo fáze \"bude už čoskoro\"?",
+      "p-1":"Dôvodom je, že na vývoji pracuje len jeden developer vo voľnom čase a funkcionality sa snaží dodávať plne funkčné a pretestované a to chce čas.",
+      "h-2":"Čo plájeme do budúcna?",
+      "p-2":"Chceli by sme časom pridávať články, ktoré by vysvetľovali veci zo sveta financií a daní, aby sa obyčajný človek v tom dokázal lepšie zorientovať bez rozsiahleho študovania. Do budúcna plánujeme spraviť napr. návody ako začať s kryptomenami, integrovať pripojenie crypto penaženiek na našu platformu a mnoho iných.",
+      "h-3":"Kto by mohol využiť kalkulačku spoločne s informáciami poskytnutými na stránke?",
+      "p-3":"Každý. Či už si môžete porovnať platové podmienky voči priemernej mzde, alebo vidieť rozdiel medzi platom zamestnanca, SZČO. Ak vás zaujímajú financie, alebo by ste si radi rozšírili svoje obzory."
+    }
+
+  },
+  "WAGE-CALCULATOR":{
+    "form":{
+      "gross-wage":"Hrubá mzda (Eur)",
+      "non-taxable-amount":"Nezdaň. časť",
+      "kids-under":"Deti 18-",
+      "kids-over":"Deti 18+",
+      "more-info":"Viac info",
+      "detailed-view":"Detailný prehľad"
+    },
+    "base-info-window":{
+      "header":"Výpočet čistej mzdy",
+      "super-gross-wage":"Super hrubá mzda:",
+      "gross-wage":"Hrubá mzda:",
+      "net-wage":"Čistá mzda:"
+    }
+  }
 }

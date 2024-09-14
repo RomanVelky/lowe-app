@@ -16,12 +16,6 @@ const languages = [
       "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
   },
   {
-    code: "cs",
-    label: "Czech",
-    flagSrc:
-      "http://purecatamphetamine.github.io/country-flag-icons/3x2/CZ.svg",
-  },
-  {
     code: "sk",
     label: "Slovak",
     flagSrc:
