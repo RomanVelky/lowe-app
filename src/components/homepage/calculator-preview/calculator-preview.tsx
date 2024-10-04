@@ -30,7 +30,7 @@ const companyDeduction = Number(
   ).toFixed(3)
 );
 
-function calculateChildAllowanceRate(totalChildren: number): number {
+function calculateChildAllowanceRate(totalChildren: number) {
   if (totalChildren > 6) {
     return CC.CHILD_ALLOWANCE_RATES.find((rate) => rate.numberOfChildren === 6)!
       .rate;
@@ -74,13 +74,13 @@ function calculateNetWage(
   );
 
   return {
-    netWage: netWage,
-    deductions: deductions,
-    taxableIncome: taxableIncome,
-    nonTaxableAmount: nonTaxableAmount,
-    incomeWithoutDeductions: incomeWithoutDeductions,
-    incomeTaxAmount: incomeTaxAmount,
-    taxBonus: taxBonus,
+    netWage,
+    deductions,
+    taxableIncome,
+    nonTaxableAmount,
+    incomeWithoutDeductions,
+    incomeTaxAmount,
+    taxBonus,
   };
 }
 
@@ -301,7 +301,8 @@ const CalculatorPreview = () => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 560 }}
           transition={{ duration: 0.5 }}
-          className="absolute">
+          className="absolute"
+        >
           <Card className="w-64">
             <CardContent className="pt-6">
               <h1 className="text-2xl font-bold">Odvody</h1>
