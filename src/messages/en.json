@@ -1,0 +1,83 @@
+{
+  "test": "English",
+  "LAYOUT": {
+    "login-button": "Login",
+    "wages": {
+      "header": "WAGES",
+      "h-1": "NET WAGE",
+      "p-1": "Simple and clear calculator for net wage calculation",
+      "h-2": "GROSS WAGE",
+      "p-2": "Gross wage calculation",
+      "h-3": "SUPER GROSS WAGE",
+      "p-3": "Super gross wage calculation",
+      "h-4": "WAGES MADE SIMPLE",
+      "p-4": "What is a wage, what types exist, how they are calculated and where they are reported"
+    },
+    "savings": {
+      "header": "SAVINGS",
+      "h-1": "INVESTMENTS",
+      "p-1": "Simple and clear calculator for net wage calculation",
+      "h-2": "SAVINGS ACCOUNTS",
+      "p-2": "Gross wage calculation",
+      "h-3": "BUILDING SAVINGS",
+      "p-3": "Super gross wage calculation",
+      "h-4": "SAVINGS MADE SIMPLE",
+      "p-4": "What is a wage, what types exist, how they are calculated and where they are reported"
+    }
+  },
+  "FOOTER": {
+    "p": "Discover more simple and intuitive tools on our platform",
+    "wages": {
+      "header": "WAGES",
+      "link-1": "NET WAGE",
+      "link-2": "SELF-EMPLOYED",
+      "link-3": "SAVINGS ACCOUNTS"
+    },
+    "savings": {
+      "header": "SAVINGS",
+      "link-1": "SAVINGS ACCOUNTS",
+      "link-2": "BUILDING SAVINGS",
+      "link-3": "RETIREMENT SAVINGS",
+      "link-4": "INVESTMENTS"
+    },
+    "taxes": {
+      "header": "TAXES",
+      "link-1": "INCOME TAX",
+      "link-2": "VAT"
+    }
+  },
+  "ACCORDIONS": {
+    "1": {
+      "h-1": "Don't understand something?",
+      "p-1": "If you don't understand something, try searching on the web. If you can't find the answer, ask us through our customer support (question mark icon in the top menu).",
+      "h-2": "How can you provide feedback to improve the site?",
+      "p-2": "Click the question mark in the menu and write what's on your mind, or what you would change or do differently - we'll be grateful.",
+      "h-3": "Why use calculators on this site?",
+      "p-3": "They were programmed by someone who initially didn't understand taxes and tried to comprehend them, therefore ensuring they are simple and their output calculations are understandable even for beginners."
+    },
+    "2": {
+      "h-1": "Why are several functions in the \"coming soon\" phase?",
+      "p-1": "The reason is that only one developer is working on the development in their spare time, trying to deliver fully functional and tested features, which takes time.",
+      "h-2": "What are our future plans?",
+      "p-2": "We would like to add articles explaining finance and tax concepts, helping ordinary people better understand these topics without extensive studying. Future plans include guides on how to start with cryptocurrencies, integrating crypto wallet connections to our platform, and much more.",
+      "h-3": "Who could benefit from the calculator along with the information provided on the site?",
+      "p-3": "Everyone. Whether you want to compare salary conditions against the average wage, or see the difference between employee and self-employed income. If you're interested in finance or would like to expand your knowledge."
+    }
+  },
+  "WAGE-CALCULATOR": {
+    "form": {
+      "gross-wage": "Gross wage (Eur)",
+      "non-taxable-amount": "Non-taxable amount",
+      "kids-under": "Children under 18",
+      "kids-over": "Children over 18",
+      "more-info": "More info",
+      "detailed-view": "Detailed view"
+    },
+    "base-info-window": {
+      "header": "Net wage calculation",
+      "super-gross-wage": "Super gross wage:",
+      "gross-wage": "Gross wage:",
+      "net-wage": "Net wage:"
+    }
+  }
+}

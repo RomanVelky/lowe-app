@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
-import Github from "../../public/assets/github.svg";
+import Github from "../../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
 
 type SubPath = { link: string; text: string };
 type Item = SubPath | { link: string; description: string };
 
-export default function Footer() {
+const Footer = () => {
   const footerMenuList: { header: string; items: Item[] }[] = [
     {
       header: PATHS.WAGES.description,
@@ -33,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="">
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3 w-full max-w-screen-xl" />
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
         <hr className="my-4  sm:mx-auto  lg:my-6" />
         <div>
-          <div className="flex sm:justify-center sm:mt-0">
+          <div className="flex justify-center sm:mt-0">
             <a
               href="https://github.com/RomanVelky/kalkulacka"
               target="_blank"
@@ -86,4 +86,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

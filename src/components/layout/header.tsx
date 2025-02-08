@@ -1,10 +1,8 @@
 import Image from "next/image";
-import * as React from "react";
 import Link from "next/link";
-import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,9 +14,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 import { PATHS } from "@/lib/paths";
-import ListItem from "./ListItem";
+import ListItem from "../list-item";
+import ThemeButton from "../unique/theme-button";
+import LangButton from "../unique/lang-button";
 
-export default function Header() {
+const Header = () => {
   const hamburgerList = [
     { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
     { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
@@ -104,7 +104,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className=" border-gray-200 dark:bg-gray-900">
+    <nav className="fixed top-0 left-0 w-full  bg-opacity-90 backdrop-blur-sm shadow-sm dark:shadow-none z-50 transition-opacity duration-300">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="w-2/6">
           <Link
@@ -167,18 +167,15 @@ export default function Header() {
           <div className="px-6 hidden sm:block">
             <Button>Prihlásenie</Button>
           </div>
-          <Button variant="outline" size="icon">
+          <Button variant="ghost" size="icon">
             <HelpOutlineIcon />
             <span className="sr-only">Support</span>
           </Button>
-          <Button variant="outline" size="icon">
-            <LanguageIcon />
-            <span className="sr-only">Choose Language</span>
-          </Button>
-
+          <LangButton />
+          <ThemeButton />
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="lg:hidden" variant="outline" size="icon">
+              <Button className="lg:hidden" variant="ghost" size="icon">
                 <MenuIcon />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -200,4 +197,6 @@ export default function Header() {
       </div>
     </nav>
   );
-}
+};
+
+export default Header;
