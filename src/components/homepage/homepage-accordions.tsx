@@ -7,8 +7,8 @@ import {
 
 const Accordions = () => {
   return (
-    <div className="flex gap-10">
-      <div className="w-1/2">
+    <div className="flex flex-col md:flex-row gap-10 px-8">
+      <div className="w-full md:w-1/2">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Nerozumieš niečomu?</AccordionTrigger>
@@ -42,11 +42,11 @@ const Accordions = () => {
         </Accordion>
       </div>
 
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              Prečo je viacero funkcíí vo fáze “bude už čoskoro”?
+              Prečo je viacero funkcíí vo fáze "bude už čoskoro"?
             </AccordionTrigger>
             <AccordionContent>
               Dôvodom je, že na vývoji pracuje len jeden developer vo voľnom
