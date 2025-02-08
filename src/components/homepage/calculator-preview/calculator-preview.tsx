@@ -10,7 +10,7 @@ import {
 import { CALCULATOR_CONSTANTS as CC } from "@/lib/calculator-constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "../../ui/button";
 import { Input } from "../../ui/input";
@@ -84,16 +84,56 @@ function calculateNetWage(
   };
 }
 
-const CalculatorPreview = () => {
-  const [superGrossWage, setSuperGrossWage] = useState(0);
-  const [netWage, setNetWage] = useState(0);
-  const [deductions, setDeductions] = useState(0);
-  const [taxableIncome, setTaxableIncome] = useState(0);
-  const [nonTaxableAmount, setNonTaxableAmount] = useState(0);
-  const [incomeWithoutDeductions, setIncomeWithoutDeductions] = useState(0);
-  const [incomeTaxAmount, setIncomeTaxAmount] = useState(0);
-  const [taxBonus, setTaxBonus] = useState(0);
+const useCalculator = (formValues: FormSchemaType) => {
+  const calculateValues = (values: FormSchemaType): CalculatorState => {
+    if (values.grossWage < CC.MIN_WAGE) {
+      return {
+        superGrossWage: 0,
+        netWage: 0,
+        deductions: 0,
+        taxableIncome: 0,
+        nonTaxableAmount: 0,
+        incomeWithoutDeductions: 0,
+        incomeTaxAmount: 0,
+        taxBonus: 0,
+      };
+    }
 
+    const superGrossWage = Number(
+      (values.grossWage * (1 + companyDeduction)).toFixed(2)
+    );
+
+    const {
+      netWage,
+      deductions,
+      taxableIncome,
+      nonTaxableAmount,
+      incomeWithoutDeductions,
+      incomeTaxAmount,
+      taxBonus,
+    } = calculateNetWage(
+      values.grossWage,
+      values.nonTaxablePart ?? false,
+      values.childrenUnder18,
+      values.childrenOver18
+    );
+
+    return {
+      superGrossWage,
+      netWage,
+      deductions,
+      taxableIncome,
+      nonTaxableAmount,
+      incomeWithoutDeductions,
+      incomeTaxAmount,
+      taxBonus,
+    };
+  };
+
+  return useMemo(() => calculateValues(formValues), [formValues]);
+};
+
+const CalculatorPreview = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const form = useForm<FormSchemaType>({
@@ -113,35 +153,16 @@ const CalculatorPreview = () => {
 
   const watchedValues = form.watch();
 
-  useEffect(() => {
-    if (CC.MIN_WAGE <= watchedValues.grossWage) {
-      const superGrossWage = Number(
-        (watchedValues.grossWage * (1 + companyDeduction)).toFixed(2)
-      );
-      const {
-        netWage,
-        deductions,
-        taxableIncome,
-        nonTaxableAmount,
-        incomeWithoutDeductions,
-        incomeTaxAmount,
-        taxBonus,
-      } = calculateNetWage(
-        watchedValues.grossWage,
-        watchedValues.nonTaxablePart || false,
-        watchedValues.childrenUnder18,
-        watchedValues.childrenOver18
-      );
-      setSuperGrossWage(superGrossWage);
-      setNetWage(netWage);
-      setDeductions(deductions);
-      setTaxableIncome(taxableIncome);
-      setNonTaxableAmount(nonTaxableAmount);
-      setIncomeWithoutDeductions(incomeWithoutDeductions);
-      setIncomeTaxAmount(incomeTaxAmount);
-      setTaxBonus(taxBonus);
-    }
-  }, [watchedValues]);
+  const {
+    superGrossWage,
+    netWage,
+    deductions,
+    taxableIncome,
+    nonTaxableAmount,
+    incomeWithoutDeductions,
+    incomeTaxAmount,
+    taxBonus,
+  } = useCalculator(watchedValues);
 
   return (
     <div className="flex gap-4 py-5">
@@ -234,7 +255,6 @@ const CalculatorPreview = () => {
                     </FormItem>
                   )}
                 />
-
                 {/* CHILDREN OVER 18 INPUT */}
                 <FormField
                   control={form.control}
@@ -278,7 +298,6 @@ const CalculatorPreview = () => {
           </CardContent>
         </Card>
       </div>
-
       {/* DISPLAY CALCULATED VALUES SECTION */}
       <div className="flex-none">
         <Card className="">
@@ -294,7 +313,6 @@ const CalculatorPreview = () => {
           </CardContent>
         </Card>
       </div>
-
       {/* ANIMATED PART WITH MORE DETAILS */}
       {isVisible && (
         <motion.div
@@ -307,7 +325,6 @@ const CalculatorPreview = () => {
             <CardContent className="pt-6">
               <h1 className="text-2xl font-bold">Odvody</h1>
               <h2 className="text-gray-500">{deductions}</h2>
-
               <h1 className="text-2xl font-bold">zaklad dane</h1>
               <h2 className="text-gray-500">{incomeWithoutDeductions}</h2>
               <h1 className="text-2xl font-bold">nezdanitelna cast </h1>
@@ -316,7 +333,6 @@ const CalculatorPreview = () => {
               <h2 className="text-gray-500">{taxableIncome.toFixed(2)}</h2>
               <h1 className="text-2xl font-bold">dan z prijmu</h1>
               <h2 className="text-gray-500">{incomeTaxAmount}</h2>
-
               <h1 className="text-2xl font-bold">Danovy bonus</h1>
               <h2 className="text-gray-500">{taxBonus}</h2>
             </CardContent>
