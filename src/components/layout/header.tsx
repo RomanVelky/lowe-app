@@ -17,8 +17,19 @@ import { PATHS } from "@/lib/paths";
 import ListItem from "../list-item";
 import ThemeButton from "../unique/theme-button";
 import LangButton from "../unique/lang-button";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+} from "@clerk/nextjs";
 
 const Header = () => {
+  const { user } = useUser();
+  console.log("User", user?.fullName);
+
   const hamburgerList = [
     { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
     { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
@@ -109,7 +120,8 @@ const Header = () => {
         <div className="w-2/6">
           <Link
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse">
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
             <Image src="/logo.svg" alt="Love Logo" width={45} height={45} />
           </Link>
         </div>
@@ -129,7 +141,8 @@ const Header = () => {
                         <NavigationMenuLink
                           href={headerSection.colorSubMenu.link}
                           className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
-                          asChild>
+                          asChild
+                        >
                           <a className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md">
                             <div className="mb-2 mt-4 text-lg font-medium text-white">
                               {headerSection.colorSubMenu.subHeader}
@@ -144,7 +157,8 @@ const Header = () => {
                         <ListItem
                           key={key}
                           href={item.link}
-                          title={item.subHeader}>
+                          title={item.subHeader}
+                        >
                           {item.text}
                         </ListItem>
                       ))}
@@ -164,8 +178,17 @@ const Header = () => {
         </div>
 
         <div className="w-2/6 flex gap-3 justify-end">
-          <div className="px-6 hidden sm:block">
-            <Button>Prihlásenie</Button>
+          <div className="px-1 hidden sm:flex items-center">
+            <SignedOut>
+              <div className="flex gap-2">
+                <SignInButton>
+                  <Button>Sign In</Button>
+                </SignInButton>
+              </div>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
           <Button variant="ghost" size="icon">
             <HelpOutlineIcon />
@@ -186,7 +209,8 @@ const Header = () => {
                   <Link
                     key={key}
                     className="inline-flex h-9 items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:focus:bg-gray-800/50"
-                    href={link.link}>
+                    href={link.link}
+                  >
                     {link.text}
                   </Link>
                 ))}
