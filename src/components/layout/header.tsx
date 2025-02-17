@@ -17,19 +17,9 @@ import { PATHS } from "@/lib/paths";
 import ListItem from "../list-item";
 import ThemeButton from "../unique/theme-button";
 import LangButton from "../unique/lang-button";
-import {
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useUser,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
-  const { user } = useUser();
-  console.log("User", user?.fullName);
-
   const hamburgerList = [
     { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
     { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
@@ -181,9 +171,9 @@ const Header = () => {
           <div className="px-1 hidden sm:flex items-center">
             <SignedOut>
               <div className="flex gap-2">
-                <SignInButton>
-                  <Button>Sign In</Button>
-                </SignInButton>
+                <Button>
+                  <Link href="/sign-in">Sign In</Link>
+                </Button>
               </div>
             </SignedOut>
             <SignedIn>
