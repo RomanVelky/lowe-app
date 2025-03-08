@@ -6,7 +6,6 @@ import {
   Shield,
   Wallet2,
 } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -32,7 +31,7 @@ const HomePage = () => {
         </div>
         <div className="flex flex-col gap-2 min-[400px]:flex-row">
           <Button size="lg" asChild>
-            <Link href="/wages#net-salary">
+            <Link href="/wages#net">
               Vypočítať Mzdu
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -105,7 +104,7 @@ const HomePage = () => {
               vašej mzdy. Vyskúšajte ho zadarmo.
             </p>
             <Button size="lg" variant="secondary" asChild className="mt-4">
-              <Link href="/wages#net-salary">
+              <Link href="/wages#net">
                 Otvoriť Kalkulačku
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
