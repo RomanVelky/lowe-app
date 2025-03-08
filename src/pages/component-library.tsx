@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
@@ -70,7 +70,11 @@ import {
 } from "@/components/ui/drawer";
 import { useToast } from "@/components/ui/use-toast";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsTrigger, TabsList } from "@/components/ui/tabs";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "../schemas/database.type";
+import { Music } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -79,6 +83,13 @@ const formSchema = z.object({
 });
 
 const ComponentLibrary = () => {
+  const supabase = useSupabaseClient<Database>();
+  const [instruments, setInstruments] = useState<
+    { id: number; name: string }[]
+  >([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -90,11 +101,47 @@ const ComponentLibrary = () => {
     console.log(values);
   }
 
-  const [isOpen, setIsOpen] = useState(false);
-  const { toast } = useToast();
+  useEffect(() => {
+    const fetchInstruments = async () => {
+      const { data, error } = await supabase
+        .from("instruments") // Fetch from the "instruments" table
+        .select("id, name"); // Select only the "id" and "name" columns
+
+      if (error) {
+        console.error("Error fetching instruments:", error);
+      } else {
+        setInstruments(data || []);
+      }
+    };
+
+    fetchInstruments();
+  }, [supabase]); // Only run this effect when the supabase client is available
+
   return (
     <>
-      <div>ComponentLibrary</div>
+      <h1>ComponentLibrary</h1>
+
+      {/*TEST DB CONNECTION  */}
+      <Card className="w-full max-w-md mx-auto">
+        <CardContent className="p-6">
+          <div className="flex items-center space-x-2 mb-4">
+            <Music className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-semibold text-primary">Instruments</h2>
+          </div>
+          <ScrollArea className="h-[300px] pr-4">
+            <ul className="space-y-2">
+              {instruments.map((instrument) => (
+                <li
+                  key={instrument.id}
+                  className="bg-secondary text-secondary-foreground rounded-lg p-3 transition-colors hover:bg-secondary/80"
+                >
+                  {instrument.name}
+                </li>
+              ))}
+            </ul>
+          </ScrollArea>
+        </CardContent>
+      </Card>
 
       {/*ACCORDION  */}
       <div className="py-11 px-11">
@@ -128,7 +175,8 @@ const ComponentLibrary = () => {
                 title: "Uh oh! Something went wrong.",
                 description: "There was a problem with your request.",
               });
-            }}>
+            }}
+          >
             Show Toast
           </Button>
         </div>
@@ -221,7 +269,8 @@ const ComponentLibrary = () => {
         <div className="grid gap-1.5 leading-none">
           <label
             htmlFor="terms1"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
             Accept terms and conditions
           </label>
           <p className="text-sm text-muted-foreground">
@@ -235,7 +284,8 @@ const ComponentLibrary = () => {
         src="https://widget.penize.cz/vypocet-ciste-mzdy-2"
         width="100%"
         height="400"
-        scrolling="no"></iframe>
+        scrolling="no"
+      ></iframe>
 
       {/* FORM SHADCN */}
       <div className="px-16 py-5">

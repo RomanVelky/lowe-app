@@ -35,6 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# md shit files
 poznamky.md
 promting.md
 supabase.md
@@ -42,3 +43,6 @@ supabase.md
 # cursor
 .cursorrules
 .cursorignore
+
+# package lock
+package-lock.json

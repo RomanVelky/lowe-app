@@ -5,34 +5,43 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
 import { ClerkProvider } from "@clerk/nextjs";
+import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { useState } from "react";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const [supabaseClient] = useState(() => createPagesBrowserClient());
 
   return (
     <>
-      <ClerkProvider
-        publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-        appearance={{
-          baseTheme: undefined,
-        }}
+      <SessionContextProvider
+        supabaseClient={supabaseClient}
+        initialSession={pageProps.initialSession}
       >
-        <NextIntlClientProvider
-          locale={router.locale}
-          messages={pageProps.messages}
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+          appearance={{
+            baseTheme: undefined,
+          }}
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          <NextIntlClientProvider
+            locale={router.locale}
+            messages={pageProps.messages}
           >
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </ClerkProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </ClerkProvider>
+      </SessionContextProvider>
     </>
   );
 };
