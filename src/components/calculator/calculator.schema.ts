@@ -20,6 +20,7 @@ export const formSchema = z.object({
       message: "Must be at least 0",
     })
     .max(10, { message: "Can't be more than 10" }),
+  calcType: z.enum(["net", "gross", "supergross"]),
 });
 
 export type FormSchemaType = z.infer<typeof formSchema>;

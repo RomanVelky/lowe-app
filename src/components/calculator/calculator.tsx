@@ -12,10 +12,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Button } from "../../ui/button";
-import { Input } from "../../ui/input";
-import { Switch } from "../../ui/switch";
-import { formSchema, FormSchemaType } from "./calculator-preview.schema";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Switch } from "../ui/switch";
+import { formSchema, FormSchemaType } from "./calculator.schema";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 const employeeDeduction = Number(
   CC.DEDUCTIONS.reduce(
@@ -133,7 +141,13 @@ const useCalculator = (formValues: FormSchemaType) => {
   return useMemo(() => calculateValues(formValues), [formValues]);
 };
 
-const CalculatorPreview = () => {
+export type WageType = "net" | "gross" | "supergross";
+
+interface WageCalculatorProps {
+  wageType: WageType;
+}
+
+const WageCalculator: React.FC<WageCalculatorProps> = ({ wageType }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const form = useForm<FormSchemaType>({
@@ -144,6 +158,7 @@ const CalculatorPreview = () => {
       nonTaxablePart: true,
       childrenUnder18: 0,
       childrenOver18: 0,
+      calcType: wageType,
     },
   });
 
@@ -171,6 +186,45 @@ const CalculatorPreview = () => {
           <CardContent className="pt-6">
             <Form {...form}>
               <form>
+                {/* CALC TYPE SELECT */}
+                <div className="pb-2">
+                  <FormField
+                    control={form.control}
+                    name="calcType"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Select
+                            onValueChange={(value) => {
+                              console.log(
+                                "Previous calcType:",
+                                form.getValues("calcType")
+                              ); // Log previous value
+                              field.onChange(value); // Change value
+                              console.log("New calcType:", value); // Log new value
+                            }}
+                            defaultValue={field.value}
+                          >
+                            <SelectTrigger className="w-[180px]">
+                              <SelectValue placeholder="Typ kalkulacky" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectGroup>
+                                <SelectItem value="net">Cista</SelectItem>
+                                <SelectItem value="gross">Hruba</SelectItem>
+                                <SelectItem value="supergross">
+                                  SuperHruba
+                                </SelectItem>
+                              </SelectGroup>
+                            </SelectContent>
+                          </Select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
                 {/* GROSS WAGE INPUT */}
                 <FormField
                   control={form.control}
@@ -343,4 +397,4 @@ const CalculatorPreview = () => {
   );
 };
 
-export default CalculatorPreview;
+export default WageCalculator;
