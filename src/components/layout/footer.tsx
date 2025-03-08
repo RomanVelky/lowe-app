@@ -3,11 +3,13 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import Github from "../../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
+import { useUser } from "@clerk/nextjs";
 
 type SubPath = { link: string; text: string };
 type Item = SubPath | { link: string; description: string };
 
 const Footer = () => {
+  const isLoggedIn = useUser().isSignedIn;
   const footerMenuList: { header: string; items: Item[] }[] = [
     {
       header: PATHS.WAGES.description,
@@ -48,7 +50,12 @@ const Footer = () => {
               <Link href="/">
                 <Image src="/logo.svg" alt="Love Logo" width={75} height={75} />
               </Link>
-              <Button> Prihlásenie</Button>
+              {!isLoggedIn && (
+                <Button>
+                  {" "}
+                  <Link href="/sign-in">Prihlásenie</Link>
+                </Button>
+              )}
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-center md:text-start">
@@ -60,7 +67,8 @@ const Footer = () => {
                 {footerSection.items.map((item, itemKey) => (
                   <ul
                     key={itemKey}
-                    className="text-gray-500 dark:text-gray-400 font-medium">
+                    className="text-gray-500 dark:text-gray-400 font-medium"
+                  >
                     <li className="mb-4">
                       <Link href={item.link} className="hover:underline">
                         {"text" in item ? item.text : item.description}
@@ -78,7 +86,8 @@ const Footer = () => {
             <a
               href="https://github.com/RomanVelky/kalkulacka"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               <Github className=" fill-gray-500 hover:fill-gray-900" />
             </a>
           </div>

@@ -130,7 +130,7 @@ const Header = () => {
                       <li className="row-span-3">
                         <NavigationMenuLink
                           href={headerSection.colorSubMenu.link}
-                          className="bg-gradient-to-b from-[#DB4E66] from-0% via-[#A24688] via-40% to-[#4E3ABA] to-100%"
+                          className="bg-gradient-to-b from-[#00C853] from-0% via-[#009688] via-40% to-[#004D40] to-100%"
                           asChild
                         >
                           <a className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md">
