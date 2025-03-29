@@ -7,11 +7,31 @@ import { useRouter } from "next/router";
 import { ClerkProvider } from "@clerk/nextjs";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const [supabaseClient] = useState(() => createPagesBrowserClient());
+  const [messages, setMessages] = useState(pageProps.messages || {});
+
+  useEffect(() => {
+    const loadMessages = async () => {
+      if (!pageProps.messages) {
+        try {
+          const locale = router.locale || "en";
+          const newMessages = (await import(`../messages/${locale}.json`))
+            .default;
+          setMessages(newMessages);
+        } catch (error) {
+          console.error("Failed to load messages:", error);
+        }
+      } else {
+        setMessages(pageProps.messages);
+      }
+    };
+
+    loadMessages();
+  }, [router.locale, pageProps.messages]);
 
   return (
     <>
@@ -27,7 +47,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         >
           <NextIntlClientProvider
             locale={router.locale}
-            messages={pageProps.messages}
+            timeZone="Europe/Vienna"
+            messages={messages}
           >
             <ThemeProvider
               attribute="class"

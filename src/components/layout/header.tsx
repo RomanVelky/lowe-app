@@ -26,7 +26,7 @@ const Header = () => {
   const hamburgerList = [
     { text: t("LAYOUT.wages.header"), link: PATHS.WAGES.link },
     { text: t("LAYOUT.savings.header"), link: PATHS.SAVINGS.link },
-    { text: t("LAYOUT.investments.header"), link: PATHS.INVESTMENTS.link },
+    { text: t("LAYOUT.savings.h-1"), link: PATHS.INVESTMENTS.link },
     { text: t("LAYOUT.taxes.header"), link: PATHS.TAXES.link },
     { text: t("LAYOUT.news.header"), link: PATHS.NEWS.link },
   ];
