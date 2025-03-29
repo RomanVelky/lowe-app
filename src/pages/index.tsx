@@ -14,9 +14,7 @@ const Homepage = () => {
 export default Homepage;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  // Import the messages for the current locale
   const messages = (await import(`../messages/${context.locale}.json`)).default;
-
   return {
     props: {
       messages,
