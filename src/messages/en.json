@@ -157,5 +157,538 @@
         }
       }
     }
+  },
+  "INVESTMENTS": {
+    "hero": {
+      "title": "Smart Investment Guide",
+      "description": "Understand different investment types and make informed decisions for your financial future"
+    },
+    "sections": {
+      "types": {
+        "title": "Investment Types",
+        "stocks": {
+          "title": "Stocks",
+          "description": "Company shares traded on stock exchanges. Higher risk, potential for higher returns.",
+          "return": "Average return: 7-10% annually"
+        },
+        "bonds": {
+          "title": "Bonds",
+          "description": "Fixed-income securities. Lower risk, stable returns. Government or corporate debt instruments.",
+          "return": "Average return: 3-6% annually"
+        },
+        "real-estate": {
+          "title": "Real Estate",
+          "description": "Property investments through REITs or direct ownership. Good for diversification.",
+          "return": "Average return: 8-12% annually"
+        },
+        "etfs": {
+          "title": "ETFs",
+          "description": "Diversified funds tracking indexes. Balance of risk and return. Easy way to invest in markets.",
+          "return": "Average return: 7-9% annually"
+        },
+        "mutual-funds": {
+          "title": "Mutual Funds",
+          "description": "Professionally managed investment pools. Good for hands-off investing.",
+          "return": "Average return: 5-8% annually"
+        },
+        "commodities": {
+          "title": "Commodities",
+          "description": "Raw materials like gold, silver, oil. Good hedge against inflation.",
+          "return": "Average return: 2-8% annually"
+        }
+      },
+      "risk": {
+        "title": "Risk vs Return",
+        "low-risk": {
+          "title": "Lower Risk",
+          "description": "More stable, lower returns",
+          "items": [
+            "Bonds",
+            "Certificates of Deposit",
+            "Treasury Securities",
+            "Money Market Funds"
+          ]
+        },
+        "high-risk": {
+          "title": "Higher Risk",
+          "description": "More volatile, higher potential returns",
+          "items": [
+            "Individual Stocks",
+            "Cryptocurrencies",
+            "Options Trading",
+            "Emerging Markets"
+          ]
+        }
+      },
+      "crypto": {
+        "title": "Curious About Crypto?",
+        "description": "Explore the world of digital currencies, blockchain technology, and decentralized finance.",
+        "button": "Explore Crypto"
+      }
+    }
+  },
+  "SAVINGS_ACCOUNTS": {
+    "hero": {
+      "title": "Savings Accounts Guide",
+      "description": "Understanding your options for secure and profitable savings"
+    },
+    "benefits": {
+      "title": "Why Choose a Savings Account?",
+      "security": {
+        "title": "Safe & Secure",
+        "description": "Protected by deposit insurance up to €100,000 per bank in EU countries"
+      },
+      "interest": {
+        "title": "Earn Interest",
+        "description": "Your money grows over time with compound interest rates"
+      },
+      "access": {
+        "title": "Easy Access",
+        "description": "Access your funds when needed, with various withdrawal options"
+      }
+    },
+    "account_types": {
+      "title": "Types of Savings Accounts",
+      "standard": {
+        "title": "Standard Savings Account",
+        "description": "Basic savings account with regular access to funds",
+        "features": [
+          "Lower interest rates but complete flexibility with withdrawals",
+          "No minimum balance requirements usually",
+          "Perfect for emergency funds and regular savings"
+        ]
+      },
+      "term": {
+        "title": "Term Deposit Account",
+        "description": "Fixed-term savings with higher interest rates",
+        "features": [
+          "Higher interest rates for longer commitment periods",
+          "Fixed terms from 1 month to several years",
+          "Early withdrawal may result in penalties"
+        ]
+      },
+      "high_yield": {
+        "title": "High-Yield Savings Account",
+        "description": "Better interest rates with some conditions",
+        "features": [
+          "Higher interest rates than standard savings accounts",
+          "May require minimum balance or regular deposits",
+          "Often offered by online banks with lower overhead costs"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Account Comparison",
+      "features": {
+        "interest_rate": "Interest Rate",
+        "minimum_balance": "Minimum Balance",
+        "access_to_funds": "Access to Funds",
+        "best_for": "Best For"
+      },
+      "standard": {
+        "interest_rate": "0.01-0.5%",
+        "minimum_balance": "€0",
+        "access_to_funds": "Anytime",
+        "best_for": "Emergency Fund"
+      },
+      "term": {
+        "interest_rate": "2-4%",
+        "minimum_balance": "€500-1000",
+        "access_to_funds": "End of Term",
+        "best_for": "Long-term Savings"
+      },
+      "high_yield": {
+        "interest_rate": "3-4.5%",
+        "minimum_balance": "€0-100",
+        "access_to_funds": "Limited",
+        "best_for": "Growing Savings"
+      }
+    },
+    "tips": {
+      "title": "Tips for Choosing a Savings Account",
+      "goals": {
+        "title": "Consider Your Goals",
+        "items": [
+          "Short-term vs long-term savings",
+          "Emergency fund or wealth building",
+          "Regular access needs"
+        ]
+      },
+      "rates": {
+        "title": "Compare Rates",
+        "items": [
+          "Check multiple banks",
+          "Look at online banks",
+          "Consider promotional rates"
+        ]
+      },
+      "security": {
+        "title": "Check Security",
+        "items": [
+          "Verify deposit insurance",
+          "Review bank reputation",
+          "Check online security features"
+        ]
+      },
+      "fine_print": {
+        "title": "Read the Fine Print",
+        "items": [
+          "Minimum balance requirements",
+          "Monthly fees",
+          "Withdrawal limitations"
+        ]
+      }
+    }
+  },
+  "BUILDING_SAVINGS": {
+    "hero": {
+      "title": "Building Savings",
+      "description": "Understanding Stavebné Sporenie: A Central European Approach to Housing Finance"
+    },
+    "what_is": {
+      "title": "What is Building Savings?",
+      "description": "Building savings (Stavebné sporenie) is a specialized savings and loan program designed to help people save for housing purposes. It combines regular savings with the possibility of obtaining a favorable housing loan, supported by state premiums.",
+      "origins": {
+        "title": "Origins",
+        "description": "The concept originated in Germany (Bausparen) and was adopted by Central European countries, becoming particularly popular in Slovakia and the Czech Republic after 1992."
+      },
+      "popularity": {
+        "title": "Regional Popularity",
+        "description": "Most common in: Germany, Austria, Slovakia, Czech Republic, Hungary, and Croatia. Less common or non-existent in other parts of Europe and the world."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits",
+      "state_premium": {
+        "title": "State Premium",
+        "description": "Annual state contribution up to €70 in Slovakia (varies by year and country). Premium is calculated as a percentage of annual savings."
+      },
+      "interest": {
+        "title": "Guaranteed Interest",
+        "description": "Fixed interest rate on savings (typically 1-2%) plus state premium, making it more attractive than regular savings accounts."
+      },
+      "loan": {
+        "title": "Housing Loan Option",
+        "description": "Right to apply for a favorable housing loan after the savings period, with better interest rates than standard mortgages."
+      }
+    },
+    "how_it_works": {
+      "title": "How Building Savings Works",
+      "savings_phase": {
+        "title": "Savings Phase",
+        "description": "Initial 6-year savings period",
+        "features": [
+          "Regular monthly deposits (amount based on your contract)",
+          "Annual state premium added to your savings",
+          "Interest earned on both savings and state premiums"
+        ]
+      },
+      "loan_phase": {
+        "title": "Loan Phase (Optional)",
+        "description": "After meeting saving requirements",
+        "features": [
+          "Option to apply for a housing loan",
+          "Favorable interest rates compared to standard mortgages",
+          "Loan amount based on saved amount and creditworthiness"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Building Savings Around the World",
+      "country": "Country",
+      "system_name": "System Name",
+      "state_support": "State Support",
+      "popularity": "Popularity",
+      "countries": {
+        "slovakia": {
+          "name": "Slovakia",
+          "system_name": "Stavebné sporenie",
+          "state_support": "Up to €70/year",
+          "popularity": "Very High"
+        },
+        "czech": {
+          "name": "Czech Republic",
+          "system_name": "Stavební spoření",
+          "state_support": "Up to 2,000 Kč/year",
+          "popularity": "Very High"
+        },
+        "germany": {
+          "name": "Germany",
+          "system_name": "Bausparen",
+          "state_support": "Housing Premium",
+          "popularity": "High"
+        },
+        "austria": {
+          "name": "Austria",
+          "system_name": "Bausparen",
+          "state_support": "State Premium",
+          "popularity": "High"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tips for Building Savings",
+      "optimize": {
+        "title": "Optimize Your Savings",
+        "items": [
+          "Save the optimal amount to maximize state premium",
+          "Consider regular monthly deposits",
+          "Plan for the full 6-year term"
+        ]
+      },
+      "planning": {
+        "title": "Long-term Planning",
+        "items": [
+          "Define your housing goals",
+          "Consider future loan needs",
+          "Compare different providers"
+        ]
+      },
+      "benefits": {
+        "title": "State Benefits",
+        "items": [
+          "Understand current premium rates",
+          "Check eligibility conditions",
+          "Monitor policy changes"
+        ]
+      },
+      "protection": {
+        "title": "Protection",
+        "items": [
+          "Savings are state-guaranteed",
+          "Read contract terms carefully",
+          "Keep documentation safe"
+        ]
+      }
+    }
+  },
+  "SAVINGS_INDEX": {
+    "hero": {
+      "title": "Smart Savings Guide",
+      "description": "Discover different ways to save and secure your financial future"
+    },
+    "types": {
+      "title": "Types of Savings",
+      "accounts": {
+        "title": "Savings Accounts",
+        "description": "Traditional banking savings with easy access to your money",
+        "benefits": {
+          "title": "Key Benefits:",
+          "items": [
+            "Easy access to your money",
+            "FDIC/European deposit protection",
+            "No risk investment",
+            "Multiple account options"
+          ]
+        },
+        "interest": {
+          "title": "Interest Rates:",
+          "description": "Current rates range from 0.5% to 4% annually depending on the bank and account type"
+        },
+        "button": "Learn More About Savings Accounts"
+      },
+      "building": {
+        "title": "Building Savings (Stavebné Sporenie)",
+        "description": "Special Slovak savings program for housing purposes",
+        "benefits": {
+          "title": "Key Benefits:",
+          "items": [
+            "State premium contribution",
+            "Favorable interest rates",
+            "Option for future housing loan",
+            "Tax advantages"
+          ]
+        },
+        "features": {
+          "title": "Features:",
+          "items": [
+            "6-year minimum saving period",
+            "State premium up to 70€ annually",
+            "Interest rates around 1-2%"
+          ]
+        },
+        "button": "Explore Building Savings"
+      },
+      "retirement": {
+        "title": "Retirement Savings",
+        "description": "Long-term savings for your retirement years",
+        "options": {
+          "title": "Options Include:",
+          "items": [
+            "2nd Pillar (Mandatory)",
+            "3rd Pillar (Voluntary)",
+            "Supplementary pension savings",
+            "Private retirement accounts"
+          ]
+        },
+        "benefits": {
+          "title": "Benefits:",
+          "items": [
+            "Tax advantages",
+            "Employer contributions possible",
+            "Long-term wealth building"
+          ]
+        },
+        "button": "Plan Your Retirement"
+      }
+    },
+    "tips": {
+      "title": "Smart Saving Tips",
+      "diversify": {
+        "title": "Diversify",
+        "description": "Don't put all your savings in one place. Combine different types of savings for optimal results."
+      },
+      "start_early": {
+        "title": "Start Early",
+        "description": "The earlier you start saving, the more time your money has to grow through compound interest."
+      },
+      "regular": {
+        "title": "Regular Savings",
+        "description": "Set up automatic transfers to your savings accounts each month for consistent growth."
+      }
+    }
+  },
+  "RETIREMENT_SAVINGS": {
+    "hero": {
+      "title": "Retirement Savings in Slovakia",
+      "description": "Understanding the Three-Pillar Pension System and EU Comparisons"
+    },
+    "pension_system": {
+      "title": "Slovak Pension System",
+      "pillars": {
+        "first": {
+          "title": "First Pillar",
+          "subtitle": "Mandatory State Pension",
+          "items": [
+            "Managed by Social Insurance Agency",
+            "Mandatory contributions",
+            "Based on pay-as-you-go system",
+            "18.3% of gross salary"
+          ]
+        },
+        "second": {
+          "title": "Second Pillar",
+          "subtitle": "Private Pension Savings",
+          "items": [
+            "Private pension management companies",
+            "Optional participation",
+            "4.5% of gross salary",
+            "Individual investment choices"
+          ]
+        },
+        "third": {
+          "title": "Third Pillar",
+          "subtitle": "Voluntary Supplementary",
+          "items": [
+            "Voluntary additional savings",
+            "Tax advantages",
+            "Employer contributions possible",
+            "Flexible contribution amounts"
+          ]
+        }
+      }
+    },
+    "key_features": {
+      "title": "Key Features of Slovak System",
+      "contribution_rates": {
+        "title": "Contribution Rates",
+        "table": {
+          "headers": {
+            "pillar": "Pillar",
+            "employee": "Employee",
+            "employer": "Employer",
+            "total": "Total"
+          },
+          "first_pillar": {
+            "name": "1st Pillar",
+            "employee": "4%",
+            "employer": "14.3%",
+            "total": "18.3%"
+          },
+          "second_pillar": {
+            "name": "2nd Pillar",
+            "employee": "4.5%",
+            "employer": "0%",
+            "total": "4.5%"
+          },
+          "third_pillar": {
+            "name": "3rd Pillar",
+            "employee": "Voluntary",
+            "employer": "Optional",
+            "total": "Flexible"
+          }
+        }
+      }
+    },
+    "eu_comparison": {
+      "title": "EU Pension Systems Comparison",
+      "regions": {
+        "western": {
+          "title": "Western Europe",
+          "subtitle": "Germany, France, Netherlands",
+          "characteristics": "Key Characteristics:",
+          "items": [
+            "Higher state pensions",
+            "Well-developed occupational schemes",
+            "Strong private pension markets",
+            "Higher contribution rates"
+          ]
+        },
+        "nordic": {
+          "title": "Nordic Countries",
+          "subtitle": "Sweden, Denmark, Finland",
+          "characteristics": "Key Characteristics:",
+          "items": [
+            "Universal basic pensions",
+            "Strong occupational pensions",
+            "High replacement rates",
+            "Automatic adjustment mechanisms"
+          ]
+        },
+        "central": {
+          "title": "Central Europe",
+          "subtitle": "Slovakia, Czech Republic, Poland",
+          "characteristics": "Key Characteristics:",
+          "items": [
+            "Mixed systems with private elements",
+            "Mandatory second pillars",
+            "Growing voluntary schemes",
+            "Lower replacement rates"
+          ]
+        },
+        "southern": {
+          "title": "Southern Europe",
+          "subtitle": "Italy, Spain, Greece",
+          "characteristics": "Key Characteristics:",
+          "items": [
+            "Strong state pensions",
+            "Less developed private pensions",
+            "Higher pension spending",
+            "Recent reform pressure"
+          ]
+        }
+      }
+    },
+    "recommendations": {
+      "title": "Making the Most of Your Retirement Savings",
+      "tips": {
+        "start_early": {
+          "title": "Start Early",
+          "description": "Begin contributing to voluntary schemes as early as possible to maximize compound interest benefits."
+        },
+        "diversify": {
+          "title": "Diversify",
+          "description": "Participate in multiple pillars to create a balanced retirement portfolio."
+        },
+        "monitor": {
+          "title": "Monitor",
+          "description": "Regularly review your pension fund performance and adjust your strategy accordingly."
+        },
+        "stay_informed": {
+          "title": "Stay Informed",
+          "description": "Keep up with pension system changes and new opportunities for retirement savings."
+        }
+      }
+    }
   }
 }

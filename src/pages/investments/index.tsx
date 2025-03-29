@@ -15,8 +15,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 const Investments = () => {
+  const t = useTranslations("INVESTMENTS");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="min-h-screen bg-background">
@@ -24,11 +27,10 @@ const Investments = () => {
         <section className="px-4 pb-14 container">
           <div className="max-w-[800px] mx-auto text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Smart Investment Guide
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understand different investment types and make informed decisions
-              for your financial future
+              {t("hero.description")}
             </p>
           </div>
         </section>
@@ -36,24 +38,23 @@ const Investments = () => {
         <section className="px-4 py-12 md:py-24 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Investment Types
+              {t("sections.types.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Building2 className="w-5 h-5" />
-                    Stocks
+                    {t("sections.types.stocks.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Company shares traded on stock exchanges. Higher risk,
-                    potential for higher returns.
+                    {t("sections.types.stocks.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-green-500" />
-                    Average return: 7-10% annually
+                    {t("sections.types.stocks.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -61,17 +62,16 @@ const Investments = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <DollarSign className="w-5 h-5" />
-                    Bonds
+                    {t("sections.types.bonds.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Fixed-income securities. Lower risk, stable returns.
-                    Government or corporate debt instruments.
+                    {t("sections.types.bonds.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-blue-500" />
-                    Average return: 3-6% annually
+                    {t("sections.types.bonds.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -79,17 +79,16 @@ const Investments = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Building2 className="w-5 h-5" />
-                    Real Estate
+                    {t("sections.types.real-estate.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Property investments through REITs or direct ownership. Good
-                    for diversification.
+                    {t("sections.types.real-estate.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-green-500" />
-                    Average return: 8-12% annually
+                    {t("sections.types.real-estate.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -97,17 +96,16 @@ const Investments = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Globe className="w-5 h-5" />
-                    ETFs
+                    {t("sections.types.etfs.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Diversified funds tracking indexes. Balance of risk and
-                    return. Easy way to invest in markets.
+                    {t("sections.types.etfs.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-green-500" />
-                    Average return: 7-9% annually
+                    {t("sections.types.etfs.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -115,17 +113,16 @@ const Investments = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="w-5 h-5" />
-                    Mutual Funds
+                    {t("sections.types.mutual-funds.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Professionally managed investment pools. Good for hands-off
-                    investing.
+                    {t("sections.types.mutual-funds.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-green-500" />
-                    Average return: 5-8% annually
+                    {t("sections.types.mutual-funds.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -133,17 +130,16 @@ const Investments = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Coins className="w-5 h-5" />
-                    Commodities
+                    {t("sections.types.commodities.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Raw materials like gold, silver, oil. Good hedge against
-                    inflation.
+                    {t("sections.types.commodities.description")}
                   </p>
                   <div className="mt-4 flex items-center text-sm">
                     <LineChart className="w-4 h-4 mr-2 text-yellow-500" />
-                    Average return: 2-8% annually
+                    {t("sections.types.commodities.return")}
                   </div>
                 </CardContent>
               </Card>
@@ -153,33 +149,35 @@ const Investments = () => {
         {/* Risk vs Return */}
         <section className="px-4 py-12 md:py-24 container">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-            Risk vs Return
+            {t("sections.risk.title")}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
             <Card>
               <CardHeader>
-                <CardTitle>Lower Risk</CardTitle>
-                <CardDescription>More stable, lower returns</CardDescription>
+                <CardTitle>{t("sections.risk.low-risk.title")}</CardTitle>
+                <CardDescription>
+                  {t("sections.risk.low-risk.description")}
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p>• Bonds</p>
-                <p>• Certificates of Deposit</p>
-                <p>• Treasury Securities</p>
-                <p>• Money Market Funds</p>
+                <p>• {t("sections.risk.low-risk.items.0")}</p>
+                <p>• {t("sections.risk.low-risk.items.1")}</p>
+                <p>• {t("sections.risk.low-risk.items.2")}</p>
+                <p>• {t("sections.risk.low-risk.items.3")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Higher Risk</CardTitle>
+                <CardTitle>{t("sections.risk.high-risk.title")}</CardTitle>
                 <CardDescription>
-                  More volatile, higher potential returns
+                  {t("sections.risk.high-risk.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p>• Individual Stocks</p>
-                <p>• Cryptocurrencies</p>
-                <p>• Options Trading</p>
-                <p>• Emerging Markets</p>
+                <p>• {t("sections.risk.high-risk.items.0")}</p>
+                <p>• {t("sections.risk.high-risk.items.1")}</p>
+                <p>• {t("sections.risk.high-risk.items.2")}</p>
+                <p>• {t("sections.risk.high-risk.items.3")}</p>
               </CardContent>
             </Card>
           </div>
@@ -188,14 +186,13 @@ const Investments = () => {
         <section className="px-4 py-12 md:py-24 bg-gradient-to-b from-primary/10 to-primary/5">
           <div className="container max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter">
-              Curious About Crypto?
+              {t("sections.crypto.title")}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Explore the world of digital currencies, blockchain technology,
-              and decentralized finance.
+              {t("sections.crypto.description")}
             </p>
             <Button size="lg" className="mt-6">
-              Explore Crypto
+              {t("sections.crypto.button")}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>

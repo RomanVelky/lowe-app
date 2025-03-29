@@ -21,8 +21,8 @@
       "p-2": "Výpočet hrubej mzdy",
       "h-3": "STAVEBNÉ SPORENIE",
       "p-3": "Výpočet super hrubej mzdy",
-      "h-4": "SPORENIE NA  JEDNODUCHO",
-      "p-4": "Čo je to mzda. aké druhy sú a ako sa vypočítavajú a kde sa uvádzajú"
+      "h-4": "SPORENIE NA  DÔCHODOK",
+      "p-4": "Bližšie informácie o možnostiach sporenia na dôchodok"
     },
     "news": {
       "header": "ČLÁNKY"
@@ -154,6 +154,539 @@
         "item3": {
           "title": "Kto by mohol využiť kalkulačky a poskytované informácie?",
           "content": "Každý. Či už si môžete porovnať platové podmienky voči priemernej mzde, alebo vidieť rozdiel medzi platom zamestnanca, SZČO. Ak vás zaujímajú financie, alebo by ste si radi rozšírili svoje obzory."
+        }
+      }
+    }
+  },
+  "INVESTMENTS": {
+    "hero": {
+      "title": "Sprievodca Investíciami",
+      "description": "Pochopte rôzne typy investícií a robte informované rozhodnutia pre vašu finančnú budúcnosť"
+    },
+    "sections": {
+      "types": {
+        "title": "Typy Investícií",
+        "stocks": {
+          "title": "Akcie",
+          "description": "Podiely spoločností obchodované na burzách. Vyššie riziko, potenciál pre vyššie výnosy.",
+          "return": "Priemerný výnos: 7-10% ročne"
+        },
+        "bonds": {
+          "title": "Dlhopisy",
+          "description": "Cenné papiere s pevným výnosom. Nižšie riziko, stabilné výnosy. Vládne alebo firemné dlhové nástroje.",
+          "return": "Priemerný výnos: 3-6% ročne"
+        },
+        "real-estate": {
+          "title": "Nehnuteľnosti",
+          "description": "Investície do nehnuteľností prostredníctvom REITov alebo priameho vlastníctva. Dobré pre diverzifikáciu.",
+          "return": "Priemerný výnos: 8-12% ročne"
+        },
+        "etfs": {
+          "title": "ETF",
+          "description": "Diverzifikované fondy sledujúce indexy. Rovnováha medzi rizikom a výnosom. Jednoduchý spôsob investovania na trhoch.",
+          "return": "Priemerný výnos: 7-9% ročne"
+        },
+        "mutual-funds": {
+          "title": "Podielové Fondy",
+          "description": "Profesionálne spravované investičné fondy. Vhodné pre pasívne investovanie.",
+          "return": "Priemerný výnos: 5-8% ročne"
+        },
+        "commodities": {
+          "title": "Komodity",
+          "description": "Suroviny ako zlato, striebro, ropa. Dobrá ochrana proti inflácii.",
+          "return": "Priemerný výnos: 2-8% ročne"
+        }
+      },
+      "risk": {
+        "title": "Riziko vs Výnos",
+        "low-risk": {
+          "title": "Nižšie Riziko",
+          "description": "Stabilnejšie, nižšie výnosy",
+          "items": [
+            "Dlhopisy",
+            "Termínované vklady",
+            "Štátne cenné papiere",
+            "Fondy peňažného trhu"
+          ]
+        },
+        "high-risk": {
+          "title": "Vyššie Riziko",
+          "description": "Volatilnejšie, potenciál vyšších výnosov",
+          "items": [
+            "Jednotlivé akcie",
+            "Kryptomeny",
+            "Obchodovanie s opciami",
+            "Rozvíjajúce sa trhy"
+          ]
+        }
+      },
+      "crypto": {
+        "title": "Zaujímajú vás Kryptomeny?",
+        "description": "Preskúmajte svet digitálnych mien, blockchain technológií a decentralizovaných financií.",
+        "button": "Preskúmať Kryptomeny"
+      }
+    }
+  },
+  "SAVINGS_ACCOUNTS": {
+    "hero": {
+      "title": "Sprievodca Sporiacimi Účtami",
+      "description": "Pochopenie možností pre bezpečné a výnosné sporenie"
+    },
+    "benefits": {
+      "title": "Prečo si Vybrať Sporiaci Účet?",
+      "security": {
+        "title": "Bezpečie a Istota",
+        "description": "Chránené poistením vkladov až do výšky 100 000 € na banku v krajinách EÚ"
+      },
+      "interest": {
+        "title": "Zarábanie úrokov",
+        "description": "Vaše peniaze rastú postupom času vďaka zloženému úročeniu"
+      },
+      "access": {
+        "title": "Jednoduchý Prístup",
+        "description": "Prístup k vašim financiám podľa potreby, s rôznymi možnosťami výberu"
+      }
+    },
+    "account_types": {
+      "title": "Typy Sporiacich Účtov",
+      "standard": {
+        "title": "Štandardný Sporiaci Účet",
+        "description": "Základný sporiaci účet s pravidelným prístupom k financiám",
+        "features": [
+          "Nižšie úrokové sadzby, ale úplná flexibilita pri výberoch",
+          "Zvyčajne bez požiadaviek na minimálny zostatok",
+          "Ideálny pre núdzové fondy a pravidelné sporenie"
+        ]
+      },
+      "term": {
+        "title": "Termínovaný Vklad",
+        "description": "Sporenie na pevne stanovenú dobu s vyššími úrokovými sadzbami",
+        "features": [
+          "Vyššie úrokové sadzby pre dlhšie záväzkové obdobia",
+          "Pevné termíny od 1 mesiaca do niekoľkých rokov",
+          "Predčasný výber môže mať za následok pokuty"
+        ]
+      },
+      "high_yield": {
+        "title": "Sporiaci Účet s Vysokým Výnosom",
+        "description": "Lepšie úrokové sadzby s určitými podmienkami",
+        "features": [
+          "Vyššie úrokové sadzby ako štandardné sporiace účty",
+          "Môže vyžadovať minimálny zostatok alebo pravidelné vklady",
+          "Často ponúkané online bankami s nižšími prevádzkovými nákladmi"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Porovnanie Účtov",
+      "features": {
+        "interest_rate": "Úroková Sadzba",
+        "minimum_balance": "Minimálny Zostatok",
+        "access_to_funds": "Prístup k Prostriedkom",
+        "best_for": "Najlepšie Pre"
+      },
+      "standard": {
+        "interest_rate": "0.01-0.5%",
+        "minimum_balance": "€0",
+        "access_to_funds": "Kedykoľvek",
+        "best_for": "Núdzový Fond"
+      },
+      "term": {
+        "interest_rate": "2-4%",
+        "minimum_balance": "€500-1000",
+        "access_to_funds": "Koniec Termínu",
+        "best_for": "Dlhodobé Sporenie"
+      },
+      "high_yield": {
+        "interest_rate": "3-4.5%",
+        "minimum_balance": "€0-100",
+        "access_to_funds": "Obmedzený",
+        "best_for": "Rastúce Úspory"
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Výber Sporiaceho Účtu",
+      "goals": {
+        "title": "Zvážte Svoje Ciele",
+        "items": [
+          "Krátkodobé vs dlhodobé sporenie",
+          "Núdzový fond alebo budovanie majetku",
+          "Potreby pravidelného prístupu"
+        ]
+      },
+      "rates": {
+        "title": "Porovnajte Sadzby",
+        "items": [
+          "Skontrolujte viacero bánk",
+          "Pozrite sa na online banky",
+          "Zvážte propagačné sadzby"
+        ]
+      },
+      "security": {
+        "title": "Skontrolujte Bezpečnosť",
+        "items": [
+          "Overte poistenie vkladov",
+          "Prezrite si reputáciu banky",
+          "Skontrolujte funkcie online zabezpečenia"
+        ]
+      },
+      "fine_print": {
+        "title": "Prečítajte si Drobnú Tlač",
+        "items": [
+          "Požiadavky na minimálny zostatok",
+          "Mesačné poplatky",
+          "Obmedzenia výberu"
+        ]
+      }
+    }
+  },
+  "SAVINGS_INDEX": {
+    "hero": {
+      "title": "Sprievodca Sporením",
+      "description": "Objavte rôzne spôsoby sporenia a zabezpečte svoju finančnú budúcnosť"
+    },
+    "types": {
+      "title": "Typy Sporenia",
+      "accounts": {
+        "title": "Sporiace Účty",
+        "description": "Tradičné bankové sporenie s jednoduchým prístupom k vašim peniazom",
+        "benefits": {
+          "title": "Hlavné Výhody:",
+          "items": [
+            "Jednoduchý prístup k vašim peniazom",
+            "Ochrana vkladov FDIC/Európska",
+            "Investícia bez rizika",
+            "Viacero možností účtov"
+          ]
+        },
+        "interest": {
+          "title": "Úrokové Sadzby:",
+          "description": "Aktuálne sadzby sa pohybujú od 0,5% do 4% ročne v závislosti od banky a typu účtu"
+        },
+        "button": "Zistite Viac o Sporiacich Účtoch"
+      },
+      "building": {
+        "title": "Stavebné Sporenie",
+        "description": "Špeciálny slovenský program sporenia na bytové účely",
+        "benefits": {
+          "title": "Hlavné Výhody:",
+          "items": [
+            "Štátny príspevok",
+            "Výhodné úrokové sadzby",
+            "Možnosť budúceho úveru na bývanie",
+            "Daňové výhody"
+          ]
+        },
+        "features": {
+          "title": "Vlastnosti:",
+          "items": [
+            "Minimálne 6-ročné obdobie sporenia",
+            "Štátna prémia až do 70€ ročne",
+            "Úrokové sadzby okolo 1-2%"
+          ]
+        },
+        "button": "Preskúmať Stavebné Sporenie"
+      },
+      "retirement": {
+        "title": "Sporenie na Dôchodok",
+        "description": "Dlhodobé sporenie na dôchodkové roky",
+        "options": {
+          "title": "Možnosti Zahŕňajú:",
+          "items": [
+            "2. pilier (Povinný)",
+            "3. pilier (Dobrovoľný)",
+            "Doplnkové dôchodkové sporenie",
+            "Súkromné dôchodkové účty"
+          ]
+        },
+        "benefits": {
+          "title": "Výhody:",
+          "items": [
+            "Daňové výhody",
+            "Možné príspevky zamestnávateľa",
+            "Dlhodobé budovanie majetku"
+          ]
+        },
+        "button": "Plánujte Svoj Dôchodok"
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Rozumné Sporenie",
+      "diversify": {
+        "title": "Diverzifikujte",
+        "description": "Neukladajte všetky úspory na jedno miesto. Kombinujte rôzne typy sporenia pre optimálne výsledky."
+      },
+      "start_early": {
+        "title": "Začnite Skoro",
+        "description": "Čím skôr začnete sporiť, tým viac času majú vaše peniaze na rast prostredníctvom zloženého úročenia."
+      },
+      "regular": {
+        "title": "Pravidelné Sporenie",
+        "description": "Nastavte si automatické prevody na sporiace účty každý mesiac pre konzistentný rast."
+      }
+    }
+  },
+  "BUILDING_SAVINGS": {
+    "hero": {
+      "title": "Stavebné Sporenie",
+      "description": "Pochopenie stavebného sporenia: stredoeurópsky prístup k financovaniu bývania"
+    },
+    "what_is": {
+      "title": "Čo je Stavebné Sporenie?",
+      "description": "Stavebné sporenie je špecializovaný sporiaci a úverový program navrhnutý na to, aby pomohol ľuďom sporiť na bytové účely. Kombinuje pravidelné sporenie s možnosťou získať výhodný úver na bývanie, podporovaný štátnymi prémiami.",
+      "origins": {
+        "title": "Pôvod",
+        "description": "Koncept pochádza z Nemecka (Bausparen) a bol prijatý stredoeurópskymi krajinami, pričom sa stal obzvlášť populárnym na Slovensku a v Českej republike po roku 1992."
+      },
+      "popularity": {
+        "title": "Regionálna Popularita",
+        "description": "Najčastejšie v: Nemecku, Rakúsku, na Slovensku, v Českej republike, Maďarsku a Chorvátsku. Menej bežné alebo neexistujúce v iných častiach Európy a sveta."
+      }
+    },
+    "benefits": {
+      "title": "Hlavné Výhody",
+      "state_premium": {
+        "title": "Štátna Prémia",
+        "description": "Ročný štátny príspevok až do výšky 70 € na Slovensku (líši sa podľa roku a krajiny). Prémia sa vypočítava ako percento z ročných úspor."
+      },
+      "interest": {
+        "title": "Garantovaný Úrok",
+        "description": "Pevná úroková sadzba na úspory (zvyčajne 1-2%) plus štátna prémia, čo ju robí atraktívnejšou ako bežné sporiace účty."
+      },
+      "loan": {
+        "title": "Možnosť Úveru na Bývanie",
+        "description": "Právo požiadať o výhodný úver na bývanie po období sporenia, s lepšími úrokovými sadzbami ako štandardné hypotéky."
+      }
+    },
+    "how_it_works": {
+      "title": "Ako Funguje Stavebné Sporenie",
+      "savings_phase": {
+        "title": "Fáza Sporenia",
+        "description": "Počiatočné 6-ročné obdobie sporenia",
+        "features": [
+          "Pravidelné mesačné vklady (suma založená na vašej zmluve)",
+          "Ročná štátna prémia pridaná k vašim úsporám",
+          "Úrok získaný z úspor aj štátnych prémií"
+        ]
+      },
+      "loan_phase": {
+        "title": "Fáza Úveru (Voliteľná)",
+        "description": "Po splnení požiadaviek na sporenie",
+        "features": [
+          "Možnosť požiadať o úver na bývanie",
+          "Výhodné úrokové sadzby v porovnaní so štandardnými hypotékami",
+          "Výška úveru založená na nasporenej sume a úverovej bonite"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Stavebné Sporenie vo Svete",
+      "country": "Krajina",
+      "system_name": "Názov Systému",
+      "state_support": "Štátna Podpora",
+      "popularity": "Popularita",
+      "countries": {
+        "slovakia": {
+          "name": "Slovensko",
+          "system_name": "Stavebné sporenie",
+          "state_support": "Až do €70/rok",
+          "popularity": "Veľmi Vysoká"
+        },
+        "czech": {
+          "name": "Česká republika",
+          "system_name": "Stavební spoření",
+          "state_support": "Až do 2,000 Kč/rok",
+          "popularity": "Veľmi Vysoká"
+        },
+        "germany": {
+          "name": "Nemecko",
+          "system_name": "Bausparen",
+          "state_support": "Prémia na Bývanie",
+          "popularity": "Vysoká"
+        },
+        "austria": {
+          "name": "Rakúsko",
+          "system_name": "Bausparen",
+          "state_support": "Štátna Prémia",
+          "popularity": "Vysoká"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Stavebné Sporenie",
+      "optimize": {
+        "title": "Optimalizujte Svoje Úspory",
+        "items": [
+          "Šetrite optimálnu sumu na maximalizáciu štátnej prémie",
+          "Zvážte pravidelné mesačné vklady",
+          "Plánujte na celé 6-ročné obdobie"
+        ]
+      },
+      "planning": {
+        "title": "Dlhodobé Plánovanie",
+        "items": [
+          "Definujte svoje ciele v oblasti bývania",
+          "Zvážte budúce potreby úverov",
+          "Porovnajte rôznych poskytovateľov"
+        ]
+      },
+      "benefits": {
+        "title": "Štátne Výhody",
+        "items": [
+          "Pochopte aktuálne sadzby prémií",
+          "Skontrolujte podmienky oprávnenosti",
+          "Sledujte zmeny v politike"
+        ]
+      },
+      "protection": {
+        "title": "Ochrana",
+        "items": [
+          "Úspory sú garantované štátom",
+          "Pozorne si prečítajte zmluvné podmienky",
+          "Udržiavajte dokumentáciu v bezpečí"
+        ]
+      }
+    }
+  },
+  "RETIREMENT_SAVINGS": {
+    "hero": {
+      "title": "Dôchodkové Sporenie na Slovensku",
+      "description": "Pochopenie trojpilierového dôchodkového systému a porovnania v rámci EÚ"
+    },
+    "pension_system": {
+      "title": "Slovenský Dôchodkový Systém",
+      "pillars": {
+        "first": {
+          "title": "Prvý Pilier",
+          "subtitle": "Povinný Štátny Dôchodok",
+          "items": [
+            "Spravovaný Sociálnou poisťovňou",
+            "Povinné príspevky",
+            "Založený na priebežnom systéme",
+            "18,3% z hrubej mzdy"
+          ]
+        },
+        "second": {
+          "title": "Druhý Pilier",
+          "subtitle": "Súkromné Dôchodkové Sporenie",
+          "items": [
+            "Súkromné dôchodkové správcovské spoločnosti",
+            "Voliteľná účasť",
+            "4,5% z hrubej mzdy",
+            "Individuálne investičné možnosti"
+          ]
+        },
+        "third": {
+          "title": "Tretí Pilier",
+          "subtitle": "Dobrovoľné Doplnkové",
+          "items": [
+            "Dobrovoľné dodatočné úspory",
+            "Daňové výhody",
+            "Možné príspevky zamestnávateľa",
+            "Flexibilné výšky príspevkov"
+          ]
+        }
+      }
+    },
+    "key_features": {
+      "title": "Kľúčové Vlastnosti Slovenského Systému",
+      "contribution_rates": {
+        "title": "Sadzby Príspevkov",
+        "table": {
+          "headers": {
+            "pillar": "Pilier",
+            "employee": "Zamestnanec",
+            "employer": "Zamestnávateľ",
+            "total": "Celkom"
+          },
+          "first_pillar": {
+            "name": "1. Pilier",
+            "employee": "4%",
+            "employer": "14,3%",
+            "total": "18,3%"
+          },
+          "second_pillar": {
+            "name": "2. Pilier",
+            "employee": "4,5%",
+            "employer": "0%",
+            "total": "4,5%"
+          },
+          "third_pillar": {
+            "name": "3. Pilier",
+            "employee": "Dobrovoľné",
+            "employer": "Voliteľné",
+            "total": "Flexibilné"
+          }
+        }
+      }
+    },
+    "eu_comparison": {
+      "title": "Porovnanie Dôchodkových Systémov v EÚ",
+      "regions": {
+        "western": {
+          "title": "Západná Európa",
+          "subtitle": "Nemecko, Francúzsko, Holandsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Vyššie štátne dôchodky",
+            "Dobre rozvinuté zamestnanecké schémy",
+            "Silné trhy súkromných dôchodkov",
+            "Vyššie sadzby príspevkov"
+          ]
+        },
+        "nordic": {
+          "title": "Severské Krajiny",
+          "subtitle": "Švédsko, Dánsko, Fínsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Univerzálne základné dôchodky",
+            "Silné zamestnanecké dôchodky",
+            "Vysoké náhradové pomery",
+            "Automatické mechanizmy úpravy"
+          ]
+        },
+        "central": {
+          "title": "Stredná Európa",
+          "subtitle": "Slovensko, Česká republika, Poľsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Zmiešané systémy so súkromnými prvkami",
+            "Povinné druhé piliere",
+            "Rastúce dobrovoľné schémy",
+            "Nižšie náhradové pomery"
+          ]
+        },
+        "southern": {
+          "title": "Južná Európa",
+          "subtitle": "Taliansko, Španielsko, Grécko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Silné štátne dôchodky",
+            "Menej rozvinuté súkromné dôchodky",
+            "Vyššie výdavky na dôchodky",
+            "Nedávny tlak na reformy"
+          ]
+        }
+      }
+    },
+    "recommendations": {
+      "title": "Ako Najlepšie Využiť Svoje Dôchodkové Sporenie",
+      "tips": {
+        "start_early": {
+          "title": "Začnite Včas",
+          "description": "Začnite prispievať do dobrovoľných schém čo najskôr, aby ste maximalizovali výhody zloženého úročenia."
+        },
+        "diversify": {
+          "title": "Diverzifikujte",
+          "description": "Zapojte sa do viacerých pilierov, aby ste vytvorili vyvážené dôchodkové portfólio."
+        },
+        "monitor": {
+          "title": "Monitorujte",
+          "description": "Pravidelne kontrolujte výkonnosť svojho dôchodkového fondu a podľa toho upravujte svoju stratégiu."
+        },
+        "stay_informed": {
+          "title": "Buďte Informovaní",
+          "description": "Sledujte zmeny v dôchodkovom systéme a nové príležitosti na dôchodkové sporenie."
         }
       }
     }

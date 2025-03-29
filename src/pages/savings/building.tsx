@@ -25,8 +25,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useTranslations } from "next-intl";
 
 const BuildingSavings = () => {
+  const t = useTranslations("BUILDING_SAVINGS");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="min-h-screen bg-background">
@@ -34,11 +37,10 @@ const BuildingSavings = () => {
         <section className="px-4 pb-14 container">
           <div className="max-w-[800px] mx-auto text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Building Savings
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding Stavebné Sporenie: A Central European Approach to
-              Housing Finance
+              {t("hero.description")}
             </p>
           </div>
         </section>
@@ -47,40 +49,31 @@ const BuildingSavings = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              What is Building Savings?
+              {t("what_is.title")}
             </h2>
             <Card>
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    Building savings (Stavebné sporenie) is a specialized
-                    savings and loan program designed to help people save for
-                    housing purposes. It combines regular savings with the
-                    possibility of obtaining a favorable housing loan, supported
-                    by state premiums.
+                    {t("what_is.description")}
                   </p>
                   <div className="grid gap-4 md:grid-cols-2 pt-4">
                     <div className="space-y-2">
                       <h4 className="font-medium flex items-center gap-2">
                         <Building className="w-5 h-5" />
-                        Origins
+                        {t("what_is.origins.title")}
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        The concept originated in Germany (Bausparen) and was
-                        adopted by Central European countries, becoming
-                        particularly popular in Slovakia and the Czech Republic
-                        after 1992.
+                        {t("what_is.origins.description")}
                       </p>
                     </div>
                     <div className="space-y-2">
                       <h4 className="font-medium flex items-center gap-2">
                         <Globe className="w-5 h-5" />
-                        Regional Popularity
+                        {t("what_is.popularity.title")}
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        Most common in: Germany, Austria, Slovakia, Czech
-                        Republic, Hungary, and Croatia. Less common or
-                        non-existent in other parts of Europe and the world.
+                        {t("what_is.popularity.description")}
                       </p>
                     </div>
                   </div>
@@ -94,21 +87,19 @@ const BuildingSavings = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Key Benefits
+              {t("benefits.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <HandCoins className="w-5 h-5" />
-                    State Premium
+                    {t("benefits.state_premium.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Annual state contribution up to €70 in Slovakia (varies by
-                    year and country). Premium is calculated as a percentage of
-                    annual savings.
+                    {t("benefits.state_premium.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -117,14 +108,12 @@ const BuildingSavings = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Percent className="w-5 h-5" />
-                    Guaranteed Interest
+                    {t("benefits.interest.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Fixed interest rate on savings (typically 1-2%) plus state
-                    premium, making it more attractive than regular savings
-                    accounts.
+                    {t("benefits.interest.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -133,14 +122,12 @@ const BuildingSavings = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Home className="w-5 h-5" />
-                    Housing Loan Option
+                    {t("benefits.loan.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Right to apply for a favorable housing loan after the
-                    savings period, with better interest rates than standard
-                    mortgages.
+                    {t("benefits.loan.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -152,57 +139,51 @@ const BuildingSavings = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              How Building Savings Works
+              {t("how_it_works.title")}
             </h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Savings Phase</CardTitle>
+                  <CardTitle>{t("how_it_works.savings_phase.title")}</CardTitle>
                   <CardDescription>
-                    Initial 6-year savings period
+                    {t("how_it_works.savings_phase.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>
-                      Regular monthly deposits (amount based on your contract)
-                    </p>
+                    <p>{t("how_it_works.savings_phase.features.0")}</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>Annual state premium added to your savings</p>
+                    <p>{t("how_it_works.savings_phase.features.1")}</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>Interest earned on both savings and state premiums</p>
+                    <p>{t("how_it_works.savings_phase.features.2")}</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Loan Phase (Optional)</CardTitle>
+                  <CardTitle>{t("how_it_works.loan_phase.title")}</CardTitle>
                   <CardDescription>
-                    After meeting saving requirements
+                    {t("how_it_works.loan_phase.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>Option to apply for a housing loan</p>
+                    <p>{t("how_it_works.loan_phase.features.0")}</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>
-                      Favorable interest rates compared to standard mortgages
-                    </p>
+                    <p>{t("how_it_works.loan_phase.features.1")}</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                    <p>
-                      Loan amount based on saved amount and creditworthiness
-                    </p>
+                    <p>{t("how_it_works.loan_phase.features.2")}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -214,45 +195,75 @@ const BuildingSavings = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Building Savings Around the World
+              {t("comparison.title")}
             </h2>
             <Card>
               <CardContent className="p-0">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Country</TableHead>
-                      <TableHead>System Name</TableHead>
-                      <TableHead>State Support</TableHead>
-                      <TableHead>Popularity</TableHead>
+                      <TableHead>{t("comparison.country")}</TableHead>
+                      <TableHead>{t("comparison.system_name")}</TableHead>
+                      <TableHead>{t("comparison.state_support")}</TableHead>
+                      <TableHead>{t("comparison.popularity")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">Slovakia</TableCell>
-                      <TableCell>Stavebné sporenie</TableCell>
-                      <TableCell>Up to €70/year</TableCell>
-                      <TableCell>Very High</TableCell>
+                      <TableCell className="font-medium">
+                        {t("comparison.countries.slovakia.name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.slovakia.system_name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.slovakia.state_support")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.slovakia.popularity")}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
-                        Czech Republic
+                        {t("comparison.countries.czech.name")}
                       </TableCell>
-                      <TableCell>Stavební spoření</TableCell>
-                      <TableCell>Up to 2,000 Kč/year</TableCell>
-                      <TableCell>Very High</TableCell>
+                      <TableCell>
+                        {t("comparison.countries.czech.system_name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.czech.state_support")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.czech.popularity")}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Germany</TableCell>
-                      <TableCell>Bausparen</TableCell>
-                      <TableCell>Housing Premium</TableCell>
-                      <TableCell>High</TableCell>
+                      <TableCell className="font-medium">
+                        {t("comparison.countries.germany.name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.germany.system_name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.germany.state_support")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.germany.popularity")}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Austria</TableCell>
-                      <TableCell>Bausparen</TableCell>
-                      <TableCell>State Premium</TableCell>
-                      <TableCell>High</TableCell>
+                      <TableCell className="font-medium">
+                        {t("comparison.countries.austria.name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.austria.system_name")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.austria.state_support")}
+                      </TableCell>
+                      <TableCell>
+                        {t("comparison.countries.austria.popularity")}
+                      </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
@@ -265,25 +276,25 @@ const BuildingSavings = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Tips for Building Savings
+              {t("tips.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Calculator className="w-5 h-5" />
-                    Optimize Your Savings
+                    {t("tips.optimize.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Save the optimal amount to maximize state premium
+                    • {t("tips.optimize.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Consider regular monthly deposits
+                    • {t("tips.optimize.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Plan for the full 6-year term
+                    • {t("tips.optimize.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -292,18 +303,18 @@ const BuildingSavings = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <ChartBar className="w-5 h-5" />
-                    Long-term Planning
+                    {t("tips.planning.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Define your housing goals
+                    • {t("tips.planning.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Consider future loan needs
+                    • {t("tips.planning.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Compare different providers
+                    • {t("tips.planning.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -312,18 +323,18 @@ const BuildingSavings = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Coins className="w-5 h-5" />
-                    State Benefits
+                    {t("tips.benefits.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Understand current premium rates
+                    • {t("tips.benefits.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Check eligibility conditions
+                    • {t("tips.benefits.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Monitor policy changes
+                    • {t("tips.benefits.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -332,18 +343,18 @@ const BuildingSavings = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Shield className="w-5 h-5" />
-                    Protection
+                    {t("tips.protection.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Savings are state-guaranteed
+                    • {t("tips.protection.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Read contract terms carefully
+                    • {t("tips.protection.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Keep documentation safe
+                    • {t("tips.protection.items.2")}
                   </p>
                 </CardContent>
               </Card>

@@ -21,8 +21,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useTranslations } from "next-intl";
 
 const SavingsAccounts = () => {
+  const t = useTranslations("SAVINGS_ACCOUNTS");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="min-h-screen bg-background">
@@ -30,10 +33,10 @@ const SavingsAccounts = () => {
         <section className="px-4 pb-14 container">
           <div className="max-w-[800px] mx-auto text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Savings Accounts Guide
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding your options for secure and profitable savings
+              {t("hero.description")}
             </p>
           </div>
         </section>
@@ -42,20 +45,19 @@ const SavingsAccounts = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Why Choose a Savings Account?
+              {t("benefits.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Shield className="w-5 h-5" />
-                    Safe & Secure
+                    {t("benefits.security.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Protected by deposit insurance up to €100,000 per bank in EU
-                    countries
+                    {t("benefits.security.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -64,12 +66,12 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="w-5 h-5" />
-                    Earn Interest
+                    {t("benefits.interest.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Your money grows over time with compound interest rates
+                    {t("benefits.interest.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -78,13 +80,12 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Wallet className="w-5 h-5" />
-                    Easy Access
+                    {t("benefits.access.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Access your funds when needed, with various withdrawal
-                    options
+                    {t("benefits.access.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -96,33 +97,30 @@ const SavingsAccounts = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Types of Savings Accounts
+              {t("account_types.title")}
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Standard Savings Account</CardTitle>
+                  <CardTitle>{t("account_types.standard.title")}</CardTitle>
                   <CardDescription>
-                    Basic savings account with regular access to funds
+                    {t("account_types.standard.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>
-                        Lower interest rates but complete flexibility with
-                        withdrawals
-                      </p>
+                      <p>{t("account_types.standard.features.0")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>No minimum balance requirements usually</p>
+                      <p>{t("account_types.standard.features.1")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>Perfect for emergency funds and regular savings</p>
+                      <p>{t("account_types.standard.features.2")}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -130,24 +128,24 @@ const SavingsAccounts = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Term Deposit Account</CardTitle>
+                  <CardTitle>{t("account_types.term.title")}</CardTitle>
                   <CardDescription>
-                    Fixed-term savings with higher interest rates
+                    {t("account_types.term.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>Higher interest rates for longer commitment periods</p>
+                      <p>{t("account_types.term.features.0")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>Fixed terms from 1 month to several years</p>
+                      <p>{t("account_types.term.features.1")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <Lock className="w-5 h-5 text-blue-500 mt-0.5" />
-                      <p>Early withdrawal may result in penalties</p>
+                      <p>{t("account_types.term.features.2")}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -155,28 +153,24 @@ const SavingsAccounts = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>High-Yield Savings Account</CardTitle>
+                  <CardTitle>{t("account_types.high_yield.title")}</CardTitle>
                   <CardDescription>
-                    Better interest rates with some conditions
+                    {t("account_types.high_yield.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>
-                        Higher interest rates than standard savings accounts
-                      </p>
+                      <p>{t("account_types.high_yield.features.0")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>May require minimum balance or regular deposits</p>
+                      <p>{t("account_types.high_yield.features.1")}</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <BadgeCheck className="w-5 h-5 text-green-500 mt-0.5" />
-                      <p>
-                        Often offered by online banks with lower overhead costs
-                      </p>
+                      <p>{t("account_types.high_yield.features.2")}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -189,7 +183,7 @@ const SavingsAccounts = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Account Comparison
+              {t("comparison.title")}
             </h2>
 
             <div className="max-w-4xl mx-auto">
@@ -198,42 +192,72 @@ const SavingsAccounts = () => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Feature</TableHead>
-                        <TableHead>Standard Savings</TableHead>
-                        <TableHead>Term Deposit</TableHead>
-                        <TableHead>High-Yield</TableHead>
+                        <TableHead>
+                          {t("comparison.features.interest_rate")}
+                        </TableHead>
+                        <TableHead>
+                          {t("account_types.standard.title")}
+                        </TableHead>
+                        <TableHead>{t("account_types.term.title")}</TableHead>
+                        <TableHead>
+                          {t("account_types.high_yield.title")}
+                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       <TableRow>
                         <TableCell className="font-medium">
-                          Interest Rate
+                          {t("comparison.features.interest_rate")}
                         </TableCell>
-                        <TableCell>0.01-0.5%</TableCell>
-                        <TableCell>2-4%</TableCell>
-                        <TableCell>3-4.5%</TableCell>
+                        <TableCell>
+                          {t("comparison.standard.interest_rate")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.term.interest_rate")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.high_yield.interest_rate")}
+                        </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">
-                          Minimum Balance
+                          {t("comparison.features.minimum_balance")}
                         </TableCell>
-                        <TableCell>€0</TableCell>
-                        <TableCell>€500-1000</TableCell>
-                        <TableCell>€0-100</TableCell>
+                        <TableCell>
+                          {t("comparison.standard.minimum_balance")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.term.minimum_balance")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.high_yield.minimum_balance")}
+                        </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">
-                          Access to Funds
+                          {t("comparison.features.access_to_funds")}
                         </TableCell>
-                        <TableCell>Anytime</TableCell>
-                        <TableCell>End of Term</TableCell>
-                        <TableCell>Limited</TableCell>
+                        <TableCell>
+                          {t("comparison.standard.access_to_funds")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.term.access_to_funds")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.high_yield.access_to_funds")}
+                        </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Best For</TableCell>
-                        <TableCell>Emergency Fund</TableCell>
-                        <TableCell>Long-term Savings</TableCell>
-                        <TableCell>Growing Savings</TableCell>
+                        <TableCell className="font-medium">
+                          {t("comparison.features.best_for")}
+                        </TableCell>
+                        <TableCell>
+                          {t("comparison.standard.best_for")}
+                        </TableCell>
+                        <TableCell>{t("comparison.term.best_for")}</TableCell>
+                        <TableCell>
+                          {t("comparison.high_yield.best_for")}
+                        </TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
@@ -247,7 +271,7 @@ const SavingsAccounts = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Tips for Choosing a Savings Account
+              {t("tips.title")}
             </h2>
 
             <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
@@ -255,18 +279,18 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <PiggyBank className="w-5 h-5" />
-                    Consider Your Goals
+                    {t("tips.goals.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Short-term vs long-term savings
+                    • {t("tips.goals.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Emergency fund or wealth building
+                    • {t("tips.goals.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Regular access needs
+                    • {t("tips.goals.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -275,18 +299,18 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="w-5 h-5" />
-                    Compare Rates
+                    {t("tips.rates.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Check multiple banks
+                    • {t("tips.rates.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Look at online banks
+                    • {t("tips.rates.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Consider promotional rates
+                    • {t("tips.rates.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -295,18 +319,18 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Shield className="w-5 h-5" />
-                    Check Security
+                    {t("tips.security.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Verify deposit insurance
+                    • {t("tips.security.items.0")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Review bank reputation
+                    • {t("tips.security.items.1")}
                   </p>
                   <p className="text-muted-foreground">
-                    • Check online security features
+                    • {t("tips.security.items.2")}
                   </p>
                 </CardContent>
               </Card>
@@ -315,16 +339,18 @@ const SavingsAccounts = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Wallet className="w-5 h-5" />
-                    Read the Fine Print
+                    {t("tips.fine_print.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-muted-foreground">
-                    • Minimum balance requirements
+                    • {t("tips.fine_print.items.0")}
                   </p>
-                  <p className="text-muted-foreground">• Monthly fees</p>
                   <p className="text-muted-foreground">
-                    • Withdrawal limitations
+                    • {t("tips.fine_print.items.1")}
+                  </p>
+                  <p className="text-muted-foreground">
+                    • {t("tips.fine_print.items.2")}
                   </p>
                 </CardContent>
               </Card>
