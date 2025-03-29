@@ -152,7 +152,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jan 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -166,7 +169,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jan 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50  dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -180,7 +186,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jan 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50  dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -194,7 +203,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jan 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-green-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-green-50  dark:bg-green-600"
+                              >
                                 Property
                               </Badge>
                               Property tax return
@@ -233,7 +245,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Feb 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50  dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -247,7 +262,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Feb 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50  dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -261,7 +279,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Feb 28</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50  dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -275,7 +296,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Feb 28</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-purple-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-purple-50  dark:bg-purple-600"
+                              >
                                 Employer
                               </Badge>
                               Annual income overview
@@ -314,7 +338,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Mar 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50  dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -328,7 +355,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Mar 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50  dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -342,10 +372,13 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Mar 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50  dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
-                              <Badge className="bg-red-500 text-white">
+                              <Badge className="bg-red-500 text-white  dark:bg-red-900">
                                 IMPORTANT
                               </Badge>
                               Income tax return filing
@@ -359,7 +392,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Mar 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Quarterly income tax advance
@@ -373,7 +409,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Mar 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-yellow-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-yellow-50 dark:bg-yellow-600"
+                              >
                                 Charity
                               </Badge>
                               2% tax assignment deadline
@@ -416,7 +455,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Apr 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -430,7 +472,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Apr 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -444,7 +489,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Apr 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -483,7 +531,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">May 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -497,7 +548,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">May 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -511,7 +565,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">May 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -550,7 +607,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jun 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -564,7 +624,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jun 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -578,10 +641,13 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jun 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
-                              <Badge className="bg-red-500 text-white">
+                              <Badge className="bg-red-500 text-white dark:bg-red-900">
                                 IMPORTANT
                               </Badge>
                               Extended tax filing deadline
@@ -595,7 +661,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jun 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Quarterly income tax advance
@@ -638,7 +707,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jul 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -652,7 +724,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jul 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -666,7 +741,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Jul 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -705,7 +783,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Aug 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -719,7 +800,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Aug 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -733,7 +817,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Aug 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -772,7 +859,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Sep 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -786,7 +876,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Sep 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -800,10 +893,13 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Sep 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
-                              <Badge className="bg-red-500 text-white">
+                              <Badge className="bg-red-500 text-white dark:bg-red-900">
                                 IMPORTANT
                               </Badge>
                               Foreign income tax filing
@@ -817,7 +913,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Sep 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Quarterly income tax advance
@@ -860,7 +959,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Oct 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -874,7 +976,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Oct 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -888,7 +993,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Oct 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -927,7 +1035,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Nov 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -941,7 +1052,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Nov 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -955,7 +1069,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Nov 30</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance
@@ -994,7 +1111,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Dec 15</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               Monthly advance VAT payment
@@ -1008,7 +1128,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Dec 25</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-blue-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-blue-50 dark:bg-blue-600"
+                              >
                                 VAT
                               </Badge>
                               VAT return filing
@@ -1022,7 +1145,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Dec 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Quarterly income tax advance
@@ -1036,7 +1162,10 @@ const TaxCalendarPage = () => {
                           <TableCell className="font-medium">Dec 31</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Badge variant="outline" className="bg-red-50">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
                                 Income
                               </Badge>
                               Monthly income tax advance

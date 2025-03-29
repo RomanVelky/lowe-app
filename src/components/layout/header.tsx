@@ -18,87 +18,90 @@ import ListItem from "../list-item";
 import ThemeButton from "../unique/theme-button";
 import LangButton from "../unique/lang-button";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
+  const t = useTranslations();
+
   const hamburgerList = [
-    { text: PATHS.WAGES.description, link: PATHS.WAGES.link },
-    { text: PATHS.SAVINGS.description, link: PATHS.SAVINGS.link },
-    { text: PATHS.INVESTMENTS.description, link: PATHS.INVESTMENTS.link },
-    { text: PATHS.TAXES.description, link: PATHS.TAXES.link },
-    { text: PATHS.NEWS.description, link: PATHS.NEWS.link },
+    { text: t("LAYOUT.wages.header"), link: PATHS.WAGES.link },
+    { text: t("LAYOUT.savings.header"), link: PATHS.SAVINGS.link },
+    { text: t("LAYOUT.investments.header"), link: PATHS.INVESTMENTS.link },
+    { text: t("LAYOUT.taxes.header"), link: PATHS.TAXES.link },
+    { text: t("LAYOUT.news.header"), link: PATHS.NEWS.link },
   ];
 
   const headerMenuList = [
     {
-      header: PATHS.WAGES.description,
+      header: t("LAYOUT.wages.header"),
       link: PATHS.WAGES.link,
       colorSubMenu: {
         link: PATHS.WAGES.subPaths.NET_SALARY.link,
-        subHeader: PATHS.WAGES.subPaths.NET_SALARY.text,
-        text: "Jednoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
+        subHeader: t("LAYOUT.wages.h-1"),
+        text: t("LAYOUT.wages.p-1"),
       },
       items: [
         {
           link: PATHS.WAGES.subPaths.GROSS_SALARY.link,
-          subHeader: PATHS.WAGES.subPaths.GROSS_SALARY.text,
-          text: "Výpočet hrubej mzdy",
+          subHeader: t("LAYOUT.wages.h-2"),
+          text: t("LAYOUT.wages.p-2"),
         },
         {
           link: PATHS.WAGES.subPaths.PRICE_OF_WORK.link,
-          subHeader: PATHS.WAGES.subPaths.PRICE_OF_WORK.text,
-          text: "Výpočet superhrubej mzdy",
+          subHeader: t("LAYOUT.wages.h-3"),
+          text: t("LAYOUT.wages.p-3"),
         },
         {
           link: PATHS.WAGES.link,
-          subHeader: "MZDY JEDNODUCHO",
-          text: "Čo je to mzda, aké druhy sú a ako sa vypočítavajú a kde sa udávajú. Porovnanie priemernej mzdy naprieč krajinami.",
+          subHeader: t("LAYOUT.wages.h-4"),
+          text: t("LAYOUT.wages.p-4"),
         },
       ],
     },
     {
-      header: PATHS.SAVINGS.description,
+      header: t("LAYOUT.savings.header"),
       link: PATHS.SAVINGS.link,
       colorSubMenu: {
         link: PATHS.INVESTMENTS.link,
-        subHeader: PATHS.INVESTMENTS.description,
-        text: "Podielové fondy, nehnuteľnosti, akcie, kryptomeny",
+        subHeader: t("LAYOUT.savings.h-1"),
+        text: t("LAYOUT.savings.p-1"),
       },
       items: [
         {
           link: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.link,
-          subHeader: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.text,
-          text: "Typy a fungovanie sporiacich účtov",
+          subHeader: t("LAYOUT.savings.h-2"),
+          text: t("LAYOUT.savings.p-2"),
         },
         {
           link: PATHS.SAVINGS.subPaths.BUILDING_SAVINGS.link,
-          subHeader: PATHS.SAVINGS.subPaths.BUILDING_SAVINGS.text,
-          text: "Čo je to stavebné sporenie?",
+          subHeader: t("LAYOUT.savings.h-3"),
+          text: t("LAYOUT.savings.p-3"),
         },
         {
           link: PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS.link,
-          subHeader: PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS.text,
-          text: "Možnosti sporenia na dôchodok",
+          subHeader: t("LAYOUT.savings.h-4"),
+          text: t("LAYOUT.savings.p-4"),
         },
       ],
     },
     {
-      header: PATHS.TAXES.description,
+      header: t("LAYOUT.taxes.header"),
       link: PATHS.TAXES.link,
       colorSubMenu: {
         link: PATHS.TAXES.subPaths.VAT.link,
-        subHeader: PATHS.TAXES.subPaths.VAT.text,
-        text: "Dôležité informácie o dani z pridanej hodnoty",
+        subHeader: t("LAYOUT.taxes.h-2"),
+        text: t("LAYOUT.taxes.p-2"),
       },
       items: [
         {
           link: PATHS.TAXES.subPaths.INCOME_TAX.link,
-          subHeader: PATHS.TAXES.subPaths.INCOME_TAX.text,
-          text: "Čo je to daň z príjmu? Od čoho závisí jej výška?",
+          subHeader: t("LAYOUT.taxes.h-1"),
+          text: t("LAYOUT.taxes.p-1"),
         },
         {
           link: PATHS.TAXES.subPaths.TAX_CALENDAR.link,
-          subHeader: PATHS.TAXES.subPaths.TAX_CALENDAR.text,
-          text: "Kalendár obsahujúci informácie do kedy a aké dane zaplatiť",
+          subHeader: t("LAYOUT.taxes.h-3"),
+          text: t("LAYOUT.taxes.p-3"),
         },
       ],
     },
@@ -159,7 +162,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <Link href="/news" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    ČLÁNKY
+                    {t("LAYOUT.news.header")}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -172,7 +175,7 @@ const Header = () => {
             <SignedOut>
               <div className="flex gap-2">
                 <Button>
-                  <Link href="/sign-in">Sign In</Link>
+                  <Link href="/sign-in">{t("LAYOUT.login-button")}</Link>
                 </Button>
               </div>
             </SignedOut>

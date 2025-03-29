@@ -4,33 +4,59 @@ import Link from "next/link";
 import Github from "../../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
 import { useUser } from "@clerk/nextjs";
+import { useTranslations } from "next-intl";
 
 type SubPath = { link: string; text: string };
 type Item = SubPath | { link: string; description: string };
 
 const Footer = () => {
+  const t = useTranslations();
   const isLoggedIn = useUser().isSignedIn;
   const footerMenuList: { header: string; items: Item[] }[] = [
     {
-      header: PATHS.WAGES.description,
+      header: t("FOOTER.wages.header"),
       items: [
-        PATHS.WAGES.subPaths.NET_SALARY,
-        { link: PATHS.WAGES.subPaths.NET_SALARY.link, text: "SZČO" },
-        PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS,
+        {
+          link: PATHS.WAGES.subPaths.NET_SALARY.link,
+          text: t("FOOTER.wages.link-1"),
+        },
+        {
+          link: PATHS.WAGES.subPaths.NET_SALARY.link,
+          text: t("FOOTER.wages.link-2"),
+        },
+        {
+          link: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.link,
+          text: t("FOOTER.wages.link-3"),
+        },
       ],
     },
     {
-      header: PATHS.SAVINGS.description,
+      header: t("FOOTER.savings.header"),
       items: [
-        PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS,
-        PATHS.SAVINGS.subPaths.BUILDING_SAVINGS,
-        PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS,
-        PATHS.INVESTMENTS,
+        {
+          link: PATHS.SAVINGS.subPaths.SAVINGS_ACCOUNTS.link,
+          text: t("FOOTER.savings.link-1"),
+        },
+        {
+          link: PATHS.SAVINGS.subPaths.BUILDING_SAVINGS.link,
+          text: t("FOOTER.savings.link-2"),
+        },
+        {
+          link: PATHS.SAVINGS.subPaths.RETIREMENT_SAVINGS.link,
+          text: t("FOOTER.savings.link-3"),
+        },
+        { link: PATHS.INVESTMENTS.link, text: t("FOOTER.savings.link-4") },
       ],
     },
     {
-      header: PATHS.TAXES.description,
-      items: [PATHS.TAXES.subPaths.INCOME_TAX, PATHS.TAXES.subPaths.VAT],
+      header: t("FOOTER.taxes.header"),
+      items: [
+        {
+          link: PATHS.TAXES.subPaths.INCOME_TAX.link,
+          text: t("FOOTER.taxes.link-1"),
+        },
+        { link: PATHS.TAXES.subPaths.VAT.link, text: t("FOOTER.taxes.link-2") },
+      ],
     },
   ];
 
@@ -42,8 +68,7 @@ const Footer = () => {
           <div className="flex gap-5 px-6 flex-col pb-10 md:pb-0 md:text-start text-center">
             <div>
               <p className="text-gray-500 dark:text-gray-400 font-medium">
-                Objav viac jednoduchých a intuitívnych nástrojov na našej
-                stránke
+                {t("FOOTER.p")}
               </p>
             </div>
             <div className="flex md:justify-start justify-center items-center gap-28 md:pt-6">
@@ -52,8 +77,7 @@ const Footer = () => {
               </Link>
               {!isLoggedIn && (
                 <Button>
-                  {" "}
-                  <Link href="/sign-in">Prihlásenie</Link>
+                  <Link href="/sign-in">{t("LAYOUT.login-button")}</Link>
                 </Button>
               )}
             </div>
