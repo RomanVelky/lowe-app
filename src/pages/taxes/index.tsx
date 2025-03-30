@@ -25,8 +25,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useTranslations } from "next-intl";
 
 const Taxes = () => {
+  const t = useTranslations("TAXES_INDEX");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="min-h-screen bg-background">
@@ -34,10 +37,10 @@ const Taxes = () => {
         <section className="px-4 pb-14 container">
           <div className="max-w-[800px] mx-auto text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Slovak Tax Guide
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding Slovak Tax System and Optimization Strategies
+              {t("hero.description")}
             </p>
           </div>
         </section>
@@ -46,25 +49,25 @@ const Taxes = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Main Types of Taxes
+              {t("tax_types.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <CircleDollarSign className="w-5 h-5" />
-                    Income Tax
+                    {t("tax_types.income.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <p className="text-muted-foreground">
-                      Progressive tax rates:
+                      {t("tax_types.income.description")}:
                     </p>
                     <ul className="list-disc list-inside text-muted-foreground">
-                      <li>19% up to €38,553.01</li>
-                      <li>25% above €38,553.01</li>
-                      <li>Tax-free allowance: €4,519.92 (2024)</li>
+                      <li>{t("tax_types.income.items.rate_19")}</li>
+                      <li>{t("tax_types.income.items.rate_25")}</li>
+                      <li>{t("tax_types.income.items.allowance")}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -74,16 +77,18 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <HandCoins className="w-5 h-5" />
-                    VAT
+                    {t("tax_types.vat.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <p className="text-muted-foreground">Three VAT rates:</p>
+                    <p className="text-muted-foreground">
+                      {t("tax_types.vat.description")}:
+                    </p>
                     <ul className="list-disc list-inside text-muted-foreground">
-                      <li>20% standard rate</li>
-                      <li>10% reduced rate</li>
-                      <li>Registration threshold: €49,790</li>
+                      <li>{t("tax_types.vat.items.standard")}</li>
+                      <li>{t("tax_types.vat.items.reduced")}</li>
+                      <li>{t("tax_types.vat.items.threshold")}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -93,17 +98,17 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Building2 className="w-5 h-5" />
-                    Corporate Tax
+                    {t("tax_types.corporate.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <p className="text-muted-foreground">
-                      Corporate income tax:
+                      {t("tax_types.corporate.description")}:
                     </p>
                     <ul className="list-disc list-inside text-muted-foreground">
-                      <li>15% for revenue up to €49,790</li>
-                      <li>21% for revenue above €49,790</li>
+                      <li>{t("tax_types.corporate.items.rate_15")}</li>
+                      <li>{t("tax_types.corporate.items.rate_21")}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -116,34 +121,56 @@ const Taxes = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Business Entities
+              {t("business_entities.title")}
             </h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>SZČO (Self-employed)</CardTitle>
+                  <CardTitle>{t("business_entities.szco.title")}</CardTitle>
                   <CardDescription>
-                    Živnosť / Sole Proprietorship
+                    {t("business_entities.szco.subtitle")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div className="grid gap-4 md:grid-cols-2">
                       <div>
-                        <h4 className="font-medium mb-2">Advantages:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("business_entities.advantages")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Simple to establish</li>
-                          <li>Lower administrative burden</li>
-                          <li>Flat-rate expenses option</li>
-                          <li>Quick setup (within 3 days)</li>
+                          <li>
+                            {t("business_entities.szco.advantages.simple")}
+                          </li>
+                          <li>
+                            {t("business_entities.szco.advantages.lower_admin")}
+                          </li>
+                          <li>
+                            {t("business_entities.szco.advantages.flat_rate")}
+                          </li>
+                          <li>
+                            {t("business_entities.szco.advantages.quick")}
+                          </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-medium mb-2">Disadvantages:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("business_entities.disadvantages")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Personal liability</li>
-                          <li>Limited tax optimization</li>
-                          <li>Higher social contributions</li>
+                          <li>
+                            {t(
+                              "business_entities.szco.disadvantages.liability"
+                            )}
+                          </li>
+                          <li>
+                            {t(
+                              "business_entities.szco.disadvantages.limited_tax"
+                            )}
+                          </li>
+                          <li>
+                            {t("business_entities.szco.disadvantages.social")}
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -153,29 +180,43 @@ const Taxes = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>s.r.o. (Limited Liability Company)</CardTitle>
+                  <CardTitle>{t("business_entities.sro.title")}</CardTitle>
                   <CardDescription>
-                    Spoločnosť s ručením obmedzeným
+                    {t("business_entities.sro.subtitle")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div className="grid gap-4 md:grid-cols-2">
                       <div>
-                        <h4 className="font-medium mb-2">Advantages:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("business_entities.advantages")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Limited liability protection</li>
-                          <li>Better tax optimization</li>
-                          <li>Professional image</li>
-                          <li>Multiple income streams</li>
+                          <li>
+                            {t("business_entities.sro.advantages.liability")}
+                          </li>
+                          <li>{t("business_entities.sro.advantages.tax")}</li>
+                          <li>{t("business_entities.sro.advantages.image")}</li>
+                          <li>
+                            {t("business_entities.sro.advantages.income")}
+                          </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-medium mb-2">Disadvantages:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("business_entities.disadvantages")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Higher setup costs</li>
-                          <li>More administrative work</li>
-                          <li>Double taxation possible</li>
+                          <li>
+                            {t("business_entities.sro.disadvantages.setup")}
+                          </li>
+                          <li>
+                            {t("business_entities.sro.disadvantages.admin")}
+                          </li>
+                          <li>
+                            {t("business_entities.sro.disadvantages.taxation")}
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -190,22 +231,22 @@ const Taxes = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Tax Optimization Strategies
+              {t("optimization.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Calculator className="w-5 h-5" />
-                    SZČO Strategies
+                    {t("optimization.szco.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Use flat-rate expenses (60%)</li>
-                    <li>Timing of income/expenses</li>
-                    <li>Home office deduction</li>
-                    <li>Vehicle expenses optimization</li>
+                    <li>{t("optimization.szco.items.flat_rate")}</li>
+                    <li>{t("optimization.szco.items.timing")}</li>
+                    <li>{t("optimization.szco.items.home_office")}</li>
+                    <li>{t("optimization.szco.items.vehicle")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -214,15 +255,15 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Settings className="w-5 h-5" />
-                    s.r.o. Strategies
+                    {t("optimization.sro.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Salary vs. dividend optimization</li>
-                    <li>Investment tax benefits</li>
-                    <li>R&D deductions</li>
-                    <li>Asset depreciation planning</li>
+                    <li>{t("optimization.sro.items.salary")}</li>
+                    <li>{t("optimization.sro.items.investment")}</li>
+                    <li>{t("optimization.sro.items.rd")}</li>
+                    <li>{t("optimization.sro.items.depreciation")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -231,15 +272,15 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Scale className="w-5 h-5" />
-                    General Tips
+                    {t("optimization.general.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Tax-deductible expenses</li>
-                    <li>Employee benefits</li>
-                    <li>Education and training costs</li>
-                    <li>Charitable contributions</li>
+                    <li>{t("optimization.general.items.deductible")}</li>
+                    <li>{t("optimization.general.items.benefits")}</li>
+                    <li>{t("optimization.general.items.education")}</li>
+                    <li>{t("optimization.general.items.charitable")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -251,49 +292,57 @@ const Taxes = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Slovakia vs. Czech Republic
+              {t("comparison.title")}
             </h2>
             <Card>
               <CardContent className="p-0">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Feature</TableHead>
-                      <TableHead>Slovakia</TableHead>
-                      <TableHead>Czech Republic</TableHead>
+                      <TableHead>{t("comparison.table.feature")}</TableHead>
+                      <TableHead>{t("comparison.table.slovakia")}</TableHead>
+                      <TableHead>{t("comparison.table.czech")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">Income Tax</TableCell>
-                      <TableCell>19% / 25%</TableCell>
-                      <TableCell>15% / 23%</TableCell>
+                      <TableCell className="font-medium">
+                        {t("comparison.table.income_tax")}
+                      </TableCell>
+                      <TableCell>{t("comparison.table.sk_income")}</TableCell>
+                      <TableCell>{t("comparison.table.cz_income")}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
-                        Corporate Tax
+                        {t("comparison.table.corporate_tax")}
                       </TableCell>
-                      <TableCell>15% / 21%</TableCell>
-                      <TableCell>19%</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">VAT</TableCell>
-                      <TableCell>20% / 10%</TableCell>
-                      <TableCell>21% / 15% / 10%</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">
-                        Flat-rate Expenses
+                      <TableCell>
+                        {t("comparison.table.sk_corporate")}
                       </TableCell>
-                      <TableCell>60%</TableCell>
-                      <TableCell>40% - 80%</TableCell>
+                      <TableCell>
+                        {t("comparison.table.cz_corporate")}
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
-                        Social Insurance
+                        {t("comparison.table.vat")}
                       </TableCell>
-                      <TableCell>33.15%</TableCell>
-                      <TableCell>31.3%</TableCell>
+                      <TableCell>{t("comparison.table.sk_vat")}</TableCell>
+                      <TableCell>{t("comparison.table.cz_vat")}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        {t("comparison.table.flat_rate")}
+                      </TableCell>
+                      <TableCell>{t("comparison.table.sk_flat")}</TableCell>
+                      <TableCell>{t("comparison.table.cz_flat")}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        {t("comparison.table.social")}
+                      </TableCell>
+                      <TableCell>{t("comparison.table.sk_social")}</TableCell>
+                      <TableCell>{t("comparison.table.cz_social")}</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
@@ -305,15 +354,15 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <LineChart className="w-5 h-5" />
-                    Slovak Advantages
+                    {t("comparison.sk_advantages.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Lower corporate tax for small businesses</li>
-                    <li>Simpler VAT structure</li>
-                    <li>More straightforward tax system</li>
-                    <li>Lower administrative burden</li>
+                    <li>{t("comparison.sk_advantages.items.corporate")}</li>
+                    <li>{t("comparison.sk_advantages.items.vat")}</li>
+                    <li>{t("comparison.sk_advantages.items.system")}</li>
+                    <li>{t("comparison.sk_advantages.items.admin")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -322,15 +371,15 @@ const Taxes = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="w-5 h-5" />
-                    Czech Advantages
+                    {t("comparison.cz_advantages.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Lower personal income tax rates</li>
-                    <li>More generous flat-rate expenses</li>
-                    <li>Lower social insurance rates</li>
-                    <li>More tax deduction options</li>
+                    <li>{t("comparison.cz_advantages.items.income")}</li>
+                    <li>{t("comparison.cz_advantages.items.flat")}</li>
+                    <li>{t("comparison.cz_advantages.items.social")}</li>
+                    <li>{t("comparison.cz_advantages.items.deduction")}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -342,14 +391,13 @@ const Taxes = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container max-w-4xl text-center">
             <h2 className="text-3xl font-bold tracking-tighter mb-6">
-              Need Professional Advice?
+              {t("final.title")}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Tax laws change frequently. Consider consulting with a tax advisor
-              for personalized optimization strategies.
+              {t("final.description")}
             </p>
             <Button size="lg" className="gap-2">
-              Find Tax Advisor
+              {t("final.button")}
               <ArrowRight className="w-4 h-4" />
             </Button>
           </div>

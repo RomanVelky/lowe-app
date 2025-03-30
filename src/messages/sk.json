@@ -690,5 +690,612 @@
         }
       }
     }
+  },
+  "AUTH": {
+    "sign_in": {
+      "title": "Vitajte na Našej Platforme",
+      "description": "Prihláste sa pre prístup k vášmu účtu a jednoduché spravovanie vašej finančnej cesty"
+    },
+    "sign_up": {
+      "title": "Vytvorte si Účet",
+      "description": "Začnite používať našu platformu"
+    }
+  },
+  "WAGES_INFO": {
+    "title": "Mzdy Jednoducho",
+    "subtitle": "Komplexný prehľad o mzdách, ich typoch a porovnanie v rámci Európskej únie",
+    "cards": {
+      "what_is": {
+        "title": "Čo je mzda?",
+        "description": "Mzda je peňažné plnenie poskytované zamestnávateľom zamestnancovi za vykonanú prácu. Je základným prvkom pracovnoprávnych vzťahov."
+      },
+      "types": {
+        "title": "Druhy miezd",
+        "list_0": "Základná mzda",
+        "list_1": "Hrubá mzda",
+        "list_2": "Čistá mzda",
+        "list_3": "Minimálna mzda"
+      },
+      "where_used": {
+        "title": "Kde sa udávajú?",
+        "description": "Mzdy sa dojednávajú v pracovnej zmluve, kolektívnej zmluve alebo sú stanovené zákonom (minimálna mzda)."
+      }
+    },
+    "comparison": {
+      "title": "Porovnanie minimálnych miezd v EÚ",
+      "subtitle": "Mesačné minimálne mzdy v eurách, 2024",
+      "table": {
+        "country": "Krajina",
+        "min_wage": "Minimálna mzda (€)",
+        "rows_per_page": "Riadkov na stránku",
+        "of": "z",
+        "prev": "Predchádzajúca",
+        "next": "Nasledujúca"
+      }
+    },
+    "calculation": {
+      "title": "Výpočet mzdy",
+      "description": "Výpočet čistej mzdy zahŕňa niekoľko krokov a odvodov:",
+      "steps_0": "Hrubá mzda - základ pre výpočet odvodov a dane",
+      "steps_1": "Odvody do zdravotnej poisťovne",
+      "steps_2": "Odvody do sociálnej poisťovne",
+      "steps_3": "Daň z príjmu"
+    }
+  },
+  "TAX_CALENDAR": {
+    "hero": {
+      "title": "Slovenský Daňový Kalendár 2024",
+      "description": "Všetky Dôležité Daňové Termíny na Slovensku"
+    },
+    "key_deadlines": {
+      "title": "Kľúčové Termíny",
+      "income_tax": {
+        "title": "Daňové Priznanie k Dani z Príjmov",
+        "description": "Štandardný termín: 31. marec 2024",
+        "extensions": "Predĺžené termíny:",
+        "june": "30. jún 2024 (s oznámením)",
+        "september": "30. september 2024 (zahraničné príjmy)"
+      },
+      "vat": {
+        "title": "DPH Priznania",
+        "description": "Mesačné/Štvrťročné podanie",
+        "due_dates": "Termíny splatnosti:",
+        "day_after": "25. deň po zdaňovacom období",
+        "same_day": "Platba DPH splatná v rovnaký deň"
+      },
+      "advance_tax": {
+        "title": "Preddavky na Daň",
+        "description": "Na základe predchádzajúcej daňovej povinnosti",
+        "schedule": "Platobný kalendár:",
+        "quarterly": "Štvrťročne: 31. mar, 30. jún, 30. sep, 31. dec",
+        "monthly": "Mesačne: Posledný deň každého mesiaca"
+      }
+    },
+    "monthly_calendar": {
+      "title": "Mesačný Daňový Kalendár",
+      "tabs": {
+        "q1": "Q1 (Jan-Mar)",
+        "q2": "Q2 (Apr-Jún)",
+        "q3": "Q3 (Júl-Sep)",
+        "q4": "Q4 (Okt-Dec)"
+      },
+      "table": {
+        "date": "Dátum",
+        "obligation": "Povinnosť",
+        "details": "Detaily"
+      },
+      "months": {
+        "january": "Január",
+        "february": "Február",
+        "march": "Marec",
+        "april": "Apríl",
+        "may": "Máj",
+        "june": "Jún",
+        "july": "Júl",
+        "august": "August",
+        "september": "September",
+        "october": "Október",
+        "november": "November",
+        "december": "December"
+      },
+      "obligations": {
+        "monthly_vat_payment": "Mesačná platba preddavku na DPH",
+        "vat_return": "Podanie DPH priznania",
+        "monthly_income_tax": "Mesačný preddavok na daň z príjmov",
+        "property_tax": "Priznanie k dani z nehnuteľností",
+        "annual_income": "Ročný prehľad o príjme",
+        "income_tax_return": "Podanie daňového priznania k dani z príjmov",
+        "quarterly_income_tax": "Štvrťročný preddavok na daň z príjmov",
+        "tax_assignment": "Termín pre 2% asignáciu dane",
+        "extended_filing": "Predĺžený termín pre podanie daňového priznania",
+        "foreign_income": "Podanie daňového priznania pre zahraničné príjmy"
+      },
+      "details": {
+        "dec_previous": "Za december 2023",
+        "jan_previous": "Za január 2023",
+        "feb_previous": "Za február 2023",
+        "mar_previous": "Za marec 2023",
+        "apr_previous": "Za apríl 2023",
+        "may_previous": "Za máj 2023",
+        "jun_previous": "Za jún 2023",
+        "jul_previous": "Za júl 2023",
+        "aug_previous": "Za august 2023",
+        "sep_previous": "Za september 2023",
+        "oct_previous": "Za október 2023",
+        "nov_previous": "Za november 2023",
+        "q4_previous": "Za december 2023 / Q4 2023",
+        "tax_liability": "Pre daňovníkov s daňovou povinnosťou >16 600 €",
+        "property_changes": "Ak nastali zmeny v nehnuteľnostiach v roku 2023",
+        "employer_filing": "Pre zamestnancov žiadajúcich o ročné zúčtovanie cez zamestnávateľa",
+        "standard_deadline": "Štandardný termín pre daňový rok 2023",
+        "q1_payment": "Platba za Q1 pre kvalifikovaných daňovníkov",
+        "charity": "Pre nasmerovanie časti dane na charitu",
+        "charity_portion": "Pre poukázanie 2% daní oprávneným organizáciám",
+        "extension_request": "Termín pre podanie žiadosti o predĺženie lehoty",
+        "foreign_income": "Pre daňovníkov so zahraničnými príjmami",
+        "extension": "Pre tých, ktorí požiadali o predĺženie",
+        "q2_payment": "Platba za Q2 pre kvalifikovaných daňovníkov",
+        "q3_payment": "Platba za Q3 pre kvalifikovaných daňovníkov",
+        "foreign_taxpayers": "Pre daňovníkov so zahraničnými príjmami",
+        "q4_payment": "Platba za Q4 pre kvalifikovaných daňovníkov"
+      },
+      "badges": {
+        "vat": "DPH",
+        "income": "Príjem",
+        "property": "Nehnuteľnosť",
+        "employer": "Zamestnávateľ",
+        "charity": "Charita",
+        "important": "DÔLEŽITÉ"
+      }
+    },
+    "notes": {
+      "title": "Dôležité Poznámky",
+      "extensions": {
+        "title": "Predĺženie Lehôt",
+        "three_month": "3-mesačné predĺženie: Oznámiť daňovému úradu do 31. marca",
+        "six_month": "6-mesačné predĺženie: Len pre zahraničné príjmy",
+        "request": "Žiadosť o predĺženie musí byť podaná pred termínom"
+      },
+      "deadlines": {
+        "title": "Pravidlá Termínov",
+        "weekend": "Ak termín pripadne na víkend/sviatok, posúva sa na nasledujúci pracovný deň",
+        "electronic": "Elektronické podanie sa považuje za včasné, ak je podané do polnoci",
+        "paper": "Papierové podanie musí byť doručené alebo odoslané poštou do termínu"
+      }
+    }
+  },
+  "INCOME_TAX": {
+    "hero": {
+      "title": "Sprievodca Daňou z Príjmu",
+      "description": "Porozumenie dani z príjmu fyzických osôb na Slovensku"
+    },
+    "tax_rates": {
+      "title": "Daňové sadzby (2024)",
+      "rate_19": {
+        "title": "19% Daňová sadzba",
+        "description": "Platí pre ročný zdaniteľný príjem do 38 553,01 €",
+        "includes": "Zahŕňa",
+        "items": {
+          "employment": "Príjem zo zamestnania",
+          "business": "Príjem z podnikania",
+          "rental": "Príjem z prenájmu",
+          "other": "Iné zdroje príjmov"
+        }
+      },
+      "rate_25": {
+        "title": "25% Daňová sadzba",
+        "description": "Platí pre ročný zdaniteľný príjem nad 38 553,01 €",
+        "progressive": "Progresívne zdanenie",
+        "items": {
+          "threshold": "Platí len pre príjem presahujúci limit",
+          "previous": "Predchádzajúci príjem zdanený 19%",
+          "monthly": "Vypočítané na mesačnej báze pre zamestnancov"
+        }
+      }
+    },
+    "allowances": {
+      "title": "Daňové úľavy a odpočty",
+      "personal": {
+        "title": "Osobná úľava",
+        "basic": "Základná nezdaniteľná časť na rok 2024: 4 519,92 €",
+        "conditions_title": "Podmienky",
+        "conditions": {
+          "decreases": "Progresívne sa znižuje s vyšším príjmom",
+          "available": "Dostupná pre všetkých daňovníkov",
+          "monthly": "Vypočítaná mesačne pre zamestnancov"
+        }
+      },
+      "additional": {
+        "title": "Dodatočné odpočty",
+        "spouse": {
+          "title": "Úľava na manžela/manželku",
+          "amount": "Až do výšky 4 519,92 € ročne",
+          "based": "Závisí od príjmu manžela/manželky",
+          "conditions": "Platia špecifické podmienky"
+        },
+        "child": {
+          "title": "Daňový bonus na dieťa",
+          "amount": "50,14 € mesačne na dieťa",
+          "minimum": "Vyžaduje minimálny príjem",
+          "restrictions": "Platia vekové obmedzenia"
+        }
+      }
+    },
+    "income_types": {
+      "title": "Typy zdaniteľných príjmov",
+      "employment": {
+        "title": "Príjem zo zamestnania",
+        "items": {
+          "salary": "Plat a mzda",
+          "bonuses": "Bonusy a provízie",
+          "benefits": "Nepeňažné benefity",
+          "withholding": "Systém zrážkovej dane"
+        }
+      },
+      "business": {
+        "title": "Príjem z podnikania",
+        "items": {
+          "self_employment": "Príjem zo živnosti",
+          "trade": "Príjem z podnikateľského oprávnenia",
+          "professional": "Odborné služby",
+          "agricultural": "Príjem z poľnohospodárstva"
+        }
+      },
+      "capital": {
+        "title": "Kapitálové zisky",
+        "items": {
+          "stock": "Investície na akciovom trhu",
+          "property": "Predaj nehnuteľností",
+          "investment": "Investičný príjem",
+          "dividend": "Príjem z dividend"
+        }
+      }
+    },
+    "dates": {
+      "title": "Dôležité daňové termíny",
+      "table": {
+        "headers": {
+          "date": "Dátum",
+          "requirement": "Povinnosť",
+          "details": "Detaily"
+        },
+        "march": {
+          "date": "31. marec",
+          "requirement": "Štandardný termín podania",
+          "details": "Pre väčšinu daňovníkov"
+        },
+        "june": {
+          "date": "30. jún",
+          "requirement": "Predĺžený termín podania",
+          "details": "S oficiálnym predĺžením"
+        },
+        "september": {
+          "date": "30. september",
+          "requirement": "Termín pre zahraničné príjmy",
+          "details": "Príjem zo zahraničia"
+        },
+        "monthly": {
+          "date": "Mesačne",
+          "requirement": "Preddavky na daň",
+          "details": "Pre kvalifikovaných daňovníkov"
+        }
+      }
+    },
+    "special_cases": {
+      "title": "Špeciálne prípady a výnimky",
+      "first_employment": {
+        "title": "Prvé zamestnanie",
+        "items": {
+          "allowances": "Špeciálne úľavy pre absolventov",
+          "reduced": "Znížené daňové zaťaženie",
+          "time_limited": "Časovo obmedzené výhody"
+        }
+      },
+      "foreign_income": {
+        "title": "Zahraničný príjem",
+        "items": {
+          "treaties": "Zmluvy o zamedzení dvojitého zdanenia",
+          "credits": "Zápočet zahraničnej dane",
+          "requirements": "Špeciálne požiadavky na deklaráciu"
+        }
+      },
+      "tax_relief": {
+        "title": "Daňová úľava",
+        "items": {
+          "research": "Výskum a vývoj",
+          "incentives": "Investičné stimuly",
+          "donations": "Charitatívne dary"
+        }
+      }
+    }
+  },
+  "VAT": {
+    "hero": {
+      "title": "Sprievodca DPH na Slovensku",
+      "description": "Porozumenie sadzbám DPH a požiadavkám na Slovensku"
+    },
+    "rates": {
+      "title": "Prehľad sadzieb DPH",
+      "examples": "Príklady",
+      "applies_to": "Platí pre",
+      "includes": "Zahŕňa",
+      "standard": {
+        "title": "Základná sadzba: 23%",
+        "description": "Platí pre väčšinu tovarov a služieb",
+        "items": {
+          "electronics": "Elektronika",
+          "clothing": "Oblečenie",
+          "services": "Väčšina služieb",
+          "luxury": "Luxusné produkty"
+        }
+      },
+      "reduced": {
+        "title": "Znížená sadzba: 19%",
+        "description": "Položky špecialnej kategórie",
+        "items": {
+          "vinegar": "Ocot",
+          "salt": "Soľ",
+          "energy": "Elektrická energia",
+          "food": "Niektoré potravinové produkty"
+        }
+      },
+      "special": {
+        "title": "Špeciálna sadzba: 5%",
+        "description": "Základné potraviny",
+        "items": {
+          "bread": "Čerstvý chlieb",
+          "milk": "Mlieko a mliečne výrobky",
+          "fruits": "Čerstvé ovocie",
+          "vegetables": "Čerstvá zelenina"
+        }
+      },
+      "zero": {
+        "title": "Nulová sadzba: 0%",
+        "description": "Špeciálne transakcie",
+        "items": {
+          "export": "Vývoz tovaru",
+          "intra_eu": "Dodávky v rámci EÚ",
+          "transport": "Medzinárodná doprava"
+        }
+      },
+      "exempt": {
+        "title": "Oslobodené od DPH",
+        "description": "DPH sa neúčtuje",
+        "items": {
+          "postal": "Poštové služby",
+          "financial": "Finančné služby",
+          "insurance": "Poistenie",
+          "education": "Vzdelávanie"
+        }
+      }
+    },
+    "registration": {
+      "title": "Registrácia k DPH",
+      "requirements": {
+        "title": "Požiadavky na registráciu",
+        "mandatory": {
+          "title": "Povinná registrácia",
+          "items": {
+            "turnover": "Obrat presahuje 49 790 € za 12 po sebe nasledujúcich mesiacov",
+            "business": "Nadobudnutie podniku ako fungujúceho celku od platiteľa DPH",
+            "successor": "Právny nástupca platiteľa DPH"
+          }
+        },
+        "voluntary": {
+          "title": "Dobrovoľná registrácia",
+          "items": {
+            "threshold": "Dostupná pred dosiahnutím limitu",
+            "proof": "Vyžaduje dôkaz o podnikateľskej činnosti",
+            "approval": "Podlieha schváleniu daňovým úradom"
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "Dôležité informácie",
+      "filing": {
+        "title": "Požiadavky na podávanie DPH",
+        "items": {
+          "monthly": "Mesačné podávanie pre nových platiteľov DPH (prvých 12 mesiacov)",
+          "quarterly": "Možnosť štvrťročného podávania, ak je obrat nižší ako 100 000 €",
+          "due": "Daňové priznania k DPH sú splatné do 25. dňa nasledujúceho mesiaca",
+          "lists": "Pre dodávky v rámci EÚ sa vyžadujú zoznamy EC Sales"
+        }
+      },
+      "records": {
+        "title": "Vedenie záznamov",
+        "items": {
+          "maintain": "Udržiavanie záznamov po dobu 10 rokov",
+          "invoice": "Podrobné požiadavky na faktúry",
+          "separate": "Samostatné záznamy pre rôzne sadzby DPH",
+          "digital": "Požiadavky na digitálne ukladanie"
+        }
+      },
+      "penalties": {
+        "title": "Pokuty a sankcie",
+        "items": {
+          "registration": "Late registration: up to €20,000",
+          "filing": "Late filing: from €30 to €16,000",
+          "interest": "Interest on late payments",
+          "additional": "Additional penalties for serious violations"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tipy a osvedčené postupy k DPH",
+      "cash_flow": {
+        "title": "Peňažný tok",
+        "items": {
+          "monitor": "Sledujte termíny platieb DPH",
+          "plan": "Plánujte platby DPH",
+          "account": "Zvážte účet na platby DPH",
+          "receivables": "Starostlivo sledujte pohľadávky"
+        }
+      },
+      "international": {
+        "title": "Medzinárodný obchod",
+        "items": {
+          "rules": "Pochopte pravidlá DPH v EÚ",
+          "verify": "Overte čísla DPH zákazníkov",
+          "export": "Uchovávajte dokumentáciu k vývozu",
+          "representation": "Zvážte fiškálne zastúpenie"
+        }
+      },
+      "mistakes": {
+        "title": "Časté chyby",
+        "items": {
+          "registration": "Late registration",
+          "rate": "Nesprávne použitie sadzby",
+          "documentation": "Chýbajúca dokumentácia",
+          "filing": "Oneskorené podanie priznaní"
+        }
+      }
+    }
+  },
+  "TAXES_INDEX": {
+    "hero": {
+      "title": "Slovenský Daňový Sprievodca",
+      "description": "Porozumenie slovenskému daňovému systému a stratégiám optimalizácie"
+    },
+    "tax_types": {
+      "title": "Hlavné Typy Daní",
+      "income": {
+        "title": "Daň z Príjmu",
+        "description": "Progresívne daňové sadzby",
+        "items": {
+          "rate_19": "19% do 38 553,01 €",
+          "rate_25": "25% nad 38 553,01 €",
+          "allowance": "Nezdaniteľná časť: 4 519,92 € (2024)"
+        }
+      },
+      "vat": {
+        "title": "DPH",
+        "description": "Tri sadzby DPH",
+        "items": {
+          "standard": "20% základná sadzba",
+          "reduced": "10% znížená sadzba",
+          "threshold": "Registračný limit: 49 790 €"
+        }
+      },
+      "corporate": {
+        "title": "Daň Právnických Osôb",
+        "description": "Daň z príjmu právnických osôb",
+        "items": {
+          "rate_15": "15% pre príjmy do 49 790 €",
+          "rate_21": "21% pre príjmy nad 49 790 €"
+        }
+      }
+    },
+    "business_entities": {
+      "title": "Podnikateľské Subjekty",
+      "advantages": "Výhody",
+      "disadvantages": "Nevýhody",
+      "szco": {
+        "title": "SZČO (Živnostník)",
+        "subtitle": "Živnosť / Samostatný podnikateľ",
+        "advantages": {
+          "simple": "Jednoduchá registrácia",
+          "lower_admin": "Nižšia administratívna záťaž",
+          "flat_rate": "Možnosť paušálnych výdavkov",
+          "quick": "Rýchle založenie (do 3 dní)"
+        },
+        "disadvantages": {
+          "liability": "Osobná zodpovednosť",
+          "limited_tax": "Obmedzená daňová optimalizácia",
+          "social": "Vyššie sociálne odvody"
+        }
+      },
+      "sro": {
+        "title": "s.r.o. (Spoločnosť s ručením obmedzeným)",
+        "subtitle": "Spoločnosť s ručením obmedzeným",
+        "advantages": {
+          "liability": "Obmedzené ručenie",
+          "tax": "Lepšia daňová optimalizácia",
+          "image": "Profesionálny imidž",
+          "income": "Viacero zdrojov príjmov"
+        },
+        "disadvantages": {
+          "setup": "Vyššie zriaďovacie náklady",
+          "admin": "Viac administratívnej práce",
+          "taxation": "Možnosť dvojitého zdanenia"
+        }
+      }
+    },
+    "optimization": {
+      "title": "Stratégie Daňovej Optimalizácie",
+      "szco": {
+        "title": "Stratégie pre SZČO",
+        "items": {
+          "flat_rate": "Využitie paušálnych výdavkov (60%)",
+          "timing": "Načasovanie príjmov/výdavkov",
+          "home_office": "Odpočet za domácu kanceláriu",
+          "vehicle": "Optimalizácia výdavkov na vozidlo"
+        }
+      },
+      "sro": {
+        "title": "Stratégie pre s.r.o.",
+        "items": {
+          "salary": "Optimalizácia mzdy vs. dividendy",
+          "investment": "Daňové výhody investícií",
+          "rd": "Odpočty na výskum a vývoj",
+          "depreciation": "Plánovanie odpisovania majetku"
+        }
+      },
+      "general": {
+        "title": "Všeobecné Tipy",
+        "items": {
+          "deductible": "Daňovo uznateľné výdavky",
+          "benefits": "Zamestnanecké benefity",
+          "education": "Náklady na vzdelávanie a školenia",
+          "charitable": "Charitatívne príspevky"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Slovensko vs. Česká republika",
+      "table": {
+        "feature": "Vlastnosť",
+        "slovakia": "Slovensko",
+        "czech": "Česká republika",
+        "income_tax": "Daň z príjmu",
+        "corporate_tax": "Firemná daň",
+        "vat": "DPH",
+        "flat_rate": "Paušálne výdavky",
+        "social": "Sociálne poistenie",
+        "sk_income": "19% / 25%",
+        "cz_income": "15% / 23%",
+        "sk_corporate": "15% / 21%",
+        "cz_corporate": "19%",
+        "sk_vat": "20% / 10%",
+        "cz_vat": "21% / 15% / 10%",
+        "sk_flat": "60%",
+        "cz_flat": "40% - 80%",
+        "sk_social": "33,15%",
+        "cz_social": "31,3%"
+      },
+      "sk_advantages": {
+        "title": "Slovenské výhody",
+        "items": {
+          "corporate": "Nižšia firemná daň pre malé podniky",
+          "vat": "Jednoduchšia štruktúra DPH",
+          "system": "Priamočiarejší daňový systém",
+          "admin": "Nižšia administratívna záťaž"
+        }
+      },
+      "cz_advantages": {
+        "title": "České výhody",
+        "items": {
+          "income": "Nižšie sadzby dane z príjmu fyzických osôb",
+          "flat": "Výhodnejšie paušálne výdavky",
+          "social": "Nižšie sadzby sociálneho poistenia",
+          "deduction": "Viac možností daňových odpočtov"
+        }
+      }
+    },
+    "final": {
+      "title": "Potrebujete Profesionálnu Radu?",
+      "description": "Daňové zákony sa často menia. Zvážte konzultáciu s daňovým poradcom pre personalizované stratégie optimalizácie.",
+      "button": "Nájsť Daňového Poradcu"
+    }
   }
 }

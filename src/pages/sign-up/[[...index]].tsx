@@ -1,11 +1,14 @@
 import { SignUp } from "@clerk/nextjs";
+import { useTranslations } from "next-intl";
 
 const SignUpPage = () => {
+  const t = useTranslations("AUTH.sign_up");
+
   return (
     <div className="flex flex-col items-center justify-center pt-16 text-center mb-8 space-y-2">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">Create an Account</h1>
-        <p className="text-muted-foreground">Get started with our platform</p>
+        <h1 className="text-3xl font-bold">{t("title")}</h1>
+        <p className="text-muted-foreground">{t("description")}</p>
       </div>
       <SignUp
         appearance={{

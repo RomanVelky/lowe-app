@@ -690,5 +690,616 @@
         }
       }
     }
+  },
+  "AUTH": {
+    "sign_in": {
+      "title": "Welcome to Our Platform",
+      "description": "Sign in to access your account and manage your financial journey with ease"
+    },
+    "sign_up": {
+      "title": "Create an Account",
+      "description": "Get started with our platform"
+    }
+  },
+  "WAGES_INFO": {
+    "title": "Wages Made Simple",
+    "subtitle": "Comprehensive overview of wages, their types, and comparison within the European Union",
+    "cards": {
+      "what_is": {
+        "title": "What is a wage?",
+        "description": "A wage is a monetary payment provided by an employer to an employee for work performed. It is a fundamental element of employment relationships."
+      },
+      "types": {
+        "title": "Types of wages",
+        "list_0": "Basic wage",
+        "list_1": "Gross wage",
+        "list_2": "Net wage",
+        "list_3": "Minimum wage"
+      },
+      "where_used": {
+        "title": "Where are they specified?",
+        "description": "Wages are negotiated in employment contracts, collective agreements, or established by law (minimum wage)."
+      }
+    },
+    "comparison": {
+      "title": "Comparison of minimum wages in the EU",
+      "subtitle": "Monthly minimum wages in euros, 2024",
+      "table": {
+        "country": "Country",
+        "min_wage": "Minimum wage (€)",
+        "rows_per_page": "Rows per page",
+        "of": "of",
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "calculation": {
+      "title": "Wage calculation",
+      "description": "Calculation of net wage includes several steps and deductions:",
+      "steps_0": "Gross wage - basis for calculating contributions and taxes",
+      "steps_1": "Health insurance contributions",
+      "steps_2": "Social insurance contributions",
+      "steps_3": "Income tax"
+    }
+  },
+  "TAX_CALENDAR": {
+    "hero": {
+      "title": "Slovak Tax Calendar 2024",
+      "description": "All Important Tax Deadlines in Slovakia"
+    },
+    "key_deadlines": {
+      "title": "Key Deadlines",
+      "income_tax": {
+        "title": "Income Tax Return",
+        "description": "Standard deadline: March 31, 2024",
+        "extensions": "Extended deadlines:",
+        "june": "June 30, 2024 (with notification)",
+        "september": "September 30, 2024 (foreign income)"
+      },
+      "vat": {
+        "title": "VAT Returns",
+        "description": "Monthly/Quarterly filing",
+        "due_dates": "Due dates:",
+        "day_after": "25th day after tax period",
+        "same_day": "VAT payment due same day"
+      },
+      "advance_tax": {
+        "title": "Advance Tax Payments",
+        "description": "Based on previous tax liability",
+        "schedule": "Payment schedule:",
+        "quarterly": "Quarterly: Mar 31, Jun 30, Sep 30, Dec 31",
+        "monthly": "Monthly: Last day of each month"
+      }
+    },
+    "monthly_calendar": {
+      "title": "Monthly Tax Calendar",
+      "tabs": {
+        "q1": "Q1 (Jan-Mar)",
+        "q2": "Q2 (Apr-Jun)",
+        "q3": "Q3 (Jul-Sep)",
+        "q4": "Q4 (Oct-Dec)"
+      },
+      "table": {
+        "date": "Date",
+        "obligation": "Obligation",
+        "details": "Details"
+      },
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "obligations": {
+        "monthly_vat_payment": "Monthly advance VAT payment",
+        "vat_return": "VAT return filing",
+        "monthly_income_tax": "Monthly income tax advance",
+        "property_tax": "Property tax return",
+        "annual_income": "Annual income overview",
+        "income_tax_return": "Income tax return filing",
+        "quarterly_income_tax": "Quarterly income tax advance",
+        "tax_assignment": "2% tax assignment deadline",
+        "extended_filing": "Extended tax filing deadline",
+        "extended_tax_filing": "Deadline for extended tax returns",
+        "foreign_income_tax": "Foreign income tax filing deadline",
+        "foreign_income": "Foreign income tax filing"
+      },
+      "details": {
+        "dec_previous": "For December 2023",
+        "jan_previous": "For January 2023",
+        "feb_previous": "For February 2023",
+        "mar_previous": "For March 2023",
+        "apr_previous": "For April 2023",
+        "may_previous": "For May 2023",
+        "jun_previous": "For June 2023",
+        "jul_previous": "For July 2023",
+        "aug_previous": "For August 2023",
+        "sep_previous": "For September 2023",
+        "oct_previous": "For October 2023",
+        "nov_previous": "For November 2023",
+        "q4_previous": "For December 2023 / Q4 2023",
+        "tax_liability": "For taxpayers with tax liability >€16,600",
+        "property_changes": "If property changes occurred in 2023",
+        "employer_filing": "For employees requesting employer tax filing",
+        "standard_deadline": "Standard deadline for 2023 tax year",
+        "q1_payment": "Q1 payment for qualifying taxpayers",
+        "charity": "For directing portion of taxes to charity",
+        "charity_portion": "For allocating 2% of your taxes to eligible organizations",
+        "extension_request": "Deadline for filing extension requests",
+        "foreign_income": "For foreign income reporting",
+        "q2": "For June 2024 / Q2 2024",
+        "q3": "For September 2024 / Q3 2024",
+        "extension": "For those who requested extension",
+        "q2_payment": "Q2 payment for qualifying taxpayers",
+        "q3_payment": "Q3 payment for qualifying taxpayers",
+        "foreign_taxpayers": "For taxpayers with foreign income",
+        "q4_payment": "Q4 payment for qualifying taxpayers"
+      },
+      "badges": {
+        "vat": "VAT",
+        "income": "Income",
+        "property": "Property",
+        "employer": "Employer",
+        "charity": "Charity",
+        "important": "IMPORTANT"
+      }
+    },
+    "notes": {
+      "title": "Important Notes",
+      "extensions": {
+        "title": "Filing Extensions",
+        "three_month": "3-month extension: Notify tax office by March 31",
+        "six_month": "6-month extension: Only for foreign income",
+        "request": "Extension request must be submitted before deadline"
+      },
+      "deadlines": {
+        "title": "Deadline Rules",
+        "weekend": "If deadline falls on weekend/holiday, moves to next business day",
+        "electronic": "Electronic filing is considered on-time if submitted by midnight",
+        "paper": "Paper filing must be received or postmarked by deadline"
+      }
+    }
+  },
+  "INCOME_TAX": {
+    "hero": {
+      "title": "Slovak Income Tax Guide",
+      "description": "Understanding Personal Income Tax in Slovakia"
+    },
+    "tax_rates": {
+      "title": "Tax Rates (2024)",
+      "rate_19": {
+        "title": "19% Tax Rate",
+        "description": "Applies to annual taxable income up to €38,553.01",
+        "includes": "Includes",
+        "items": {
+          "employment": "Employment income",
+          "business": "Business income",
+          "rental": "Rental income",
+          "other": "Other income sources"
+        }
+      },
+      "rate_25": {
+        "title": "25% Tax Rate",
+        "description": "Applies to annual taxable income above €38,553.01",
+        "progressive": "Progressive taxation",
+        "items": {
+          "threshold": "Only applies to income exceeding threshold",
+          "previous": "Previous income taxed at 19%",
+          "monthly": "Calculated on monthly basis for employment"
+        }
+      }
+    },
+    "allowances": {
+      "title": "Tax Allowances and Deductions",
+      "personal": {
+        "title": "Personal Allowance",
+        "basic": "Basic tax-free allowance for 2024: €4,519.92",
+        "conditions_title": "Conditions",
+        "conditions": {
+          "decreases": "Decreases progressively with higher income",
+          "available": "Available to all taxpayers",
+          "monthly": "Calculated monthly for employees"
+        }
+      },
+      "additional": {
+        "title": "Additional Deductions",
+        "spouse": {
+          "title": "Spouse Allowance",
+          "amount": "Up to €4,519.92 annually",
+          "based": "Based on spouse's income",
+          "conditions": "Specific conditions apply"
+        },
+        "child": {
+          "title": "Child Tax Bonus",
+          "amount": "€50.14 per child monthly",
+          "minimum": "Requires minimum income",
+          "restrictions": "Age restrictions apply"
+        }
+      }
+    },
+    "income_types": {
+      "title": "Types of Taxable Income",
+      "employment": {
+        "title": "Employment Income",
+        "items": {
+          "salary": "Salary and wages",
+          "bonuses": "Bonuses and commissions",
+          "benefits": "Benefits in kind",
+          "withholding": "Withholding tax system"
+        }
+      },
+      "business": {
+        "title": "Business Income",
+        "items": {
+          "self_employment": "Self-employment income",
+          "trade": "Trade license income",
+          "professional": "Professional services",
+          "agricultural": "Agricultural income"
+        }
+      },
+      "capital": {
+        "title": "Capital Gains",
+        "items": {
+          "stock": "Stock market investments",
+          "property": "Property sales",
+          "investment": "Investment income",
+          "dividend": "Dividend income"
+        }
+      }
+    },
+    "dates": {
+      "title": "Important Tax Dates",
+      "table": {
+        "headers": {
+          "date": "Date",
+          "requirement": "Requirement",
+          "details": "Details"
+        },
+        "march": {
+          "date": "March 31",
+          "requirement": "Standard filing deadline",
+          "details": "For most taxpayers"
+        },
+        "june": {
+          "date": "June 30",
+          "requirement": "Extended filing deadline",
+          "details": "With official extension"
+        },
+        "september": {
+          "date": "September 30",
+          "requirement": "Foreign income deadline",
+          "details": "Income from abroad"
+        },
+        "monthly": {
+          "date": "Monthly",
+          "requirement": "Advance tax payments",
+          "details": "For qualifying taxpayers"
+        }
+      }
+    },
+    "special_cases": {
+      "title": "Special Cases and Exemptions",
+      "first_employment": {
+        "title": "First-time Employment",
+        "items": {
+          "allowances": "Special allowances for graduates",
+          "reduced": "Reduced tax burden",
+          "time_limited": "Time-limited benefits"
+        }
+      },
+      "foreign_income": {
+        "title": "Foreign Income",
+        "items": {
+          "treaties": "Double taxation treaties",
+          "credits": "Foreign tax credits",
+          "requirements": "Special declaration requirements"
+        }
+      },
+      "tax_relief": {
+        "title": "Tax Relief",
+        "items": {
+          "research": "Research & Development",
+          "incentives": "Investment incentives",
+          "donations": "Charitable donations"
+        }
+      }
+    }
+  },
+  "VAT": {
+    "hero": {
+      "title": "Slovak VAT Guide",
+      "description": "Understanding VAT Rates and Requirements in Slovakia"
+    },
+    "rates": {
+      "title": "VAT Rates Overview",
+      "examples": "Examples",
+      "applies_to": "Applies to",
+      "includes": "Includes",
+      "standard": {
+        "title": "Standard Rate: 23%",
+        "description": "Applied to most goods and services",
+        "items": {
+          "electronics": "Electronics",
+          "clothing": "Clothing",
+          "services": "Most services",
+          "luxury": "Luxury items"
+        }
+      },
+      "reduced": {
+        "title": "Reduced Rate: 19%",
+        "description": "Special category items",
+        "items": {
+          "vinegar": "Vinegar",
+          "salt": "Salt",
+          "energy": "Electric energy",
+          "food": "Some food products"
+        }
+      },
+      "special": {
+        "title": "Special Rate: 5%",
+        "description": "Basic food items",
+        "items": {
+          "bread": "Fresh bread",
+          "milk": "Milk and dairy",
+          "fruits": "Fresh fruits",
+          "vegetables": "Fresh vegetables"
+        }
+      },
+      "zero": {
+        "title": "Zero Rate: 0%",
+        "description": "Special transactions",
+        "items": {
+          "export": "Export of goods",
+          "intra_eu": "Intra-EU supplies",
+          "transport": "International transport"
+        }
+      },
+      "exempt": {
+        "title": "VAT Exempt",
+        "description": "No VAT charged",
+        "items": {
+          "postal": "Postal services",
+          "financial": "Financial services",
+          "insurance": "Insurance",
+          "education": "Education"
+        }
+      }
+    },
+    "registration": {
+      "title": "VAT Registration",
+      "requirements": {
+        "title": "Registration Requirements",
+        "mandatory": {
+          "title": "Mandatory Registration",
+          "items": {
+            "turnover": "Turnover exceeds €49,790 over 12 consecutive months",
+            "business": "Acquiring a business as a going concern from a VAT payer",
+            "successor": "Legal successor of a VAT payer"
+          }
+        },
+        "voluntary": {
+          "title": "Voluntary Registration",
+          "items": {
+            "threshold": "Available before reaching the threshold",
+            "proof": "Requires proof of business activities",
+            "approval": "Subject to tax authority approval"
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "Important Information",
+      "filing": {
+        "title": "VAT Filing Requirements",
+        "items": {
+          "monthly": "Monthly filing for new VAT payers (first 12 months)",
+          "quarterly": "Option for quarterly filing if turnover below €100,000",
+          "due": "VAT returns due by 25th day of following month",
+          "lists": "EC Sales Lists required for intra-EU supplies"
+        }
+      },
+      "records": {
+        "title": "Record Keeping",
+        "items": {
+          "maintain": "Maintain records for 10 years",
+          "invoice": "Detailed invoice requirements",
+          "separate": "Separate records for different VAT rates",
+          "digital": "Digital storage requirements"
+        }
+      },
+      "penalties": {
+        "title": "Penalties and Fines",
+        "items": {
+          "registration": "Late registration: up to €20,000",
+          "filing": "Late filing: from €30 to €16,000",
+          "interest": "Interest on late payments",
+          "additional": "Additional penalties for serious violations"
+        }
+      }
+    },
+    "tips": {
+      "title": "VAT Tips and Best Practices",
+      "cash_flow": {
+        "title": "Cash Flow",
+        "items": {
+          "monitor": "Monitor VAT payment dates",
+          "plan": "Plan for VAT payments",
+          "account": "Consider VAT payment account",
+          "receivables": "Track receivables carefully"
+        }
+      },
+      "international": {
+        "title": "International Trade",
+        "items": {
+          "rules": "Understand EU VAT rules",
+          "verify": "Verify customer VAT numbers",
+          "export": "Keep export documentation",
+          "representation": "Consider fiscal representation"
+        }
+      },
+      "mistakes": {
+        "title": "Common Mistakes",
+        "items": {
+          "registration": "Late registration",
+          "rate": "Incorrect rate application",
+          "documentation": "Missing documentation",
+          "filing": "Late filing of returns"
+        }
+      }
+    }
+  },
+  "TAXES_INDEX": {
+    "hero": {
+      "title": "Slovak Tax Guide",
+      "description": "Understanding Slovak Tax System and Optimization Strategies"
+    },
+    "tax_types": {
+      "title": "Main Types of Taxes",
+      "income": {
+        "title": "Income Tax",
+        "description": "Progressive tax rates",
+        "items": {
+          "rate_19": "19% up to €38,553.01",
+          "rate_25": "25% above €38,553.01",
+          "allowance": "Tax-free allowance: €4,519.92 (2024)"
+        }
+      },
+      "vat": {
+        "title": "VAT",
+        "description": "Three VAT rates",
+        "items": {
+          "standard": "20% standard rate",
+          "reduced": "10% reduced rate",
+          "threshold": "Registration threshold: €49,790"
+        }
+      },
+      "corporate": {
+        "title": "Corporate Tax",
+        "description": "Corporate income tax",
+        "items": {
+          "rate_15": "15% for revenue up to €49,790",
+          "rate_21": "21% for revenue above €49,790"
+        }
+      }
+    },
+    "business_entities": {
+      "title": "Business Entities",
+      "advantages": "Advantages",
+      "disadvantages": "Disadvantages",
+      "szco": {
+        "title": "SZČO (Self-employed)",
+        "subtitle": "Živnosť / Sole Proprietorship",
+        "advantages": {
+          "simple": "Simple to establish",
+          "lower_admin": "Lower administrative burden",
+          "flat_rate": "Flat-rate expenses option",
+          "quick": "Quick setup (within 3 days)"
+        },
+        "disadvantages": {
+          "liability": "Personal liability",
+          "limited_tax": "Limited tax optimization",
+          "social": "Higher social contributions"
+        }
+      },
+      "sro": {
+        "title": "s.r.o. (Limited Liability Company)",
+        "subtitle": "Spoločnosť s ručením obmedzeným",
+        "advantages": {
+          "liability": "Limited liability protection",
+          "tax": "Better tax optimization",
+          "image": "Professional image",
+          "income": "Multiple income streams"
+        },
+        "disadvantages": {
+          "setup": "Higher setup costs",
+          "admin": "More administrative work",
+          "taxation": "Double taxation possible"
+        }
+      }
+    },
+    "optimization": {
+      "title": "Tax Optimization Strategies",
+      "szco": {
+        "title": "SZČO Strategies",
+        "items": {
+          "flat_rate": "Use flat-rate expenses (60%)",
+          "timing": "Timing of income/expenses",
+          "home_office": "Home office deduction",
+          "vehicle": "Vehicle expenses optimization"
+        }
+      },
+      "sro": {
+        "title": "s.r.o. Strategies",
+        "items": {
+          "salary": "Salary vs. dividend optimization",
+          "investment": "Investment tax benefits",
+          "rd": "R&D deductions",
+          "depreciation": "Asset depreciation planning"
+        }
+      },
+      "general": {
+        "title": "General Tips",
+        "items": {
+          "deductible": "Tax-deductible expenses",
+          "benefits": "Employee benefits",
+          "education": "Education and training costs",
+          "charitable": "Charitable contributions"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Slovakia vs. Czech Republic",
+      "table": {
+        "feature": "Feature",
+        "slovakia": "Slovakia",
+        "czech": "Czech Republic",
+        "income_tax": "Income Tax",
+        "corporate_tax": "Corporate Tax",
+        "vat": "VAT",
+        "flat_rate": "Flat-rate Expenses",
+        "social": "Social Insurance",
+        "sk_income": "19% / 25%",
+        "cz_income": "15% / 23%",
+        "sk_corporate": "15% / 21%",
+        "cz_corporate": "19%",
+        "sk_vat": "20% / 10%",
+        "cz_vat": "21% / 15% / 10%",
+        "sk_flat": "60%",
+        "cz_flat": "40% - 80%",
+        "sk_social": "33.15%",
+        "cz_social": "31.3%"
+      },
+      "sk_advantages": {
+        "title": "Slovak Advantages",
+        "items": {
+          "corporate": "Lower corporate tax for small businesses",
+          "vat": "Simpler VAT structure",
+          "system": "More straightforward tax system",
+          "admin": "Lower administrative burden"
+        }
+      },
+      "cz_advantages": {
+        "title": "Czech Advantages",
+        "items": {
+          "income": "Lower personal income tax rates",
+          "flat": "More generous flat-rate expenses",
+          "social": "Lower social insurance rates",
+          "deduction": "More tax deduction options"
+        }
+      }
+    },
+    "final": {
+      "title": "Need Professional Advice?",
+      "description": "Tax laws change frequently. Consider consulting with a tax advisor for personalized optimization strategies.",
+      "button": "Find Tax Advisor"
+    }
   }
 }

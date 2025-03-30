@@ -3,13 +3,9 @@ import {
   CalendarClock,
   CalendarDays,
   CircleDollarSign,
-  Download,
   FileText,
   HandCoins,
-  HelpCircle,
-  Printer,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
@@ -21,46 +17,50 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslations } from "next-intl";
 
 const TaxCalendarPage = () => {
+  const t = useTranslations("TAX_CALENDAR");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="px-4 py-12 md:py-24 lg:py-32 container">
         <div className="max-w-[800px] mx-auto text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-            Slovak Tax Calendar 2024
+            {t("hero.title")}
           </h1>
           <p className="text-xl text-muted-foreground">
-            All Important Tax Deadlines in Slovakia
+            {t("hero.description")}
           </p>
         </div>
       </section>
 
       {/* Quick Reference */}
-
       <section className="px-4 py-12 bg-muted/50 rounded-md">
         <div className="container">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-            Key Deadlines
+            {t("key_deadlines.title")}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             <Card className="border-l-4 border-l-red-500">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="w-5 h-5" />
-                  Income Tax Return
+                  {t("key_deadlines.income_tax.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Standard deadline: March 31, 2024
+                  {t("key_deadlines.income_tax.description")}
                 </p>
                 <div className="space-y-2">
-                  <p className="text-sm">Extended deadlines:</p>
+                  <p className="text-sm">
+                    {t("key_deadlines.income_tax.extensions")}
+                  </p>
                   <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                    <li>June 30, 2024 (with notification)</li>
-                    <li>September 30, 2024 (foreign income)</li>
+                    <li>{t("key_deadlines.income_tax.june")}</li>
+                    <li>{t("key_deadlines.income_tax.september")}</li>
                   </ul>
                 </div>
               </CardContent>
@@ -70,18 +70,18 @@ const TaxCalendarPage = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <HandCoins className="w-5 h-5" />
-                  VAT Returns
+                  {t("key_deadlines.vat.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Monthly/Quarterly filing
+                  {t("key_deadlines.vat.description")}
                 </p>
                 <div className="space-y-2">
-                  <p className="text-sm">Due dates:</p>
+                  <p className="text-sm">{t("key_deadlines.vat.due_dates")}</p>
                   <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                    <li>25th day after tax period</li>
-                    <li>VAT payment due same day</li>
+                    <li>{t("key_deadlines.vat.day_after")}</li>
+                    <li>{t("key_deadlines.vat.same_day")}</li>
                   </ul>
                 </div>
               </CardContent>
@@ -91,18 +91,20 @@ const TaxCalendarPage = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CircleDollarSign className="w-5 h-5" />
-                  Advance Tax Payments
+                  {t("key_deadlines.advance_tax.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Based on previous tax liability
+                  {t("key_deadlines.advance_tax.description")}
                 </p>
                 <div className="space-y-2">
-                  <p className="text-sm">Payment schedule:</p>
+                  <p className="text-sm">
+                    {t("key_deadlines.advance_tax.schedule")}
+                  </p>
                   <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                    <li>Quarterly: Mar 31, Jun 30, Sep 30, Dec 31</li>
-                    <li>Monthly: Last day of each month</li>
+                    <li>{t("key_deadlines.advance_tax.quarterly")}</li>
+                    <li>{t("key_deadlines.advance_tax.monthly")}</li>
                   </ul>
                 </div>
               </CardContent>
@@ -115,15 +117,23 @@ const TaxCalendarPage = () => {
       <section className="px-4 py-12 md:py-24">
         <div className="container max-w-5xl">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-            Monthly Tax Calendar
+            {t("monthly_calendar.title")}
           </h2>
 
           <Tabs defaultValue="q1" className="w-full">
             <TabsList className="grid grid-cols-4 mb-8">
-              <TabsTrigger value="q1">Q1 (Jan-Mar)</TabsTrigger>
-              <TabsTrigger value="q2">Q2 (Apr-Jun)</TabsTrigger>
-              <TabsTrigger value="q3">Q3 (Jul-Sep)</TabsTrigger>
-              <TabsTrigger value="q4">Q4 (Oct-Dec)</TabsTrigger>
+              <TabsTrigger value="q1">
+                {t("monthly_calendar.tabs.q1")}
+              </TabsTrigger>
+              <TabsTrigger value="q2">
+                {t("monthly_calendar.tabs.q2")}
+              </TabsTrigger>
+              <TabsTrigger value="q3">
+                {t("monthly_calendar.tabs.q3")}
+              </TabsTrigger>
+              <TabsTrigger value="q4">
+                {t("monthly_calendar.tabs.q4")}
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="q1">
@@ -133,17 +143,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      January
+                      {t("monthly_calendar.months.january")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -156,13 +170,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For December 2023
+                            {t("monthly_calendar.details.dec_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -173,13 +189,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50  dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For December 2023 / Q4 2023
+                            {t("monthly_calendar.details.q4_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -190,13 +206,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50  dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -207,13 +225,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-green-50  dark:bg-green-600"
                               >
-                                Property
+                                {t("monthly_calendar.badges.property")}
                               </Badge>
-                              Property tax return
+                              {t("monthly_calendar.obligations.property_tax")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            If property changes occurred in 2023
+                            {t("monthly_calendar.details.property_changes")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -226,17 +244,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      February
+                      {t("monthly_calendar.months.february")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -247,15 +269,17 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-blue-50  dark:bg-blue-600"
+                                className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For January 2024
+                            {t("monthly_calendar.details.jan_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -264,15 +288,15 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-blue-50  dark:bg-blue-600"
+                                className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For January 2024
+                            {t("monthly_calendar.details.jan_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -281,15 +305,17 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-red-50  dark:bg-red-600"
+                                className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -298,15 +324,17 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-purple-50  dark:bg-purple-600"
+                                className="bg-purple-50 dark:bg-purple-600"
                               >
-                                Employer
+                                {t("monthly_calendar.badges.employer")}
                               </Badge>
-                              Annual income overview
+                              {t(
+                                "monthly_calendar.obligations.annual_income_overview"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For employees requesting employer tax filing
+                            {t("monthly_calendar.details.employer_filing")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -319,17 +347,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      March
+                      {t("monthly_calendar.months.march")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -340,15 +372,17 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-blue-50  dark:bg-blue-600"
+                                className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For February 2024
+                            {t("monthly_calendar.details.feb_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -357,35 +391,15 @@ const TaxCalendarPage = () => {
                             <div className="flex items-center gap-2">
                               <Badge
                                 variant="outline"
-                                className="bg-blue-50  dark:bg-blue-600"
+                                className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For February 2024
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell className="font-medium">Mar 31</TableCell>
-                          <TableCell>
-                            <div className="flex items-center gap-2">
-                              <Badge
-                                variant="outline"
-                                className="bg-red-50  dark:bg-red-600"
-                              >
-                                Income
-                              </Badge>
-                              <Badge className="bg-red-500 text-white  dark:bg-red-900">
-                                IMPORTANT
-                              </Badge>
-                              Income tax return filing
-                            </div>
-                          </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            Standard deadline for 2023 tax year
+                            {t("monthly_calendar.details.feb_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -396,13 +410,37 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Quarterly income tax advance
+                              <Badge className="bg-red-500 text-white dark:bg-red-900">
+                                {t("monthly_calendar.badges.important")}
+                              </Badge>
+                              {t(
+                                "monthly_calendar.obligations.income_tax_return"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            Q1 payment for qualifying taxpayers
+                            {t("monthly_calendar.details.standard_deadline")}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Mar 31</TableCell>
+                          <TableCell>
+                            <div className="flex items-center gap-2">
+                              <Badge
+                                variant="outline"
+                                className="bg-red-50 dark:bg-red-600"
+                              >
+                                {t("monthly_calendar.badges.income")}
+                              </Badge>
+                              {t(
+                                "monthly_calendar.obligations.quarterly_income_tax"
+                              )}
+                            </div>
+                          </TableCell>
+                          <TableCell className="hidden md:table-cell">
+                            {t("monthly_calendar.details.q1_payment")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -413,13 +451,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-yellow-50 dark:bg-yellow-600"
                               >
-                                Charity
+                                {t("monthly_calendar.badges.charity")}
                               </Badge>
-                              2% tax assignment deadline
+                              {t("monthly_calendar.obligations.tax_assignment")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For directing portion of taxes to charity
+                            {t("monthly_calendar.details.charity_portion")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -436,17 +474,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      April
+                      {t("monthly_calendar.months.april")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -459,13 +501,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For March 2024
+                            {t("monthly_calendar.details.mar_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -476,13 +520,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For March 2024 / Q1 2024
+                            {t("monthly_calendar.details.mar_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -493,13 +537,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -512,17 +558,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      May
+                      {t("monthly_calendar.months.may")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -535,13 +585,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For April 2024
+                            {t("monthly_calendar.details.apr_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -552,13 +604,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For April 2024
+                            {t("monthly_calendar.details.apr_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -569,13 +621,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -588,17 +642,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      June
+                      {t("monthly_calendar.months.june")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -611,13 +669,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For May 2024
+                            {t("monthly_calendar.details.may_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -628,13 +688,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For May 2024
+                            {t("monthly_calendar.details.may_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -645,16 +705,18 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
                               <Badge className="bg-red-500 text-white dark:bg-red-900">
-                                IMPORTANT
+                                {t("monthly_calendar.badges.important")}
                               </Badge>
-                              Extended tax filing deadline
+                              {t(
+                                "monthly_calendar.obligations.extended_tax_filing"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For those who requested extension
+                            {t("monthly_calendar.details.extension_request")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -665,13 +727,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Quarterly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.quarterly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            Q2 payment for qualifying taxpayers
+                            {t("monthly_calendar.details.q2_payment")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -688,17 +752,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      July
+                      {t("monthly_calendar.months.july")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -711,13 +779,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For June 2024
+                            {t("monthly_calendar.details.jun_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -728,13 +798,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For June 2024 / Q2 2024
+                            {t("monthly_calendar.details.jun_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -745,13 +815,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -764,17 +836,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      August
+                      {t("monthly_calendar.months.august")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -787,13 +863,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For July 2024
+                            {t("monthly_calendar.details.jul_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -804,13 +882,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For July 2024
+                            {t("monthly_calendar.details.jul_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -821,13 +899,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -840,17 +920,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      September
+                      {t("monthly_calendar.months.september")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -863,13 +947,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For August 2024
+                            {t("monthly_calendar.details.aug_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -880,13 +966,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For August 2024
+                            {t("monthly_calendar.details.aug_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -897,16 +983,18 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
                               <Badge className="bg-red-500 text-white dark:bg-red-900">
-                                IMPORTANT
+                                {t("monthly_calendar.badges.important")}
                               </Badge>
-                              Foreign income tax filing
+                              {t(
+                                "monthly_calendar.obligations.foreign_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with foreign income
+                            {t("monthly_calendar.details.foreign_income")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -917,13 +1005,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Quarterly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.quarterly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            Q3 payment for qualifying taxpayers
+                            {t("monthly_calendar.details.q3_payment")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -940,17 +1030,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      October
+                      {t("monthly_calendar.months.october")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -963,13 +1057,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For September 2024
+                            {t("monthly_calendar.details.sep_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -980,13 +1076,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For September 2024 / Q3 2024
+                            {t("monthly_calendar.details.sep_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -997,13 +1093,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -1016,17 +1114,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      November
+                      {t("monthly_calendar.months.november")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -1039,13 +1141,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For October 2024
+                            {t("monthly_calendar.details.oct_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -1056,13 +1160,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For October 2024
+                            {t("monthly_calendar.details.oct_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -1073,13 +1177,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -1092,17 +1198,21 @@ const TaxCalendarPage = () => {
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="flex items-center gap-2">
                       <CalendarDays className="w-5 h-5" />
-                      December
+                      {t("monthly_calendar.months.december")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[100px]">Date</TableHead>
-                          <TableHead>Obligation</TableHead>
+                          <TableHead className="w-[100px]">
+                            {t("monthly_calendar.table.date")}
+                          </TableHead>
+                          <TableHead>
+                            {t("monthly_calendar.table.obligation")}
+                          </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Details
+                            {t("monthly_calendar.table.details")}
                           </TableHead>
                         </TableRow>
                       </TableHeader>
@@ -1115,13 +1225,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              Monthly advance VAT payment
+                              {t(
+                                "monthly_calendar.obligations.monthly_vat_payment"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For November 2024
+                            {t("monthly_calendar.details.nov_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -1132,13 +1244,13 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-blue-50 dark:bg-blue-600"
                               >
-                                VAT
+                                {t("monthly_calendar.badges.vat")}
                               </Badge>
-                              VAT return filing
+                              {t("monthly_calendar.obligations.vat_return")}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For November 2024
+                            {t("monthly_calendar.details.nov_previous")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -1149,13 +1261,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Quarterly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.quarterly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            Q4 payment for qualifying taxpayers
+                            {t("monthly_calendar.details.q4_payment")}
                           </TableCell>
                         </TableRow>
                         <TableRow>
@@ -1166,13 +1280,15 @@ const TaxCalendarPage = () => {
                                 variant="outline"
                                 className="bg-red-50 dark:bg-red-600"
                               >
-                                Income
+                                {t("monthly_calendar.badges.income")}
                               </Badge>
-                              Monthly income tax advance
+                              {t(
+                                "monthly_calendar.obligations.monthly_income_tax"
+                              )}
                             </div>
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
-                            For taxpayers with tax liability &gt;€16,600
+                            {t("monthly_calendar.details.tax_liability")}
                           </TableCell>
                         </TableRow>
                       </TableBody>
@@ -1189,21 +1305,21 @@ const TaxCalendarPage = () => {
       <section className="px-4 py-12 bg-muted/50 rounded-md">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-            Important Notes
+            {t("notes.title")}
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5" />
-                  Filing Extensions
+                  {t("notes.extensions.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>3-month extension: Notify tax office by March 31</li>
-                  <li>6-month extension: Only for foreign income</li>
-                  <li>Extension request must be submitted before deadline</li>
+                  <li>{t("notes.extensions.three_month")}</li>
+                  <li>{t("notes.extensions.six_month")}</li>
+                  <li>{t("notes.extensions.request")}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -1212,22 +1328,14 @@ const TaxCalendarPage = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CalendarClock className="w-5 h-5" />
-                  Deadline Rules
+                  {t("notes.deadlines.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>
-                    If deadline falls on weekend/holiday, moves to next business
-                    day
-                  </li>
-                  <li>
-                    Electronic filing is considered on-time if submitted by
-                    midnight
-                  </li>
-                  <li>
-                    Paper filing must be received or postmarked by deadline
-                  </li>
+                  <li>{t("notes.deadlines.weekend")}</li>
+                  <li>{t("notes.deadlines.electronic")}</li>
+                  <li>{t("notes.deadlines.paper")}</li>
                 </ul>
               </CardContent>
             </Card>

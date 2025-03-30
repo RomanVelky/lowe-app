@@ -23,8 +23,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useTranslations } from "next-intl";
 
 const IncomeTaxPage = () => {
+  const t = useTranslations("INCOME_TAX");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="min-h-screen bg-background">
@@ -32,10 +35,10 @@ const IncomeTaxPage = () => {
         <section className="px-4 pb-14 container">
           <div className="max-w-[800px] mx-auto text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Slovak Income Tax Guide
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding Personal Income Tax in Slovakia
+              {t("hero.description")}
             </p>
           </div>
         </section>
@@ -44,26 +47,28 @@ const IncomeTaxPage = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Tax Rates (2024)
+              {t("tax_rates.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
               <Card className="border-l-4 border-l-blue-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    19% Tax Rate
+                    {t("tax_rates.rate_19.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Applies to annual taxable income up to €38,553.01
+                    {t("tax_rates.rate_19.description")}
                   </p>
                   <div className="space-y-2">
-                    <p className="text-sm font-medium">Includes:</p>
+                    <p className="text-sm font-medium">
+                      {t("tax_rates.rate_19.includes")}:
+                    </p>
                     <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                      <li>Employment income</li>
-                      <li>Business income</li>
-                      <li>Rental income</li>
-                      <li>Other income sources</li>
+                      <li>{t("tax_rates.rate_19.items.employment")}</li>
+                      <li>{t("tax_rates.rate_19.items.business")}</li>
+                      <li>{t("tax_rates.rate_19.items.rental")}</li>
+                      <li>{t("tax_rates.rate_19.items.other")}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -72,19 +77,21 @@ const IncomeTaxPage = () => {
               <Card className="border-l-4 border-l-green-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    25% Tax Rate
+                    {t("tax_rates.rate_25.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Applies to annual taxable income above €38,553.01
+                    {t("tax_rates.rate_25.description")}
                   </p>
                   <div className="space-y-2">
-                    <p className="text-sm font-medium">Progressive taxation:</p>
+                    <p className="text-sm font-medium">
+                      {t("tax_rates.rate_25.progressive")}:
+                    </p>
                     <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                      <li>Only applies to income exceeding threshold</li>
-                      <li>Previous income taxed at 19%</li>
-                      <li>Calculated on monthly basis for employment</li>
+                      <li>{t("tax_rates.rate_25.items.threshold")}</li>
+                      <li>{t("tax_rates.rate_25.items.previous")}</li>
+                      <li>{t("tax_rates.rate_25.items.monthly")}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -97,28 +104,34 @@ const IncomeTaxPage = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Tax Allowances and Deductions
+              {t("allowances.title")}
             </h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <PiggyBank className="w-5 h-5" />
-                    Personal Allowance
+                    {t("allowances.personal.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <p className="text-muted-foreground">
-                      Basic tax-free allowance for 2024: €4,519.92
+                      {t("allowances.personal.basic")}
                     </p>
                     <div className="grid gap-4">
                       <div>
-                        <h4 className="font-medium mb-2">Conditions:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("allowances.personal.conditions_title")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Decreases progressively with higher income</li>
-                          <li>Available to all taxpayers</li>
-                          <li>Calculated monthly for employees</li>
+                          <li>
+                            {t("allowances.personal.conditions.decreases")}
+                          </li>
+                          <li>
+                            {t("allowances.personal.conditions.available")}
+                          </li>
+                          <li>{t("allowances.personal.conditions.monthly")}</li>
                         </ul>
                       </div>
                     </div>
@@ -130,26 +143,34 @@ const IncomeTaxPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <HandCoins className="w-5 h-5" />
-                    Additional Deductions
+                    {t("allowances.additional.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div className="grid gap-4 md:grid-cols-2">
                       <div>
-                        <h4 className="font-medium mb-2">Spouse Allowance:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("allowances.additional.spouse.title")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>Up to €4,519.92 annually</li>
-                          <li>Based on spouse's income</li>
-                          <li>Specific conditions apply</li>
+                          <li>{t("allowances.additional.spouse.amount")}</li>
+                          <li>{t("allowances.additional.spouse.based")}</li>
+                          <li>
+                            {t("allowances.additional.spouse.conditions")}
+                          </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-medium mb-2">Child Tax Bonus:</h4>
+                        <h4 className="font-medium mb-2">
+                          {t("allowances.additional.child.title")}:
+                        </h4>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                          <li>€50.14 per child monthly</li>
-                          <li>Requires minimum income</li>
-                          <li>Age restrictions apply</li>
+                          <li>{t("allowances.additional.child.amount")}</li>
+                          <li>{t("allowances.additional.child.minimum")}</li>
+                          <li>
+                            {t("allowances.additional.child.restrictions")}
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -164,22 +185,22 @@ const IncomeTaxPage = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Types of Taxable Income
+              {t("income_types.title")}
             </h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="employment">
                 <AccordionTrigger>
                   <span className="flex items-center gap-2">
                     <Wallet className="w-5 h-5" />
-                    Employment Income
+                    {t("income_types.employment.title")}
                   </span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2">
-                    <li>Salary and wages</li>
-                    <li>Bonuses and commissions</li>
-                    <li>Benefits in kind</li>
-                    <li>Withholding tax system</li>
+                    <li>{t("income_types.employment.items.salary")}</li>
+                    <li>{t("income_types.employment.items.bonuses")}</li>
+                    <li>{t("income_types.employment.items.benefits")}</li>
+                    <li>{t("income_types.employment.items.withholding")}</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -188,15 +209,15 @@ const IncomeTaxPage = () => {
                 <AccordionTrigger>
                   <span className="flex items-center gap-2">
                     <CircleDollarSign className="w-5 h-5" />
-                    Business Income
+                    {t("income_types.business.title")}
                   </span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2">
-                    <li>Self-employment income</li>
-                    <li>Trade license income</li>
-                    <li>Professional services</li>
-                    <li>Agricultural income</li>
+                    <li>{t("income_types.business.items.self_employment")}</li>
+                    <li>{t("income_types.business.items.trade")}</li>
+                    <li>{t("income_types.business.items.professional")}</li>
+                    <li>{t("income_types.business.items.agricultural")}</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -205,15 +226,15 @@ const IncomeTaxPage = () => {
                 <AccordionTrigger>
                   <span className="flex items-center gap-2">
                     <Calculator className="w-5 h-5" />
-                    Capital Gains
+                    {t("income_types.capital.title")}
                   </span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2">
-                    <li>Stock market investments</li>
-                    <li>Property sales</li>
-                    <li>Investment income</li>
-                    <li>Dividend income</li>
+                    <li>{t("income_types.capital.items.stock")}</li>
+                    <li>{t("income_types.capital.items.property")}</li>
+                    <li>{t("income_types.capital.items.investment")}</li>
+                    <li>{t("income_types.capital.items.dividend")}</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -225,7 +246,7 @@ const IncomeTaxPage = () => {
         <section className="px-4 py-12 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Important Tax Dates
+              {t("dates.title")}
             </h2>
             <div className="max-w-4xl mx-auto">
               <Card>
@@ -233,33 +254,55 @@ const IncomeTaxPage = () => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Date</TableHead>
-                        <TableHead>Requirement</TableHead>
-                        <TableHead>Details</TableHead>
+                        <TableHead>{t("dates.table.headers.date")}</TableHead>
+                        <TableHead>
+                          {t("dates.table.headers.requirement")}
+                        </TableHead>
+                        <TableHead>
+                          {t("dates.table.headers.details")}
+                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="font-medium">March 31</TableCell>
-                        <TableCell>Standard filing deadline</TableCell>
-                        <TableCell>For most taxpayers</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell className="font-medium">June 30</TableCell>
-                        <TableCell>Extended filing deadline</TableCell>
-                        <TableCell>With official extension</TableCell>
+                        <TableCell className="font-medium">
+                          {t("dates.table.march.date")}
+                        </TableCell>
+                        <TableCell>
+                          {t("dates.table.march.requirement")}
+                        </TableCell>
+                        <TableCell>{t("dates.table.march.details")}</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">
-                          September 30
+                          {t("dates.table.june.date")}
                         </TableCell>
-                        <TableCell>Foreign income deadline</TableCell>
-                        <TableCell>Income from abroad</TableCell>
+                        <TableCell>
+                          {t("dates.table.june.requirement")}
+                        </TableCell>
+                        <TableCell>{t("dates.table.june.details")}</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Monthly</TableCell>
-                        <TableCell>Advance tax payments</TableCell>
-                        <TableCell>For qualifying taxpayers</TableCell>
+                        <TableCell className="font-medium">
+                          {t("dates.table.september.date")}
+                        </TableCell>
+                        <TableCell>
+                          {t("dates.table.september.requirement")}
+                        </TableCell>
+                        <TableCell>
+                          {t("dates.table.september.details")}
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">
+                          {t("dates.table.monthly.date")}
+                        </TableCell>
+                        <TableCell>
+                          {t("dates.table.monthly.requirement")}
+                        </TableCell>
+                        <TableCell>
+                          {t("dates.table.monthly.details")}
+                        </TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
@@ -273,21 +316,25 @@ const IncomeTaxPage = () => {
         <section className="px-4 py-12 bg-muted/50 rounded-md">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
-              Special Cases and Exemptions
+              {t("special_cases.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
-                    First-time Employment
+                    {t("special_cases.first_employment.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Special allowances for graduates</li>
-                    <li>Reduced tax burden</li>
-                    <li>Time-limited benefits</li>
+                    <li>
+                      {t("special_cases.first_employment.items.allowances")}
+                    </li>
+                    <li>{t("special_cases.first_employment.items.reduced")}</li>
+                    <li>
+                      {t("special_cases.first_employment.items.time_limited")}
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -296,14 +343,16 @@ const IncomeTaxPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <FileText className="w-5 h-5" />
-                    Foreign Income
+                    {t("special_cases.foreign_income.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Double taxation treaties</li>
-                    <li>Foreign tax credits</li>
-                    <li>Special declaration requirements</li>
+                    <li>{t("special_cases.foreign_income.items.treaties")}</li>
+                    <li>{t("special_cases.foreign_income.items.credits")}</li>
+                    <li>
+                      {t("special_cases.foreign_income.items.requirements")}
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -312,14 +361,14 @@ const IncomeTaxPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <HelpCircle className="w-5 h-5" />
-                    Tax Relief
+                    {t("special_cases.tax_relief.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Research & Development</li>
-                    <li>Investment incentives</li>
-                    <li>Charitable donations</li>
+                    <li>{t("special_cases.tax_relief.items.research")}</li>
+                    <li>{t("special_cases.tax_relief.items.incentives")}</li>
+                    <li>{t("special_cases.tax_relief.items.donations")}</li>
                   </ul>
                 </CardContent>
               </Card>
