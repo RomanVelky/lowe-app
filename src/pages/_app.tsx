@@ -12,7 +12,7 @@ import { useState } from "react";
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const [supabaseClient] = useState(() => createPagesBrowserClient());
-  const locale = router.locale || "en";
+  const locale = router.locale || "sk";
   const messages = require(`../messages/${locale}.json`);
 
   return (

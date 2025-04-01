@@ -30,10 +30,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useTranslations } from "next-intl";
 
 type SortDirection = "asc" | "desc" | null;
 
 const WageInfo = () => {
+  const t = useTranslations("WAGES_INFO");
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(5);
@@ -86,12 +88,9 @@ const WageInfo = () => {
       <div className="mx-auto max-w-6xl space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-            Mzdy Jednoducho
+            {t("title")}
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Komplexný prehľad o mzdách, ich typoch a porovnanie v rámci
-            Európskej únie
-          </p>
+          <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -99,14 +98,12 @@ const WageInfo = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Euro className="h-5 w-5" />
-                Čo je mzda?
+                {t("cards.what_is.title")}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Mzda je peňažné plnenie poskytované zamestnávateľom
-                zamestnancovi za vykonanú prácu. Je základným prvkom
-                pracovnoprávnych vzťahov.
+                {t("cards.what_is.description")}
               </p>
             </CardContent>
           </Card>
@@ -115,15 +112,15 @@ const WageInfo = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <LineChart className="h-5 w-5" />
-                Druhy miezd
+                {t("cards.types.title")}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="list-inside list-disc text-muted-foreground">
-                <li>Základná mzda</li>
-                <li>Hrubá mzda</li>
-                <li>Čistá mzda</li>
-                <li>Minimálna mzda</li>
+                <li>{t("cards.types.list_0")}</li>
+                <li>{t("cards.types.list_1")}</li>
+                <li>{t("cards.types.list_2")}</li>
+                <li>{t("cards.types.list_3")}</li>
               </ul>
             </CardContent>
           </Card>
@@ -132,13 +129,12 @@ const WageInfo = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                Kde sa udávajú?
+                {t("cards.where_used.title")}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Mzdy sa dojednávajú v pracovnej zmluve, kolektívnej zmluve alebo
-                sú stanovené zákonom (minimálna mzda).
+                {t("cards.where_used.description")}
               </p>
             </CardContent>
           </Card>
@@ -146,24 +142,22 @@ const WageInfo = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle>Porovnanie minimálnych miezd v EÚ</CardTitle>
-            <CardDescription>
-              Mesačné minimálne mzdy v eurách, 2024
-            </CardDescription>
+            <CardTitle>{t("comparison.title")}</CardTitle>
+            <CardDescription>{t("comparison.subtitle")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Krajina</TableHead>
+                    <TableHead>{t("comparison.table.country")}</TableHead>
                     <TableHead>
                       <Button
                         variant="ghost"
                         onClick={toggleSort}
                         className="flex items-center gap-2 hover:text-primary"
                       >
-                        Minimálna mzda (€)
+                        {t("comparison.table.min_wage")}
                         {sortDirection === "desc" ? (
                           <ArrowDown className="h-4 w-4" />
                         ) : (
@@ -190,7 +184,7 @@ const WageInfo = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <p className="text-sm text-muted-foreground">
-                    Riadkov na stránku
+                    {t("comparison.table.rows_per_page")}
                   </p>
                   <Select
                     value={itemsPerPage.toString()}
@@ -220,11 +214,13 @@ const WageInfo = () => {
                     }
                     disabled={currentPage === 1}
                   >
-                    Predchádzajúca
+                    {t("comparison.table.prev")}
                   </Button>
                   <div className="flex items-center gap-1">
                     <span className="text-sm font-medium">{currentPage}</span>
-                    <span className="text-sm text-muted-foreground">z</span>
+                    <span className="text-sm text-muted-foreground">
+                      {t("comparison.table.of")}
+                    </span>
                     <span className="text-sm font-medium">{totalPages}</span>
                   </div>
                   <Button
@@ -235,7 +231,7 @@ const WageInfo = () => {
                     }
                     disabled={currentPage === totalPages}
                   >
-                    Nasledujúca
+                    {t("comparison.table.next")}
                   </Button>
                 </div>
               </div>
@@ -245,28 +241,28 @@ const WageInfo = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle>Výpočet mzdy</CardTitle>
+            <CardTitle>{t("calculation.title")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Výpočet čistej mzdy zahŕňa niekoľko krokov a odvodov:
+              {t("calculation.description")}
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <ArrowRight className="h-4 w-4 text-primary" />
-                <span>Hrubá mzda - základ pre výpočet odvodov a dane</span>
+                <span>{t("calculation.steps_0")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="h-4 w-4 text-primary" />
-                <span>Odvody do zdravotnej poisťovne </span>
+                <span>{t("calculation.steps_1")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="h-4 w-4 text-primary" />
-                <span>Odvody do sociálnej poisťovne</span>
+                <span>{t("calculation.steps_2")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="h-4 w-4 text-primary" />
-                <span>Daň z príjmu</span>
+                <span>{t("calculation.steps_3")}</span>
               </div>
             </div>
           </CardContent>
