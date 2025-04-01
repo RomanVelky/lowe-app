@@ -1,57 +1,42 @@
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Globe } from "lucide-react";
+import Image from "next/image";
 
 const languages = [
   {
-    code: "en",
-    label: "English",
-    flagSrc:
-      "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
-  },
-  {
     code: "sk",
-    label: "Slovak",
     flagSrc:
       "http://purecatamphetamine.github.io/country-flag-icons/3x2/SK.svg",
+  },
+  {
+    code: "en",
+    flagSrc:
+      "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
   },
 ];
 
 const LangButton = () => {
   const router = useRouter();
+  const currentLocale = router.locale || "sk";
 
-  const handleLanguageChange = (newLocale: string) => {
+  const handleLanguageChange = () => {
+    const newLocale = currentLocale === "en" ? "sk" : "en";
     router.push(router.pathname, router.asPath, { locale: newLocale });
   };
 
+  const currentLanguage =
+    languages.find((lang) => lang.code === currentLocale) || languages[0];
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Globe className="w-6 h-6" />
-          <span className="sr-only">Choose Language</span>
-        </Button>
-      </DropdownMenuTrigger>
-
-      <DropdownMenuContent align="end">
-        {languages.map(({ code, label, flagSrc }) => (
-          <DropdownMenuItem
-            key={code}
-            onClick={() => handleLanguageChange(code)}>
-            <div className="flex gap-2">
-              <img className="w-6 h-5" alt="country flag" src={flagSrc} />
-              {label}
-            </div>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <>
+      <Button variant="ghost" size="icon" onClick={handleLanguageChange}>
+        <Image
+          src={currentLanguage.flagSrc}
+          alt={`${currentLanguage.code} flag`}
+          width={24}
+          height={20}
+        />
+      </Button>
+    </>
   );
 };
 
