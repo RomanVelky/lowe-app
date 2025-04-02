@@ -1297,5 +1297,35 @@
       "description": "Daňové zákony sa často menia. Zvážte konzultáciu s daňovým poradcom pre personalizované stratégie optimalizácie.",
       "button": "Nájsť Daňového Poradcu"
     }
+  },
+  "BE": {
+    "country": {
+      "luxembourg": "Luxembursko",
+      "denmark": "Dánsko",
+      "ireland": "Írsko",
+      "belgium": "Belgicko",
+      "austria": "Rakúsko",
+      "germany": "Nemecko",
+      "france": "Francúzsko",
+      "sweden": "Švédsko",
+      "netherlands": "Holandsko",
+      "slovenia": "Slovinsko",
+      "italy": "Taliansko",
+      "spain": "Španielsko",
+      "malta": "Malta",
+      "lithuania": "Litva",
+      "cyprus": "Cyprus",
+      "estonia": "Estónsko",
+      "czechia": "Česko",
+      "portugal": "Portugalsko",
+      "latvia": "Lotyšsko",
+      "croatia": "Chorvátsko",
+      "slovakia": "Slovensko",
+      "poland": "Poľsko",
+      "romania": "Rumunsko",
+      "greece": "Grécko",
+      "hungary": "Maďarsko",
+      "bulgaria": "Bulharsko"
+    }
   }
 }

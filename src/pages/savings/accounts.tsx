@@ -209,29 +209,17 @@ const SavingsAccounts = () => {
                         <TableCell className="font-medium">
                           {t("comparison.features.interest_rate")}
                         </TableCell>
-                        <TableCell>
-                          {t("comparison.standard.interest_rate")}
-                        </TableCell>
-                        <TableCell>
-                          {t("comparison.term.interest_rate")}
-                        </TableCell>
-                        <TableCell>
-                          {t("comparison.high_yield.interest_rate")}
-                        </TableCell>
+                        <TableCell>0.01-0.5%</TableCell>
+                        <TableCell>2-4%</TableCell>
+                        <TableCell>3-4.5%</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">
                           {t("comparison.features.minimum_balance")}
                         </TableCell>
-                        <TableCell>
-                          {t("comparison.standard.minimum_balance")}
-                        </TableCell>
-                        <TableCell>
-                          {t("comparison.term.minimum_balance")}
-                        </TableCell>
-                        <TableCell>
-                          {t("comparison.high_yield.minimum_balance")}
-                        </TableCell>
+                        <TableCell>0€</TableCell>
+                        <TableCell>500-1000€</TableCell>
+                        <TableCell>0-100€</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">

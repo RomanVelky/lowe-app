@@ -309,40 +309,36 @@ const Taxes = () => {
                       <TableCell className="font-medium">
                         {t("comparison.table.income_tax")}
                       </TableCell>
-                      <TableCell>{t("comparison.table.sk_income")}</TableCell>
-                      <TableCell>{t("comparison.table.cz_income")}</TableCell>
+                      <TableCell>19% / 25%</TableCell>
+                      <TableCell>15% / 23%</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         {t("comparison.table.corporate_tax")}
                       </TableCell>
-                      <TableCell>
-                        {t("comparison.table.sk_corporate")}
-                      </TableCell>
-                      <TableCell>
-                        {t("comparison.table.cz_corporate")}
-                      </TableCell>
+                      <TableCell>15% / 21%</TableCell>
+                      <TableCell>19%</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         {t("comparison.table.vat")}
                       </TableCell>
-                      <TableCell>{t("comparison.table.sk_vat")}</TableCell>
-                      <TableCell>{t("comparison.table.cz_vat")}</TableCell>
+                      <TableCell>23% / 19% / 10% / 0% </TableCell>
+                      <TableCell>21% / 15% / 10%</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         {t("comparison.table.flat_rate")}
                       </TableCell>
-                      <TableCell>{t("comparison.table.sk_flat")}</TableCell>
-                      <TableCell>{t("comparison.table.cz_flat")}</TableCell>
+                      <TableCell>60%</TableCell>
+                      <TableCell>40% - 80%</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">
                         {t("comparison.table.social")}
                       </TableCell>
-                      <TableCell>{t("comparison.table.sk_social")}</TableCell>
-                      <TableCell>{t("comparison.table.cz_social")}</TableCell>
+                      <TableCell>33.15%</TableCell>
+                      <TableCell>31.3%</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>

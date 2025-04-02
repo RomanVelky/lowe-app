@@ -286,20 +286,14 @@
         "best_for": "Best For"
       },
       "standard": {
-        "interest_rate": "0.01-0.5%",
-        "minimum_balance": "€0",
         "access_to_funds": "Anytime",
         "best_for": "Emergency Fund"
       },
       "term": {
-        "interest_rate": "2-4%",
-        "minimum_balance": "€500-1000",
         "access_to_funds": "End of Term",
         "best_for": "Long-term Savings"
       },
       "high_yield": {
-        "interest_rate": "3-4.5%",
-        "minimum_balance": "€0-100",
         "access_to_funds": "Limited",
         "best_for": "Growing Savings"
       }
@@ -600,16 +594,10 @@
             "total": "Total"
           },
           "first_pillar": {
-            "name": "1st Pillar",
-            "employee": "4%",
-            "employer": "14.3%",
-            "total": "18.3%"
+            "name": "1st Pillar"
           },
           "second_pillar": {
-            "name": "2nd Pillar",
-            "employee": "4.5%",
-            "employer": "0%",
-            "total": "4.5%"
+            "name": "2nd Pillar"
           },
           "third_pillar": {
             "name": "3rd Pillar",
@@ -1265,17 +1253,7 @@
         "corporate_tax": "Corporate Tax",
         "vat": "VAT",
         "flat_rate": "Flat-rate Expenses",
-        "social": "Social Insurance",
-        "sk_income": "19% / 25%",
-        "cz_income": "15% / 23%",
-        "sk_corporate": "15% / 21%",
-        "cz_corporate": "19%",
-        "sk_vat": "20% / 10%",
-        "cz_vat": "21% / 15% / 10%",
-        "sk_flat": "60%",
-        "cz_flat": "40% - 80%",
-        "sk_social": "33.15%",
-        "cz_social": "31.3%"
+        "social": "Social Insurance"
       },
       "sk_advantages": {
         "title": "Slovak Advantages",
@@ -1300,6 +1278,36 @@
       "title": "Need Professional Advice?",
       "description": "Tax laws change frequently. Consider consulting with a tax advisor for personalized optimization strategies.",
       "button": "Find Tax Advisor"
+    }
+  },
+  "BE": {
+    "country": {
+      "luxembourg": "Luxembourg",
+      "denmark": "Denmark",
+      "ireland": "Ireland",
+      "belgium": "Belgium",
+      "austria": "Austria",
+      "germany": "Germany",
+      "france": "France",
+      "sweden": "Sweden",
+      "netherlands": "Netherlands",
+      "slovenia": "Slovenia",
+      "italy": "Italy",
+      "spain": "Spain",
+      "malta": "Malta",
+      "lithuania": "Lithuania",
+      "cyprus": "Cyprus",
+      "estonia": "Estonia",
+      "czechia": "Czechia",
+      "portugal": "Portugal",
+      "latvia": "Latvia",
+      "croatia": "Croatia",
+      "slovakia": "Slovakia",
+      "poland": "Poland",
+      "romania": "Romania",
+      "greece": "Greece",
+      "hungary": "Hungary",
+      "bulgaria": "Bulgaria"
     }
   }
 }

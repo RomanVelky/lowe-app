@@ -8,12 +8,15 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const [supabaseClient] = useState(() => createPagesBrowserClient());
   const locale = router.locale || "sk";
   const messages = require(`../messages/${locale}.json`);
+  const queryClient = new QueryClient();
 
   return (
     <>
@@ -38,9 +41,12 @@ const App = ({ Component, pageProps }: AppProps) => {
               enableSystem
               disableTransitionOnChange
             >
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
+              <QueryClientProvider client={queryClient}>
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+                <ReactQueryDevtools />
+              </QueryClientProvider>
             </ThemeProvider>
           </NextIntlClientProvider>
         </ClerkProvider>

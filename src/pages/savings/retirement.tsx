@@ -160,21 +160,9 @@ const RetirementSavings = () => {
                             "key_features.contribution_rates.table.first_pillar.name"
                           )}
                         </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.first_pillar.employee"
-                          )}
-                        </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.first_pillar.employer"
-                          )}
-                        </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.first_pillar.total"
-                          )}
-                        </TableCell>
+                        <TableCell>4%</TableCell>
+                        <TableCell>14.3%</TableCell>
+                        <TableCell>18.3%</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">
@@ -182,21 +170,9 @@ const RetirementSavings = () => {
                             "key_features.contribution_rates.table.second_pillar.name"
                           )}
                         </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.second_pillar.employee"
-                          )}
-                        </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.second_pillar.employer"
-                          )}
-                        </TableCell>
-                        <TableCell>
-                          {t(
-                            "key_features.contribution_rates.table.second_pillar.total"
-                          )}
-                        </TableCell>
+                        <TableCell>4.5%</TableCell>
+                        <TableCell>0%</TableCell>
+                        <TableCell>4.5%</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">

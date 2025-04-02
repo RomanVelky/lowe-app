@@ -12,12 +12,3 @@ const Homepage = () => {
 };
 
 export default Homepage;
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const messages = (await import(`../messages/${context.locale}.json`)).default;
-  return {
-    props: {
-      messages,
-    },
-  };
-};
