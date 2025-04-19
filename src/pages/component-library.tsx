@@ -89,6 +89,9 @@ const ComponentLibrary = () => {
   >([]);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
+  const [wagesInfo, setWagesInfo] = useState<
+    { id: number; name: string; wage: number }[]
+  >([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -113,10 +116,23 @@ const ComponentLibrary = () => {
         setInstruments(data || []);
       }
     };
+    const fetchWagesInfo = async () => {
+      const { data, error } = await supabase
+        .from("wages")
+        .select("id, name, wage");
 
+      if (error) {
+        console.error("Error fetching instruments:", error);
+      } else {
+        setWagesInfo(data || []);
+      }
+    };
+    fetchWagesInfo();
     fetchInstruments();
   }, [supabase]); // Only run this effect when the supabase client is available
 
+  console.log("wagesInfo", wagesInfo);
+  console.log("instrument", instruments);
   return (
     <>
       <h1>ComponentLibrary</h1>

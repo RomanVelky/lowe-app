@@ -31,57 +31,45 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useWageData } from "@/pages/api/hooks/useWageData";
 
 type SortDirection = "asc" | "desc" | null;
 
 const WageInfo = () => {
   const t = useTranslations("WAGES_INFO");
-  const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const tt = useTranslations();
 
-  const wageData = [
-    { country: "Luxembursko", wage: 6755 },
-    { country: "Dánsko", wage: 5634 },
-    { country: "Írsko", wage: 4890 },
-    { country: "Belgicko", wage: 4832 },
-    { country: "Rakúsko", wage: 4542 },
-    { country: "Nemecko", wage: 4250 },
-    { country: "Francúzsko", wage: 4033 },
-    { country: "Švédsko", wage: 3718 },
-    { country: "Holandsko", wage: 3555 },
-    { country: "Slovinsko", wage: 2757 },
-    { country: "Taliansko", wage: 2729 },
-    { country: "Španielsko", wage: 2716 },
-    { country: "Malta", wage: 2499 },
-    { country: "Litva", wage: 2265 },
-    { country: "Cyprus", wage: 2203 },
-    { country: "Estónsko", wage: 2075 },
-    { country: "Česko", wage: 1955 },
-    { country: "Portugalsko", wage: 1911 },
-    { country: "Lotyšsko", wage: 1858 },
-    { country: "Chorvátsko", wage: 1794 },
-    { country: "Slovensko", wage: 1583 },
-    { country: "Poľsko", wage: 1505 },
-    { country: "Rumunsko", wage: 1478 },
-    { country: "Grécko", wage: 1418 },
-    { country: "Maďarsko", wage: 1408 },
-    { country: "Bulharsko", wage: 1125 },
-  ].sort((a, b) => {
-    if (sortDirection === "desc") {
-      return b.wage - a.wage;
-    }
-    return a.wage - b.wage;
-  });
+  const {
+    data: currentData,
+    pagination,
+    isLoading,
+    isError,
+    error,
+    changePage,
+    changeLimit,
+    toggleSort,
+    sort: sortDirection,
+  } = useWageData();
 
-  const totalPages = Math.ceil(wageData.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentData = wageData.slice(startIndex, endIndex);
-
-  const toggleSort = () => {
-    setSortDirection((current) => (current === "desc" ? "asc" : "desc"));
-  };
+  const LoadingTable = () => (
+    <div className="space-y-3">
+      {[...Array(5)].map((_, i) => (
+        <div key={i} className="flex justify-between">
+          <Skeleton className="h-12 w-1/3" />
+          <Skeleton className="h-12 w-1/3" />
+        </div>
+      ))}
+    </div>
+  );
+  const ErrorState = () => (
+    <div className="text-center py-4 text-red-500">
+      <p>{t("comparison.table.error")}</p>
+      <p className="text-sm">
+        {error instanceof Error ? error.message : "Unknown error"}
+      </p>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-background p-6 lg:p-8">
@@ -147,39 +135,47 @@ const WageInfo = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>{t("comparison.table.country")}</TableHead>
-                    <TableHead>
-                      <Button
-                        variant="ghost"
-                        onClick={toggleSort}
-                        className="flex items-center gap-2 hover:text-primary"
-                      >
-                        {t("comparison.table.min_wage")}
-                        {sortDirection === "desc" ? (
-                          <ArrowDown className="h-4 w-4" />
-                        ) : (
-                          <ArrowUp className="h-4 w-4" />
-                        )}
-                      </Button>
-                    </TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {currentData.map((item) => (
-                    <TableRow key={item.country}>
-                      <TableCell className="font-medium">
-                        {item.country}
-                      </TableCell>
-                      <TableCell>
-                        {item.wage.toLocaleString("sk-SK")} €
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+              <div className="space-y-4">
+                {isLoading ? (
+                  <LoadingTable />
+                ) : isError ? (
+                  <ErrorState />
+                ) : (
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>{t("comparison.table.country")}</TableHead>
+                        <TableHead>
+                          <Button
+                            variant="ghost"
+                            onClick={toggleSort}
+                            className="flex items-center gap-2 hover:text-primary"
+                          >
+                            {t("comparison.table.min_wage")}
+                            {sortDirection === "desc" ? (
+                              <ArrowDown className="h-4 w-4" />
+                            ) : (
+                              <ArrowUp className="h-4 w-4" />
+                            )}
+                          </Button>
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {currentData.map((item) => (
+                        <TableRow key={item.name}>
+                          <TableCell className="font-medium">
+                            {tt(item.name)}
+                          </TableCell>
+                          <TableCell>
+                            {item.wage.toLocaleString("sk-SK")} €
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                )}
+              </div>
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -187,11 +183,8 @@ const WageInfo = () => {
                     {t("comparison.table.rows_per_page")}
                   </p>
                   <Select
-                    value={itemsPerPage.toString()}
-                    onValueChange={(value) => {
-                      setItemsPerPage(Number(value));
-                      setCurrentPage(1);
-                    }}
+                    value={pagination.limit.toString()}
+                    onValueChange={(value) => changeLimit(Number(value))}
                   >
                     <SelectTrigger className="w-[80px]">
                       <SelectValue placeholder="10" />
@@ -209,27 +202,30 @@ const WageInfo = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() =>
-                      setCurrentPage((page) => Math.max(1, page - 1))
-                    }
-                    disabled={currentPage === 1}
+                    onClick={() => changePage(pagination.currentPage - 1)}
+                    disabled={pagination.currentPage === 1 || isLoading}
                   >
                     {t("comparison.table.prev")}
                   </Button>
                   <div className="flex items-center gap-1">
-                    <span className="text-sm font-medium">{currentPage}</span>
+                    <span className="text-sm font-medium">
+                      {pagination.currentPage}
+                    </span>
                     <span className="text-sm text-muted-foreground">
                       {t("comparison.table.of")}
                     </span>
-                    <span className="text-sm font-medium">{totalPages}</span>
+                    <span className="text-sm font-medium">
+                      {pagination.totalPages}
+                    </span>
                   </div>
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() =>
-                      setCurrentPage((page) => Math.min(totalPages, page + 1))
+                    onClick={() => changePage(pagination.currentPage + 1)}
+                    disabled={
+                      pagination.currentPage === pagination.totalPages ||
+                      isLoading
                     }
-                    disabled={currentPage === totalPages}
                   >
                     {t("comparison.table.next")}
                   </Button>

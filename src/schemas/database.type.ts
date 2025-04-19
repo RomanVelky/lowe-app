@@ -7,6 +7,11 @@ export type Database = {
           name: string;
         };
       };
+      wages: {
+        id: number;
+        name: string;
+        wage: number;
+      };
     };
   };
 };

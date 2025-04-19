@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useEffect } from "react";
+import { useLanguageStore } from "@/lib/store/langStore";
 
 const languages = [
   {
@@ -17,15 +19,23 @@ const languages = [
 
 const LangButton = () => {
   const router = useRouter();
-  const currentLocale = router.locale || "sk";
+  const { locale, setLocale } = useLanguageStore();
+
+  useEffect(() => {
+    if (router.locale && !localStorage.getItem("lang")) {
+      setLocale(router.locale);
+    }
+  }, []);
 
   const handleLanguageChange = () => {
-    const newLocale = currentLocale === "en" ? "sk" : "en";
+    const newLocale = locale === "en" ? "sk" : "en";
+    setLocale(newLocale);
     router.push(router.pathname, router.asPath, { locale: newLocale });
   };
 
   const currentLanguage =
-    languages.find((lang) => lang.code === currentLocale) || languages[0];
+    languages.find((lang) => lang.code === locale) || languages[0];
+
   return (
     <>
       <Button variant="ghost" size="icon" onClick={handleLanguageChange}>
