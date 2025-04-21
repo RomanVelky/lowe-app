@@ -1,9 +1,14 @@
 import { SignIn } from "@clerk/nextjs";
 import { useTranslations } from "next-intl";
+import { useAuthStore } from "@/lib/store/authStore";
+import { useLanguageStore } from "@/lib/store/langStore";
 
-//TODO clerk localization prekladane prihlasovacie komponenty
 const SignInPage = () => {
   const t = useTranslations("AUTH.sign_in");
+  const { locale } = useLanguageStore();
+  const { lastVisitedUrl } = useAuthStore();
+  const signInPath = locale === "en" ? "/en/sign-in" : "/sign-in";
+  const signUpPath = locale === "en" ? "/en/sign-up" : "/sign-up";
 
   return (
     <>
@@ -14,9 +19,9 @@ const SignInPage = () => {
       <div className="flex justify-center">
         <SignIn
           routing="path"
-          path="/sign-in"
-          fallbackRedirectUrl="/"
-          signUpUrl="/sign-up"
+          path={signInPath}
+          fallbackRedirectUrl={lastVisitedUrl || "/"}
+          signUpUrl={signUpPath}
           appearance={{
             elements: {
               socialButtonsBlockButton: "border-gray-700 hover:border-gray-600",

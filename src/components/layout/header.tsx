@@ -111,12 +111,11 @@ const Header = () => {
     <nav className="fixed top-0 left-0 w-full  bg-opacity-90 backdrop-blur-sm shadow-sm dark:shadow-none z-50 transition-opacity duration-300">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="w-2/6">
-          <Link
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image src="/logo.svg" alt="Love Logo" width={45} height={45} />
-          </Link>
+          <div className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Link href="/">
+              <Image src="/logo.svg" alt="Love Logo" width={45} height={45} />
+            </Link>
+          </div>
         </div>
         <div className="w-2/6 hidden lg:block">
           <NavigationMenu>

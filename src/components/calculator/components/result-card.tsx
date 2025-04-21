@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { companyDeduction } from "../calculator.utils";
 import { WageType } from "../calculator.types";
 import type { CalculatorState } from "../calculator.types";
-
+import { SignedIn, useUser } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { Save } from "lucide-react";
 interface ResultsCardProps {
   calculationResults: CalculatorState;
   grossWage: number;
@@ -17,6 +18,23 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
   inputValue,
 }) => {
   const { superGrossWage, netWage, deductions, wage } = calculationResults;
+  const { isSignedIn, user } = useUser();
+
+  const handleSaveCalculation = async () => {
+    try {
+      console.log("Saving calculation for user:", user?.id);
+      console.log("Calculation data:", {
+        userId: user?.id,
+        calculationType: calcType,
+        grossWage,
+        netWage,
+        superGrossWage,
+        timestamp: new Date(),
+      });
+    } catch (error) {
+      console.error("Error saving calculation:", error);
+    }
+  };
 
   return (
     <Card className="w-full md:w-80 shadow-md border-0 bg-card/95 backdrop-blur-sm">
@@ -74,6 +92,17 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
             </span>
           </div>
         </div>
+
+        {/* Save calculation button */}
+        <SignedIn>
+          <Button
+            onClick={handleSaveCalculation}
+            variant="outline"
+            className="w-full mt-2 flex items-center justify-center gap-2"
+          >
+            <Save className="h-4 w-4" /> Uložiť výpočet
+          </Button>
+        </SignedIn>
       </CardContent>
     </Card>
   );

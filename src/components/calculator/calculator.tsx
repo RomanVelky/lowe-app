@@ -79,7 +79,7 @@ const WageCalculator: React.FC<WageCalculatorProps> = ({ wageType }) => {
         inputValue={watchedValues.wage || CC.MIN_WAGE}
       />
       <AnimatePresence>
-        {isVisible && (
+        {isVisible && calcType === "net" && (
           <DetailsCard
             calculationResults={calculationResults}
             watchedValues={watchedValues}

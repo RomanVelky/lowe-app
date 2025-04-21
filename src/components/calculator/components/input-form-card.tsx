@@ -193,7 +193,10 @@ const InputFormCard: React.FC<InputFormCardProps> = ({
                 onClick={onToggleDetails}
                 variant="outline"
                 className="w-full"
-                disabled={!form.formState.isValid}
+                disabled={
+                  !form.formState.isValid ||
+                  form.getValues("calcType") !== "net"
+                }
                 type="button"
               >
                 {isDetailsVisible ? "Skryť info" : "Viac info"}

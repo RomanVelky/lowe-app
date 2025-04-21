@@ -4,22 +4,34 @@ import { ReactNode, useEffect } from "react";
 import { Toaster } from "../ui/toaster";
 import Footer from "./footer";
 import Header from "./header";
-
+import { useAuthStore } from "@/lib/store/authStore";
+import { useRouter } from "next/router";
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
   const { resolvedTheme, setTheme } = useTheme();
+  const { setLastVisitedUrl } = useAuthStore();
+  const router = useRouter();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      setTheme("system"); // Default
+      setTheme("system");
     }
-  }, [setTheme]);
+    const currentPath = router.pathname;
+    if (
+      !currentPath.startsWith("/sign-in") &&
+      !currentPath.startsWith("/sign-up") &&
+      currentPath !== "/en/sign-in" &&
+      currentPath !== "/en/sign-up"
+    ) {
+      setLastVisitedUrl(currentPath);
+    }
+  }, [setTheme, setLastVisitedUrl]);
 
   return (
     <>

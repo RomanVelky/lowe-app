@@ -22,7 +22,7 @@ const LangButton = () => {
   const { locale, setLocale } = useLanguageStore();
 
   useEffect(() => {
-    if (router.locale && !localStorage.getItem("lang")) {
+    if (router.locale && !locale) {
       setLocale(router.locale);
     }
   }, []);
