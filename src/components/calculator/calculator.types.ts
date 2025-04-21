@@ -1,4 +1,4 @@
-type CalculatorState = {
+export type CalculatorState = {
   superGrossWage: number;
   netWage: number;
   deductions: number;
@@ -7,4 +7,7 @@ type CalculatorState = {
   incomeWithoutDeductions: number;
   incomeTaxAmount: number;
   taxBonus: number;
+  wage?: number;
 };
+
+export type WageType = "net" | "gross" | "supergross";
