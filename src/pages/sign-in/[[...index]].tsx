@@ -37,3 +37,21 @@ const SignInPage = () => {
 };
 
 export default SignInPage;
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
+  };
+}
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { index: [] }, locale: "en" },
+      { params: { index: [] }, locale: "sk" },
+    ],
+    fallback: "blocking",
+  };
+};
