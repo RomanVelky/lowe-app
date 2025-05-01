@@ -808,7 +808,10 @@
         "quarterly_income_tax": "Štvrťročný preddavok na daň z príjmov",
         "tax_assignment": "Termín pre 2% asignáciu dane",
         "extended_filing": "Predĺžený termín pre podanie daňového priznania",
-        "foreign_income": "Podanie daňového priznania pre zahraničné príjmy"
+        "foreign_income": "Podanie daňového priznania pre zahraničné príjmy",
+        "annual_income_overview": "Poskytnutie ročného prehľadu o príjme",
+        "foreign_income_tax": "Podanie daňového priznania pre zahraničné príjmy",
+        "extended_tax_filing": "Termín pre podanie žiadosti o predĺženie lehoty"
       },
       "details": {
         "dec_previous": "Za december 2023",

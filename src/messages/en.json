@@ -798,7 +798,8 @@
         "extended_filing": "Extended tax filing deadline",
         "extended_tax_filing": "Deadline for extended tax returns",
         "foreign_income_tax": "Foreign income tax filing deadline",
-        "foreign_income": "Foreign income tax filing"
+        "foreign_income": "Foreign income tax filing",
+        "annual_income_overview": "Annual income overview"
       },
       "details": {
         "dec_previous": "For December 2023",

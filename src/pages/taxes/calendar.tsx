@@ -18,14 +18,15 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
+import { TracingBeam } from "@/components/ui/animations/tracing-beam";
 
 const TaxCalendarPage = () => {
   const t = useTranslations("TAX_CALENDAR");
 
-  return (
+  const pageContent = (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="px-4 py-12 md:py-24 lg:py-32 container">
+      <section className=" py-12 md:py-24 lg:py-32 container">
         <div className="max-w-[800px] mx-auto text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
             {t("hero.title")}
@@ -37,7 +38,7 @@ const TaxCalendarPage = () => {
       </section>
 
       {/* Quick Reference */}
-      <section className="px-4 py-12 bg-muted/50 rounded-md">
+      <section className=" py-12 bg-muted/50 rounded-md">
         <div className="container">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             {t("key_deadlines.title")}
@@ -114,7 +115,7 @@ const TaxCalendarPage = () => {
       </section>
 
       {/* Monthly Calendar */}
-      <section className="px-4 py-12 md:py-24">
+      <section className=" py-12 md:py-24">
         <div className="container max-w-5xl">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             {t("monthly_calendar.title")}
@@ -1302,7 +1303,7 @@ const TaxCalendarPage = () => {
       </section>
 
       {/* Special Notes */}
-      <section className="px-4 py-12 bg-muted/50 rounded-md">
+      <section className=" py-12 bg-muted/50 rounded-md">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             {t("notes.title")}
@@ -1343,6 +1344,15 @@ const TaxCalendarPage = () => {
         </div>
       </section>
     </div>
+  );
+
+  return (
+    <>
+      <div className="hidden lg:block">
+        <TracingBeam>{pageContent}</TracingBeam>
+      </div>
+      <div className="lg:hidden">{pageContent}</div>
+    </>
   );
 };
 
