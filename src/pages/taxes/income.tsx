@@ -381,3 +381,9 @@ const IncomeTaxPage = () => {
 };
 
 export default IncomeTaxPage;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

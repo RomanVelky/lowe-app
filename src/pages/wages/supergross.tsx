@@ -9,3 +9,9 @@ const SuperGrossSallaryPage = () => {
 };
 export default SuperGrossSallaryPage;
 //TODO wage type dat na typ a nie string
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

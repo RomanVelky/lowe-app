@@ -367,3 +367,9 @@ const VatPage = () => {
 };
 
 export default VatPage;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

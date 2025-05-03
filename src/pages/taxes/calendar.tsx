@@ -1357,3 +1357,9 @@ const TaxCalendarPage = () => {
 };
 
 export default TaxCalendarPage;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

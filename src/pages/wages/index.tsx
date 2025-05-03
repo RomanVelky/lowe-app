@@ -8,3 +8,9 @@ const WagesPage = () => {
   );
 };
 export default WagesPage;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

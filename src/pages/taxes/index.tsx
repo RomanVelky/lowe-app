@@ -404,3 +404,9 @@ const Taxes = () => {
 };
 
 export default Taxes;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

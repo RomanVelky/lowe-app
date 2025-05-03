@@ -381,3 +381,9 @@ const RetirementSavings = () => {
 };
 
 export default RetirementSavings;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

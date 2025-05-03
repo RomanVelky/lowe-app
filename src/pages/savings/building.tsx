@@ -367,3 +367,9 @@ const BuildingSavings = () => {
 };
 
 export default BuildingSavings;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};
