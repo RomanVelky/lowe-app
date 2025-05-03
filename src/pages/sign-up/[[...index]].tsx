@@ -1,5 +1,5 @@
 import { SignUp } from "@clerk/nextjs";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const SignUpPage = () => {
   const t = useTranslations("AUTH.sign_up");
@@ -32,9 +32,7 @@ export default SignUpPage;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
+    props: {},
   };
 }
 

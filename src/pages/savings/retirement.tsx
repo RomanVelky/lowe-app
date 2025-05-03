@@ -23,7 +23,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const RetirementSavings = () => {
   const t = useTranslations("RETIREMENT_SAVINGS");
@@ -381,11 +381,3 @@ const RetirementSavings = () => {
 };
 
 export default RetirementSavings;
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
-  };
-}

@@ -15,7 +15,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const Investments = () => {
   const t = useTranslations("INVESTMENTS");
@@ -203,11 +203,3 @@ const Investments = () => {
 };
 
 export default Investments;
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
-  };
-}

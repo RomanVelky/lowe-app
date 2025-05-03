@@ -25,7 +25,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const Taxes = () => {
   const t = useTranslations("TAXES_INDEX");
@@ -404,11 +404,3 @@ const Taxes = () => {
 };
 
 export default Taxes;
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
-  };
-}

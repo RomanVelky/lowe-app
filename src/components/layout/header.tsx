@@ -18,7 +18,7 @@ import ListItem from "../list-item";
 import ThemeButton from "../unique/theme-button";
 import LangButton from "../unique/lang-button";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const Header = () => {
   const t = useTranslations();

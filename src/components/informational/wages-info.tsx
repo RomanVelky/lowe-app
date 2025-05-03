@@ -30,7 +30,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useWageData } from "@/pages/api/hooks/useWageData";
 

@@ -25,7 +25,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 const BuildingSavings = () => {
   const t = useTranslations("BUILDING_SAVINGS");
@@ -367,11 +367,3 @@ const BuildingSavings = () => {
 };
 
 export default BuildingSavings;
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
-  };
-}

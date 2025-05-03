@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "@/components/layout/layout";
 import { ThemeProvider } from "next-themes";
-import { NextIntlClientProvider } from "next-intl";
+import { TranslationProvider } from "@/context/TranslationContext";
 import { ClerkProvider } from "@clerk/nextjs";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
@@ -29,11 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             baseTheme: undefined,
           }}
         >
-          <NextIntlClientProvider
-            locale={locale}
-            timeZone="Europe/Vienna"
-            messages={messages}
-          >
+          <TranslationProvider>
             <ThemeProvider
               attribute="class"
               defaultTheme="system"
@@ -47,7 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <ReactQueryDevtools />
               </QueryClientProvider>
             </ThemeProvider>
-          </NextIntlClientProvider>
+          </TranslationProvider>
         </ClerkProvider>
       </SessionContextProvider>
     </>

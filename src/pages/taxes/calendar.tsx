@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 import { TracingBeam } from "@/components/ui/animations/tracing-beam";
 
 const TaxCalendarPage = () => {
@@ -1357,11 +1357,3 @@ const TaxCalendarPage = () => {
 };
 
 export default TaxCalendarPage;
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default,
-    },
-  };
-}

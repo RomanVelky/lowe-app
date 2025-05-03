@@ -4,7 +4,7 @@ import Link from "next/link";
 import Github from "../../../public/assets/github.svg";
 import { PATHS } from "@/lib/paths";
 import { useUser } from "@clerk/nextjs";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/context/useTranslations";
 
 type SubPath = { link: string; text: string };
 type Item = SubPath | { link: string; description: string };
