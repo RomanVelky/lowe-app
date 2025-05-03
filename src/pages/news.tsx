@@ -9,3 +9,9 @@ const News = () => {
 };
 
 export default News;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

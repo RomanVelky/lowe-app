@@ -1,7 +1,5 @@
-// src/context/TranslationContext.tsx
 import { createContext, useState, useEffect, ReactNode } from "react";
 import { useLanguageStore } from "@/lib/store/langStore";
-
 export interface TranslationContextType {
   messages: Record<string, any>;
   isLoaded: boolean;
@@ -20,17 +18,13 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   });
 
   useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const messages = require(`../messages/${locale}.json`);
-        setState({ messages, isLoaded: true });
-      } catch (error) {
-        console.error("Failed to load translations:", error);
-        setState({ messages: {}, isLoaded: true });
-      }
-    };
-
-    loadTranslations();
+    try {
+      const messages = require(`../messages/${locale}.json`);
+      setState({ messages, isLoaded: true });
+    } catch (error) {
+      console.error("Failed to load translations:", error);
+      setState({ messages: {}, isLoaded: true });
+    }
   }, [locale]);
 
   return (

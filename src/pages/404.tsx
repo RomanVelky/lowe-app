@@ -54,3 +54,9 @@ export default function NotFound() {
     </>
   );
 }
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {},
+  };
+};

@@ -25,7 +25,7 @@ const HomePage = () => {
       <section className="container flex flex-col items-center justify-center gap-4 py-16 text-center md:py-32">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            {t("hero.title")}{" "}
+            {t("hero.title")}
             <span className="text-primary">{t("hero.title-highlight")}</span>
           </h1>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
