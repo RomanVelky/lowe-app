@@ -10,6 +10,10 @@ const nextConfig = {
 
     return config;
   },
+  i18n: {
+    locales: ["en", "sk"],
+    defaultLocale: "sk",
+  },
 };
 
 export default nextConfig;

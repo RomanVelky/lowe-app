@@ -1,42 +1,36 @@
 export const PATHS = {
   WAGES: {
     link: "/wages",
-    description: "MZDY",
     subPaths: {
-      NET_SALARY: { link: "/wages#net-salary", text: "ČISTÁ MZDA" },
-      GROSS_SALARY: { link: "/wages#gross-salary", text: "HRUBÁ MZDA" },
-      PRICE_OF_WORK: { link: "/wages#price-of-work", text: "SUPERHRUBÁ MZDA" },
+      NET_SALARY: { link: "/wages/net" },
+      GROSS_SALARY: { link: "/wages/gross" },
+      PRICE_OF_WORK: { link: "/wages/supergross" },
     },
   },
   SAVINGS: {
     link: "/savings",
-    description: "SPORENIE",
     subPaths: {
       SAVINGS_ACCOUNTS: {
-        link: "/savings#savings-accounts",
-        text: "SPORIACE ÚČTY",
+        link: "/savings/accounts",
       },
       BUILDING_SAVINGS: {
-        link: "/savings#building-savings",
-        text: "STAVEBNÉ SPORENIE",
+        link: "/savings/building",
       },
       RETIREMENT_SAVINGS: {
-        link: "/savings#retirement-savings",
-        text: "SPORENIE NA DÔCHODOK",
+        link: "/savings/retirement",
       },
     },
   },
   TAXES: {
     link: "/taxes",
-    description: "DANE",
     subPaths: {
-      INCOME_TAX: { link: "/taxes#income-tax", text: "DAŇ Z PRÍJMU" },
-      VAT: { link: "/taxes#vat", text: "DPH" },
-      TAX_CALENDAR: { link: "/taxes#tax-calendar", text: "DAŇOVÝ KALENDÁR" },
+      INCOME_TAX: { link: "/taxes/income" },
+      VAT: { link: "/taxes/vat" },
+      TAX_CALENDAR: { link: "/taxes/calendar" },
     },
   },
-  INVESTMENTS: { link: "/investments", description: "INVESTÍCIE" },
-  NEWS: { link: "/news", description: "ČLÁNKY" },
+  INVESTMENTS: { link: "/investments" },
+  NEWS: { link: "/news" },
 };
 
 export const PATHS_OPTIONS = Object.values(PATHS);

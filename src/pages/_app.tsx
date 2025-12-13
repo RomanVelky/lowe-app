@@ -1,11 +1,53 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Layout from "@/components/layout";
+import Layout from "@/components/layout/layout";
+import { ThemeProvider } from "next-themes";
+import { TranslationProvider } from "@/context/TranslationContext";
+import { ClerkProvider } from "@clerk/nextjs";
+import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { useLanguageStore } from "@/lib/store/langStore";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
+  const [supabaseClient] = useState(() => createPagesBrowserClient());
+  const { locale } = useLanguageStore();
+  const messages = require(`../messages/${locale}.json`);
+  const queryClient = new QueryClient();
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <SessionContextProvider
+        supabaseClient={supabaseClient}
+        initialSession={pageProps.initialSession}
+      >
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+          appearance={{
+            baseTheme: undefined,
+          }}
+        >
+          <TranslationProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <QueryClientProvider client={queryClient}>
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+                <ReactQueryDevtools />
+              </QueryClientProvider>
+            </ThemeProvider>
+          </TranslationProvider>
+        </ClerkProvider>
+      </SessionContextProvider>
+    </>
   );
-}
+};
+
+export default App;

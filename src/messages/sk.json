@@ -1,0 +1,1334 @@
+{
+  "test": "Slovina",
+  "LAYOUT": {
+    "login-button": "Prihlásenie",
+    "wages": {
+      "header": "MZDY",
+      "h-1": "ČISTÁ MZDA",
+      "p-1": "Jedoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
+      "h-2": "HRUBÁ MZDA",
+      "p-2": "Výpočet hrubej mzdy",
+      "h-3": "SUPER HRUBÁ MZDA",
+      "p-3": "Výpočet super hrubej mzdy",
+      "h-4": "MZDY JEDNODUCHO",
+      "p-4": "Čo je to mzda. aké druhy sú a ako sa vypočítavajú a kde sa uvádzajú"
+    },
+    "savings": {
+      "header": "SPORENIE",
+      "h-1": "INVESTÍCIE",
+      "p-1": "Jedoduchá a prehľadná kalkulačka na výpočet čistej mzdy",
+      "h-2": "SPORIACE ÚČTY",
+      "p-2": "Výpočet hrubej mzdy",
+      "h-3": "STAVEBNÉ SPORENIE",
+      "p-3": "Výpočet super hrubej mzdy",
+      "h-4": "SPORENIE NA  DÔCHODOK",
+      "p-4": "Bližšie informácie o možnostiach sporenia na dôchodok"
+    },
+    "news": {
+      "header": "ČLÁNKY"
+    },
+    "taxes": {
+      "header": "DANE",
+      "h-1": "DAŇ Z PRÍJMU",
+      "p-1": "Čo je to daň z príjmu? Od čoho závisí jej výška?",
+      "h-2": "DPH",
+      "p-2": "Dôležité informácie o dani z pridanej hodnoty",
+      "h-3": "DAŇOVÝ KALENDÁR",
+      "p-3": "Kalendár obsahujúci informácie do kedy a aké dane zaplatiť"
+    }
+  },
+  "FOOTER": {
+    "p": "Objav ciac jednoduchých a intuitívnych nástrojov na našej platforme",
+    "wages": {
+      "header": "MZDY",
+      "link-1": "ČISTÁ MZDA",
+      "link-2": "SZČO",
+      "link-3": "SPORIACE ÚČTY"
+    },
+    "savings": {
+      "header": "SPORENIE",
+      "link-1": "SPORACE ÚČTY",
+      "link-2": "STAVEBNÉ SPORENIE",
+      "link-3": "SPORENIE NA DÔCHODOK",
+      "link-4": "INVESTÍCIE"
+    },
+    "taxes": {
+      "header": "DANE",
+      "link-1": "DAŇ Z PRÍJMU",
+      "link-2": "DPH"
+    }
+  },
+  "ACCORDIONS": {
+    "1": {
+      "h-1": "Nerozumieš niečomu?",
+      "p-1": "Ak niečomu nerozumieš, skús pogooogliť na webe, ak nenájdeš odpoveď, tak sa nás spýtaj na našej zákazníckej podpore (ikona otázkinu v hornom menu).",
+      "h-2": "Ako môžeš poskytnúť spätnú väzbu na vylepšenie stránky?",
+      "p-2": "Klikni hore v menu na otáznik a napíš čo máš na srdci, poprípade čo by si zmmenil alebo spravil inak, budeme ti vďační.",
+      "h-3": "Prečo používať kalkulačky na tejto stránke?",
+      "p-3": "Programoval ich človek čo sa v daniach vôbec nevyznal a snažil sa ich pochopiť, a preto dbal na to aby boli jednoduché a aj laik rozumel ich výstupnému výpočtu."
+    },
+    "2": {
+      "h-1": "Prečo je viacero funkcií vo fáze \"bude už čoskoro\"?",
+      "p-1": "Dôvodom je, že na vývoji pracuje len jeden developer vo voľnom čase a funkcionality sa snaží dodávať plne funkčné a pretestované a to chce čas.",
+      "h-2": "Čo plájeme do budúcna?",
+      "p-2": "Chceli by sme časom pridávať články, ktoré by vysvetľovali veci zo sveta financií a daní, aby sa obyčajný človek v tom dokázal lepšie zorientovať bez rozsiahleho študovania. Do budúcna plánujeme spraviť napr. návody ako začať s kryptomenami, integrovať pripojenie crypto penaženiek na našu platformu a mnoho iných.",
+      "h-3": "Kto by mohol využiť kalkulačku spoločne s informáciami poskytnutými na stránke?",
+      "p-3": "Každý. Či už si môžete porovnať platové podmienky voči priemernej mzde, alebo vidieť rozdiel medzi platom zamestnanca, SZČO. Ak vás zaujímajú financie, alebo by ste si radi rozšírili svoje obzory."
+    }
+  },
+  "WAGE-CALCULATOR": {
+    "form": {
+      "gross-wage": "Hrubá mzda (Eur)",
+      "non-taxable-amount": "Nezdaň. časť",
+      "kids-under": "Deti 18-",
+      "kids-over": "Deti 18+",
+      "more-info": "Viac info",
+      "detailed-view": "Detailný prehľad"
+    },
+    "base-info-window": {
+      "header": "Výpočet čistej mzdy",
+      "super-gross-wage": "Super hrubá mzda:",
+      "gross-wage": "Hrubá mzda:",
+      "net-wage": "Čistá mzda:"
+    }
+  },
+  "HOMEPAGE": {
+    "hero": {
+      "title": "Kalkulačka Miezd",
+      "title-highlight": "Pre Slovensko",
+      "description": "Jednoduchý a presný nástroj pre výpočet čistej mzdy, odvodov a daní. Všetko, čo potrebujete vedieť o vašej výplate.",
+      "calculate-button": "Vypočítať Mzdu",
+      "learn-more-button": "Zistiť Viac"
+    },
+    "features": {
+      "card-1": {
+        "title": "Presný Výpočet",
+        "subtitle": "Aktuálne podľa legislatívy SR",
+        "description": "Vypočítajte si presnú čistú mzdu, odvody a dane podľa aktuálnych zákonov a predpisov."
+      },
+      "card-2": {
+        "title": "Detailný Prehľad",
+        "subtitle": "Všetky položky rozpísané",
+        "description": "Získajte podrobný rozpis všetkých odvodov, daní a zliav ktoré ovplyvňujú vašu výplatu."
+      },
+      "card-3": {
+        "title": "Bez Registrácie",
+        "subtitle": "Rýchlo a anonymne",
+        "description": "Používajte kalkulačku bez nutnosti registrácie. Vaše údaje nikde neukladáme."
+      },
+      "card-4": {
+        "title": "Nezdaniteľné Časti",
+        "subtitle": "Všetky odpočítateľné položky",
+        "description": "Zohľadňujeme všetky nezdaniteľné časti základu dane vrátane odpočtu na deti."
+      }
+    },
+    "cta": {
+      "title": "Začnite s Výpočtom Hneď Teraz",
+      "description": "Náš kalkulátor je vždy aktuálny a pripravený pomôcť vám s výpočtom vašej mzdy. Vyskúšajte ho zadarmo.",
+      "button": "Otvoriť Kalkulačku"
+    },
+    "accordions": {
+      "leftColumn": {
+        "item1": {
+          "title": "Nerozumieš niečomu?",
+          "content": "Ak niečomu nerozumieš, skús pogooogliť na webe, ak nenájdeš odpoveď, tak sa nás spýtaj na našej zákazníckej podpore (ikona otázkinu v hornom menu)."
+        },
+        "item2": {
+          "title": "Ako môžeš poskytnúť spätnú väzbu na vylepšenie stránky?",
+          "content": "Klikni hore v menu na otáznik a napíš čo máš na srdci, poprípade čo by si zmmenil alebo spravil inak, budeme ti vďační."
+        },
+        "item3": {
+          "title": "Prečo používať kalkulačky na tejto stránke?",
+          "content": "Programoval ich človek čo sa v daniach vôbec nevyznal a snažil sa ich pochopiť, a preto dbal na to aby boli jednoduché a aj laik rozumel ich výstupnému výpočtu."
+        }
+      },
+      "rightColumn": {
+        "item1": {
+          "title": "Prečo je viacero funkcíí vo fáze \"bude už čoskoro\"?",
+          "content": "Dôvodom je, že na vývoji pracuje len jeden developer vo voľnom čase a funkcionality sa snaží dodávať plne funkčné a pretestované a to chce čas."
+        },
+        "item2": {
+          "title": "Čo plánujeme do budúcna?",
+          "content": "Chceli by sme časom pridávať články, ktoré by vysvetľovali veci zo sveta financií a daní, aby ste sa obyčajný človek v tom dokázal lepšie zorientovať, bez rozsiahleho študovania. Do budúcna plánujeme spraviť napr. návody ako začať s kryptomenami, integrovať pripojenie crypto penaženiek na našu platformu a mnoho iných."
+        },
+        "item3": {
+          "title": "Kto by mohol využiť kalkulačky a poskytované informácie?",
+          "content": "Každý. Či už si môžete porovnať platové podmienky voči priemernej mzde, alebo vidieť rozdiel medzi platom zamestnanca, SZČO. Ak vás zaujímajú financie, alebo by ste si radi rozšírili svoje obzory."
+        }
+      }
+    }
+  },
+  "INVESTMENTS": {
+    "hero": {
+      "title": "Sprievodca Investíciami",
+      "description": "Pochopte rôzne typy investícií a robte informované rozhodnutia pre vašu finančnú budúcnosť"
+    },
+    "sections": {
+      "types": {
+        "title": "Typy Investícií",
+        "stocks": {
+          "title": "Akcie",
+          "description": "Podiely spoločností obchodované na burzách. Vyššie riziko, potenciál pre vyššie výnosy.",
+          "return": "Priemerný výnos: 7-10% ročne"
+        },
+        "bonds": {
+          "title": "Dlhopisy",
+          "description": "Cenné papiere s pevným výnosom. Nižšie riziko, stabilné výnosy. Vládne alebo firemné dlhové nástroje.",
+          "return": "Priemerný výnos: 3-6% ročne"
+        },
+        "real-estate": {
+          "title": "Nehnuteľnosti",
+          "description": "Investície do nehnuteľností prostredníctvom REITov alebo priameho vlastníctva. Dobré pre diverzifikáciu.",
+          "return": "Priemerný výnos: 8-12% ročne"
+        },
+        "etfs": {
+          "title": "ETF",
+          "description": "Diverzifikované fondy sledujúce indexy. Rovnováha medzi rizikom a výnosom. Jednoduchý spôsob investovania na trhoch.",
+          "return": "Priemerný výnos: 7-9% ročne"
+        },
+        "mutual-funds": {
+          "title": "Podielové Fondy",
+          "description": "Profesionálne spravované investičné fondy. Vhodné pre pasívne investovanie.",
+          "return": "Priemerný výnos: 5-8% ročne"
+        },
+        "commodities": {
+          "title": "Komodity",
+          "description": "Suroviny ako zlato, striebro, ropa. Dobrá ochrana proti inflácii.",
+          "return": "Priemerný výnos: 2-8% ročne"
+        }
+      },
+      "risk": {
+        "title": "Riziko vs Výnos",
+        "low-risk": {
+          "title": "Nižšie Riziko",
+          "description": "Stabilnejšie, nižšie výnosy",
+          "items": [
+            "Dlhopisy",
+            "Termínované vklady",
+            "Štátne cenné papiere",
+            "Fondy peňažného trhu"
+          ]
+        },
+        "high-risk": {
+          "title": "Vyššie Riziko",
+          "description": "Volatilnejšie, potenciál vyšších výnosov",
+          "items": [
+            "Jednotlivé akcie",
+            "Kryptomeny",
+            "Obchodovanie s opciami",
+            "Rozvíjajúce sa trhy"
+          ]
+        }
+      },
+      "crypto": {
+        "title": "Zaujímajú vás Kryptomeny?",
+        "description": "Preskúmajte svet digitálnych mien, blockchain technológií a decentralizovaných financií.",
+        "button": "Preskúmať Kryptomeny"
+      }
+    }
+  },
+  "SAVINGS_ACCOUNTS": {
+    "hero": {
+      "title": "Sprievodca Sporiacimi Účtami",
+      "description": "Pochopenie možností pre bezpečné a výnosné sporenie"
+    },
+    "benefits": {
+      "title": "Prečo si Vybrať Sporiaci Účet?",
+      "security": {
+        "title": "Bezpečie a Istota",
+        "description": "Chránené poistením vkladov až do výšky 100 000 € na banku v krajinách EÚ"
+      },
+      "interest": {
+        "title": "Zarábanie úrokov",
+        "description": "Vaše peniaze rastú postupom času vďaka zloženému úročeniu"
+      },
+      "access": {
+        "title": "Jednoduchý Prístup",
+        "description": "Prístup k vašim financiám podľa potreby, s rôznymi možnosťami výberu"
+      }
+    },
+    "account_types": {
+      "title": "Typy Sporiacich Účtov",
+      "standard": {
+        "title": "Štandardný Sporiaci Účet",
+        "description": "Základný sporiaci účet s pravidelným prístupom k financiám",
+        "features": [
+          "Nižšie úrokové sadzby, ale úplná flexibilita pri výberoch",
+          "Zvyčajne bez požiadaviek na minimálny zostatok",
+          "Ideálny pre núdzové fondy a pravidelné sporenie"
+        ]
+      },
+      "term": {
+        "title": "Termínovaný Vklad",
+        "description": "Sporenie na pevne stanovenú dobu s vyššími úrokovými sadzbami",
+        "features": [
+          "Vyššie úrokové sadzby pre dlhšie záväzkové obdobia",
+          "Pevné termíny od 1 mesiaca do niekoľkých rokov",
+          "Predčasný výber môže mať za následok pokuty"
+        ]
+      },
+      "high_yield": {
+        "title": "Sporiaci Účet s Vysokým Výnosom",
+        "description": "Lepšie úrokové sadzby s určitými podmienkami",
+        "features": [
+          "Vyššie úrokové sadzby ako štandardné sporiace účty",
+          "Môže vyžadovať minimálny zostatok alebo pravidelné vklady",
+          "Často ponúkané online bankami s nižšími prevádzkovými nákladmi"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Porovnanie Účtov",
+      "features": {
+        "interest_rate": "Úroková Sadzba",
+        "minimum_balance": "Minimálny Zostatok",
+        "access_to_funds": "Prístup k Prostriedkom",
+        "best_for": "Najlepšie Pre"
+      },
+      "standard": {
+        "interest_rate": "0.01-0.5%",
+        "minimum_balance": "€0",
+        "access_to_funds": "Kedykoľvek",
+        "best_for": "Núdzový Fond"
+      },
+      "term": {
+        "interest_rate": "2-4%",
+        "minimum_balance": "€500-1000",
+        "access_to_funds": "Koniec Termínu",
+        "best_for": "Dlhodobé Sporenie"
+      },
+      "high_yield": {
+        "interest_rate": "3-4.5%",
+        "minimum_balance": "€0-100",
+        "access_to_funds": "Obmedzený",
+        "best_for": "Rastúce Úspory"
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Výber Sporiaceho Účtu",
+      "goals": {
+        "title": "Zvážte Svoje Ciele",
+        "items": [
+          "Krátkodobé vs dlhodobé sporenie",
+          "Núdzový fond alebo budovanie majetku",
+          "Potreby pravidelného prístupu"
+        ]
+      },
+      "rates": {
+        "title": "Porovnajte Sadzby",
+        "items": [
+          "Skontrolujte viacero bánk",
+          "Pozrite sa na online banky",
+          "Zvážte propagačné sadzby"
+        ]
+      },
+      "security": {
+        "title": "Skontrolujte Bezpečnosť",
+        "items": [
+          "Overte poistenie vkladov",
+          "Prezrite si reputáciu banky",
+          "Skontrolujte funkcie online zabezpečenia"
+        ]
+      },
+      "fine_print": {
+        "title": "Prečítajte si Drobnú Tlač",
+        "items": [
+          "Požiadavky na minimálny zostatok",
+          "Mesačné poplatky",
+          "Obmedzenia výberu"
+        ]
+      }
+    }
+  },
+  "SAVINGS_INDEX": {
+    "hero": {
+      "title": "Sprievodca Sporením",
+      "description": "Objavte rôzne spôsoby sporenia a zabezpečte svoju finančnú budúcnosť"
+    },
+    "types": {
+      "title": "Typy Sporenia",
+      "accounts": {
+        "title": "Sporiace Účty",
+        "description": "Tradičné bankové sporenie s jednoduchým prístupom k vašim peniazom",
+        "benefits": {
+          "title": "Hlavné Výhody:",
+          "items": [
+            "Jednoduchý prístup k vašim peniazom",
+            "Ochrana vkladov FDIC/Európska",
+            "Investícia bez rizika",
+            "Viacero možností účtov"
+          ]
+        },
+        "interest": {
+          "title": "Úrokové Sadzby:",
+          "description": "Aktuálne sadzby sa pohybujú od 0,5% do 4% ročne v závislosti od banky a typu účtu"
+        },
+        "button": "Zistite Viac o Sporiacich Účtoch"
+      },
+      "building": {
+        "title": "Stavebné Sporenie",
+        "description": "Špeciálny slovenský program sporenia na bytové účely",
+        "benefits": {
+          "title": "Hlavné Výhody:",
+          "items": [
+            "Štátny príspevok",
+            "Výhodné úrokové sadzby",
+            "Možnosť budúceho úveru na bývanie",
+            "Daňové výhody"
+          ]
+        },
+        "features": {
+          "title": "Vlastnosti:",
+          "items": [
+            "Minimálne 6-ročné obdobie sporenia",
+            "Štátna prémia až do 70€ ročne",
+            "Úrokové sadzby okolo 1-2%"
+          ]
+        },
+        "button": "Preskúmať Stavebné Sporenie"
+      },
+      "retirement": {
+        "title": "Sporenie na Dôchodok",
+        "description": "Dlhodobé sporenie na dôchodkové roky",
+        "options": {
+          "title": "Možnosti Zahŕňajú:",
+          "items": [
+            "2. pilier (Povinný)",
+            "3. pilier (Dobrovoľný)",
+            "Doplnkové dôchodkové sporenie",
+            "Súkromné dôchodkové účty"
+          ]
+        },
+        "benefits": {
+          "title": "Výhody:",
+          "items": [
+            "Daňové výhody",
+            "Možné príspevky zamestnávateľa",
+            "Dlhodobé budovanie majetku"
+          ]
+        },
+        "button": "Plánujte Svoj Dôchodok"
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Rozumné Sporenie",
+      "diversify": {
+        "title": "Diverzifikujte",
+        "description": "Neukladajte všetky úspory na jedno miesto. Kombinujte rôzne typy sporenia pre optimálne výsledky."
+      },
+      "start_early": {
+        "title": "Začnite Skoro",
+        "description": "Čím skôr začnete sporiť, tým viac času majú vaše peniaze na rast prostredníctvom zloženého úročenia."
+      },
+      "regular": {
+        "title": "Pravidelné Sporenie",
+        "description": "Nastavte si automatické prevody na sporiace účty každý mesiac pre konzistentný rast."
+      }
+    }
+  },
+  "BUILDING_SAVINGS": {
+    "hero": {
+      "title": "Stavebné Sporenie",
+      "description": "Pochopenie stavebného sporenia: stredoeurópsky prístup k financovaniu bývania"
+    },
+    "what_is": {
+      "title": "Čo je Stavebné Sporenie?",
+      "description": "Stavebné sporenie je špecializovaný sporiaci a úverový program navrhnutý na to, aby pomohol ľuďom sporiť na bytové účely. Kombinuje pravidelné sporenie s možnosťou získať výhodný úver na bývanie, podporovaný štátnymi prémiami.",
+      "origins": {
+        "title": "Pôvod",
+        "description": "Koncept pochádza z Nemecka (Bausparen) a bol prijatý stredoeurópskymi krajinami, pričom sa stal obzvlášť populárnym na Slovensku a v Českej republike po roku 1992."
+      },
+      "popularity": {
+        "title": "Regionálna Popularita",
+        "description": "Najčastejšie v: Nemecku, Rakúsku, na Slovensku, v Českej republike, Maďarsku a Chorvátsku. Menej bežné alebo neexistujúce v iných častiach Európy a sveta."
+      }
+    },
+    "benefits": {
+      "title": "Hlavné Výhody",
+      "state_premium": {
+        "title": "Štátna Prémia",
+        "description": "Ročný štátny príspevok až do výšky 70 € na Slovensku (líši sa podľa roku a krajiny). Prémia sa vypočítava ako percento z ročných úspor."
+      },
+      "interest": {
+        "title": "Garantovaný Úrok",
+        "description": "Pevná úroková sadzba na úspory (zvyčajne 1-2%) plus štátna prémia, čo ju robí atraktívnejšou ako bežné sporiace účty."
+      },
+      "loan": {
+        "title": "Možnosť Úveru na Bývanie",
+        "description": "Právo požiadať o výhodný úver na bývanie po období sporenia, s lepšími úrokovými sadzbami ako štandardné hypotéky."
+      }
+    },
+    "how_it_works": {
+      "title": "Ako Funguje Stavebné Sporenie",
+      "savings_phase": {
+        "title": "Fáza Sporenia",
+        "description": "Počiatočné 6-ročné obdobie sporenia",
+        "features": [
+          "Pravidelné mesačné vklady (suma založená na vašej zmluve)",
+          "Ročná štátna prémia pridaná k vašim úsporám",
+          "Úrok získaný z úspor aj štátnych prémií"
+        ]
+      },
+      "loan_phase": {
+        "title": "Fáza Úveru (Voliteľná)",
+        "description": "Po splnení požiadaviek na sporenie",
+        "features": [
+          "Možnosť požiadať o úver na bývanie",
+          "Výhodné úrokové sadzby v porovnaní so štandardnými hypotékami",
+          "Výška úveru založená na nasporenej sume a úverovej bonite"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Stavebné Sporenie vo Svete",
+      "country": "Krajina",
+      "system_name": "Názov Systému",
+      "state_support": "Štátna Podpora",
+      "popularity": "Popularita",
+      "countries": {
+        "slovakia": {
+          "name": "Slovensko",
+          "system_name": "Stavebné sporenie",
+          "state_support": "Až do €70/rok",
+          "popularity": "Veľmi Vysoká"
+        },
+        "czech": {
+          "name": "Česká republika",
+          "system_name": "Stavební spoření",
+          "state_support": "Až do 2,000 Kč/rok",
+          "popularity": "Veľmi Vysoká"
+        },
+        "germany": {
+          "name": "Nemecko",
+          "system_name": "Bausparen",
+          "state_support": "Prémia na Bývanie",
+          "popularity": "Vysoká"
+        },
+        "austria": {
+          "name": "Rakúsko",
+          "system_name": "Bausparen",
+          "state_support": "Štátna Prémia",
+          "popularity": "Vysoká"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tipy pre Stavebné Sporenie",
+      "optimize": {
+        "title": "Optimalizujte Svoje Úspory",
+        "items": [
+          "Šetrite optimálnu sumu na maximalizáciu štátnej prémie",
+          "Zvážte pravidelné mesačné vklady",
+          "Plánujte na celé 6-ročné obdobie"
+        ]
+      },
+      "planning": {
+        "title": "Dlhodobé Plánovanie",
+        "items": [
+          "Definujte svoje ciele v oblasti bývania",
+          "Zvážte budúce potreby úverov",
+          "Porovnajte rôznych poskytovateľov"
+        ]
+      },
+      "benefits": {
+        "title": "Štátne Výhody",
+        "items": [
+          "Pochopte aktuálne sadzby prémií",
+          "Skontrolujte podmienky oprávnenosti",
+          "Sledujte zmeny v politike"
+        ]
+      },
+      "protection": {
+        "title": "Ochrana",
+        "items": [
+          "Úspory sú garantované štátom",
+          "Pozorne si prečítajte zmluvné podmienky",
+          "Udržiavajte dokumentáciu v bezpečí"
+        ]
+      }
+    }
+  },
+  "RETIREMENT_SAVINGS": {
+    "hero": {
+      "title": "Dôchodkové Sporenie na Slovensku",
+      "description": "Pochopenie trojpilierového dôchodkového systému a porovnania v rámci EÚ"
+    },
+    "pension_system": {
+      "title": "Slovenský Dôchodkový Systém",
+      "pillars": {
+        "first": {
+          "title": "Prvý Pilier",
+          "subtitle": "Povinný Štátny Dôchodok",
+          "items": [
+            "Spravovaný Sociálnou poisťovňou",
+            "Povinné príspevky",
+            "Založený na priebežnom systéme",
+            "18,3% z hrubej mzdy"
+          ]
+        },
+        "second": {
+          "title": "Druhý Pilier",
+          "subtitle": "Súkromné Dôchodkové Sporenie",
+          "items": [
+            "Súkromné dôchodkové správcovské spoločnosti",
+            "Voliteľná účasť",
+            "4,5% z hrubej mzdy",
+            "Individuálne investičné možnosti"
+          ]
+        },
+        "third": {
+          "title": "Tretí Pilier",
+          "subtitle": "Dobrovoľné Doplnkové",
+          "items": [
+            "Dobrovoľné dodatočné úspory",
+            "Daňové výhody",
+            "Možné príspevky zamestnávateľa",
+            "Flexibilné výšky príspevkov"
+          ]
+        }
+      }
+    },
+    "key_features": {
+      "title": "Kľúčové Vlastnosti Slovenského Systému",
+      "contribution_rates": {
+        "title": "Sadzby Príspevkov",
+        "table": {
+          "headers": {
+            "pillar": "Pilier",
+            "employee": "Zamestnanec",
+            "employer": "Zamestnávateľ",
+            "total": "Celkom"
+          },
+          "first_pillar": {
+            "name": "1. Pilier",
+            "employee": "4%",
+            "employer": "14,3%",
+            "total": "18,3%"
+          },
+          "second_pillar": {
+            "name": "2. Pilier",
+            "employee": "4,5%",
+            "employer": "0%",
+            "total": "4,5%"
+          },
+          "third_pillar": {
+            "name": "3. Pilier",
+            "employee": "Dobrovoľné",
+            "employer": "Voliteľné",
+            "total": "Flexibilné"
+          }
+        }
+      }
+    },
+    "eu_comparison": {
+      "title": "Porovnanie Dôchodkových Systémov v EÚ",
+      "regions": {
+        "western": {
+          "title": "Západná Európa",
+          "subtitle": "Nemecko, Francúzsko, Holandsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Vyššie štátne dôchodky",
+            "Dobre rozvinuté zamestnanecké schémy",
+            "Silné trhy súkromných dôchodkov",
+            "Vyššie sadzby príspevkov"
+          ]
+        },
+        "nordic": {
+          "title": "Severské Krajiny",
+          "subtitle": "Švédsko, Dánsko, Fínsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Univerzálne základné dôchodky",
+            "Silné zamestnanecké dôchodky",
+            "Vysoké náhradové pomery",
+            "Automatické mechanizmy úpravy"
+          ]
+        },
+        "central": {
+          "title": "Stredná Európa",
+          "subtitle": "Slovensko, Česká republika, Poľsko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Zmiešané systémy so súkromnými prvkami",
+            "Povinné druhé piliere",
+            "Rastúce dobrovoľné schémy",
+            "Nižšie náhradové pomery"
+          ]
+        },
+        "southern": {
+          "title": "Južná Európa",
+          "subtitle": "Taliansko, Španielsko, Grécko",
+          "characteristics": "Kľúčové Charakteristiky:",
+          "items": [
+            "Silné štátne dôchodky",
+            "Menej rozvinuté súkromné dôchodky",
+            "Vyššie výdavky na dôchodky",
+            "Nedávny tlak na reformy"
+          ]
+        }
+      }
+    },
+    "recommendations": {
+      "title": "Ako Najlepšie Využiť Svoje Dôchodkové Sporenie",
+      "tips": {
+        "start_early": {
+          "title": "Začnite Včas",
+          "description": "Začnite prispievať do dobrovoľných schém čo najskôr, aby ste maximalizovali výhody zloženého úročenia."
+        },
+        "diversify": {
+          "title": "Diverzifikujte",
+          "description": "Zapojte sa do viacerých pilierov, aby ste vytvorili vyvážené dôchodkové portfólio."
+        },
+        "monitor": {
+          "title": "Monitorujte",
+          "description": "Pravidelne kontrolujte výkonnosť svojho dôchodkového fondu a podľa toho upravujte svoju stratégiu."
+        },
+        "stay_informed": {
+          "title": "Buďte Informovaní",
+          "description": "Sledujte zmeny v dôchodkovom systéme a nové príležitosti na dôchodkové sporenie."
+        }
+      }
+    }
+  },
+  "AUTH": {
+    "sign_in": {
+      "title": "Vitajte na Našej Platforme",
+      "description": "Prihláste sa pre prístup k vášmu účtu a jednoduché spravovanie vašej finančnej cesty"
+    },
+    "sign_up": {
+      "title": "Vytvorte si Účet",
+      "description": "Začnite používať našu platformu"
+    }
+  },
+  "WAGES_INFO": {
+    "title": "Mzdy Jednoducho",
+    "subtitle": "Komplexný prehľad o mzdách, ich typoch a porovnanie v rámci Európskej únie",
+    "cards": {
+      "what_is": {
+        "title": "Čo je mzda?",
+        "description": "Mzda je peňažné plnenie poskytované zamestnávateľom zamestnancovi za vykonanú prácu. Je základným prvkom pracovnoprávnych vzťahov."
+      },
+      "types": {
+        "title": "Druhy miezd",
+        "list_0": "Základná mzda",
+        "list_1": "Hrubá mzda",
+        "list_2": "Čistá mzda",
+        "list_3": "Minimálna mzda"
+      },
+      "where_used": {
+        "title": "Kde sa udávajú?",
+        "description": "Mzdy sa dojednávajú v pracovnej zmluve, kolektívnej zmluve alebo sú stanovené zákonom (minimálna mzda)."
+      }
+    },
+    "comparison": {
+      "title": "Porovnanie minimálnych miezd v EÚ",
+      "subtitle": "Mesačné minimálne mzdy v eurách, 2024",
+      "table": {
+        "country": "Krajina",
+        "min_wage": "Minimálna mzda (€)",
+        "rows_per_page": "Riadkov na stránku",
+        "of": "z",
+        "prev": "Predchádzajúca",
+        "next": "Nasledujúca"
+      }
+    },
+    "calculation": {
+      "title": "Výpočet mzdy",
+      "description": "Výpočet čistej mzdy zahŕňa niekoľko krokov a odvodov:",
+      "steps_0": "Hrubá mzda - základ pre výpočet odvodov a dane",
+      "steps_1": "Odvody do zdravotnej poisťovne",
+      "steps_2": "Odvody do sociálnej poisťovne",
+      "steps_3": "Daň z príjmu"
+    }
+  },
+  "TAX_CALENDAR": {
+    "hero": {
+      "title": "Slovenský Daňový Kalendár 2024",
+      "description": "Všetky Dôležité Daňové Termíny na Slovensku"
+    },
+    "key_deadlines": {
+      "title": "Kľúčové Termíny",
+      "income_tax": {
+        "title": "Daňové Priznanie k Dani z Príjmov",
+        "description": "Štandardný termín: 31. marec 2024",
+        "extensions": "Predĺžené termíny:",
+        "june": "30. jún 2024 (s oznámením)",
+        "september": "30. september 2024 (zahraničné príjmy)"
+      },
+      "vat": {
+        "title": "DPH Priznania",
+        "description": "Mesačné/Štvrťročné podanie",
+        "due_dates": "Termíny splatnosti:",
+        "day_after": "25. deň po zdaňovacom období",
+        "same_day": "Platba DPH splatná v rovnaký deň"
+      },
+      "advance_tax": {
+        "title": "Preddavky na Daň",
+        "description": "Na základe predchádzajúcej daňovej povinnosti",
+        "schedule": "Platobný kalendár:",
+        "quarterly": "Štvrťročne: 31. mar, 30. jún, 30. sep, 31. dec",
+        "monthly": "Mesačne: Posledný deň každého mesiaca"
+      }
+    },
+    "monthly_calendar": {
+      "title": "Mesačný Daňový Kalendár",
+      "tabs": {
+        "q1": "Q1 (Jan-Mar)",
+        "q2": "Q2 (Apr-Jún)",
+        "q3": "Q3 (Júl-Sep)",
+        "q4": "Q4 (Okt-Dec)"
+      },
+      "table": {
+        "date": "Dátum",
+        "obligation": "Povinnosť",
+        "details": "Detaily"
+      },
+      "months": {
+        "january": "Január",
+        "february": "Február",
+        "march": "Marec",
+        "april": "Apríl",
+        "may": "Máj",
+        "june": "Jún",
+        "july": "Júl",
+        "august": "August",
+        "september": "September",
+        "october": "Október",
+        "november": "November",
+        "december": "December"
+      },
+      "obligations": {
+        "monthly_vat_payment": "Mesačná platba preddavku na DPH",
+        "vat_return": "Podanie DPH priznania",
+        "monthly_income_tax": "Mesačný preddavok na daň z príjmov",
+        "property_tax": "Priznanie k dani z nehnuteľností",
+        "annual_income": "Ročný prehľad o príjme",
+        "income_tax_return": "Podanie daňového priznania k dani z príjmov",
+        "quarterly_income_tax": "Štvrťročný preddavok na daň z príjmov",
+        "tax_assignment": "Termín pre 2% asignáciu dane",
+        "extended_filing": "Predĺžený termín pre podanie daňového priznania",
+        "foreign_income": "Podanie daňového priznania pre zahraničné príjmy",
+        "annual_income_overview": "Poskytnutie ročného prehľadu o príjme",
+        "foreign_income_tax": "Podanie daňového priznania pre zahraničné príjmy",
+        "extended_tax_filing": "Termín pre podanie žiadosti o predĺženie lehoty"
+      },
+      "details": {
+        "dec_previous": "Za december 2023",
+        "jan_previous": "Za január 2023",
+        "feb_previous": "Za február 2023",
+        "mar_previous": "Za marec 2023",
+        "apr_previous": "Za apríl 2023",
+        "may_previous": "Za máj 2023",
+        "jun_previous": "Za jún 2023",
+        "jul_previous": "Za júl 2023",
+        "aug_previous": "Za august 2023",
+        "sep_previous": "Za september 2023",
+        "oct_previous": "Za október 2023",
+        "nov_previous": "Za november 2023",
+        "q4_previous": "Za december 2023 / Q4 2023",
+        "tax_liability": "Pre daňovníkov s daňovou povinnosťou >16 600 €",
+        "property_changes": "Ak nastali zmeny v nehnuteľnostiach v roku 2023",
+        "employer_filing": "Pre zamestnancov žiadajúcich o ročné zúčtovanie cez zamestnávateľa",
+        "standard_deadline": "Štandardný termín pre daňový rok 2023",
+        "q1_payment": "Platba za Q1 pre kvalifikovaných daňovníkov",
+        "charity": "Pre nasmerovanie časti dane na charitu",
+        "charity_portion": "Pre poukázanie 2% daní oprávneným organizáciám",
+        "extension_request": "Termín pre podanie žiadosti o predĺženie lehoty",
+        "foreign_income": "Pre daňovníkov so zahraničnými príjmami",
+        "extension": "Pre tých, ktorí požiadali o predĺženie",
+        "q2_payment": "Platba za Q2 pre kvalifikovaných daňovníkov",
+        "q3_payment": "Platba za Q3 pre kvalifikovaných daňovníkov",
+        "foreign_taxpayers": "Pre daňovníkov so zahraničnými príjmami",
+        "q4_payment": "Platba za Q4 pre kvalifikovaných daňovníkov"
+      },
+      "badges": {
+        "vat": "DPH",
+        "income": "Príjem",
+        "property": "Nehnuteľnosť",
+        "employer": "Zamestnávateľ",
+        "charity": "Charita",
+        "important": "DÔLEŽITÉ"
+      }
+    },
+    "notes": {
+      "title": "Dôležité Poznámky",
+      "extensions": {
+        "title": "Predĺženie Lehôt",
+        "three_month": "3-mesačné predĺženie: Oznámiť daňovému úradu do 31. marca",
+        "six_month": "6-mesačné predĺženie: Len pre zahraničné príjmy",
+        "request": "Žiadosť o predĺženie musí byť podaná pred termínom"
+      },
+      "deadlines": {
+        "title": "Pravidlá Termínov",
+        "weekend": "Ak termín pripadne na víkend/sviatok, posúva sa na nasledujúci pracovný deň",
+        "electronic": "Elektronické podanie sa považuje za včasné, ak je podané do polnoci",
+        "paper": "Papierové podanie musí byť doručené alebo odoslané poštou do termínu"
+      }
+    }
+  },
+  "INCOME_TAX": {
+    "hero": {
+      "title": "Sprievodca Daňou z Príjmu",
+      "description": "Porozumenie dani z príjmu fyzických osôb na Slovensku"
+    },
+    "tax_rates": {
+      "title": "Daňové sadzby (2024)",
+      "rate_19": {
+        "title": "19% Daňová sadzba",
+        "description": "Platí pre ročný zdaniteľný príjem do 38 553,01 €",
+        "includes": "Zahŕňa",
+        "items": {
+          "employment": "Príjem zo zamestnania",
+          "business": "Príjem z podnikania",
+          "rental": "Príjem z prenájmu",
+          "other": "Iné zdroje príjmov"
+        }
+      },
+      "rate_25": {
+        "title": "25% Daňová sadzba",
+        "description": "Platí pre ročný zdaniteľný príjem nad 38 553,01 €",
+        "progressive": "Progresívne zdanenie",
+        "items": {
+          "threshold": "Platí len pre príjem presahujúci limit",
+          "previous": "Predchádzajúci príjem zdanený 19%",
+          "monthly": "Vypočítané na mesačnej báze pre zamestnancov"
+        }
+      }
+    },
+    "allowances": {
+      "title": "Daňové úľavy a odpočty",
+      "personal": {
+        "title": "Osobná úľava",
+        "basic": "Základná nezdaniteľná časť na rok 2024: 4 519,92 €",
+        "conditions_title": "Podmienky",
+        "conditions": {
+          "decreases": "Progresívne sa znižuje s vyšším príjmom",
+          "available": "Dostupná pre všetkých daňovníkov",
+          "monthly": "Vypočítaná mesačne pre zamestnancov"
+        }
+      },
+      "additional": {
+        "title": "Dodatočné odpočty",
+        "spouse": {
+          "title": "Úľava na manžela/manželku",
+          "amount": "Až do výšky 4 519,92 € ročne",
+          "based": "Závisí od príjmu manžela/manželky",
+          "conditions": "Platia špecifické podmienky"
+        },
+        "child": {
+          "title": "Daňový bonus na dieťa",
+          "amount": "50,14 € mesačne na dieťa",
+          "minimum": "Vyžaduje minimálny príjem",
+          "restrictions": "Platia vekové obmedzenia"
+        }
+      }
+    },
+    "income_types": {
+      "title": "Typy zdaniteľných príjmov",
+      "employment": {
+        "title": "Príjem zo zamestnania",
+        "items": {
+          "salary": "Plat a mzda",
+          "bonuses": "Bonusy a provízie",
+          "benefits": "Nepeňažné benefity",
+          "withholding": "Systém zrážkovej dane"
+        }
+      },
+      "business": {
+        "title": "Príjem z podnikania",
+        "items": {
+          "self_employment": "Príjem zo živnosti",
+          "trade": "Príjem z podnikateľského oprávnenia",
+          "professional": "Odborné služby",
+          "agricultural": "Príjem z poľnohospodárstva"
+        }
+      },
+      "capital": {
+        "title": "Kapitálové zisky",
+        "items": {
+          "stock": "Investície na akciovom trhu",
+          "property": "Predaj nehnuteľností",
+          "investment": "Investičný príjem",
+          "dividend": "Príjem z dividend"
+        }
+      }
+    },
+    "dates": {
+      "title": "Dôležité daňové termíny",
+      "table": {
+        "headers": {
+          "date": "Dátum",
+          "requirement": "Povinnosť",
+          "details": "Detaily"
+        },
+        "march": {
+          "date": "31. marec",
+          "requirement": "Štandardný termín podania",
+          "details": "Pre väčšinu daňovníkov"
+        },
+        "june": {
+          "date": "30. jún",
+          "requirement": "Predĺžený termín podania",
+          "details": "S oficiálnym predĺžením"
+        },
+        "september": {
+          "date": "30. september",
+          "requirement": "Termín pre zahraničné príjmy",
+          "details": "Príjem zo zahraničia"
+        },
+        "monthly": {
+          "date": "Mesačne",
+          "requirement": "Preddavky na daň",
+          "details": "Pre kvalifikovaných daňovníkov"
+        }
+      }
+    },
+    "special_cases": {
+      "title": "Špeciálne prípady a výnimky",
+      "first_employment": {
+        "title": "Prvé zamestnanie",
+        "items": {
+          "allowances": "Špeciálne úľavy pre absolventov",
+          "reduced": "Znížené daňové zaťaženie",
+          "time_limited": "Časovo obmedzené výhody"
+        }
+      },
+      "foreign_income": {
+        "title": "Zahraničný príjem",
+        "items": {
+          "treaties": "Zmluvy o zamedzení dvojitého zdanenia",
+          "credits": "Zápočet zahraničnej dane",
+          "requirements": "Špeciálne požiadavky na deklaráciu"
+        }
+      },
+      "tax_relief": {
+        "title": "Daňová úľava",
+        "items": {
+          "research": "Výskum a vývoj",
+          "incentives": "Investičné stimuly",
+          "donations": "Charitatívne dary"
+        }
+      }
+    }
+  },
+  "VAT": {
+    "hero": {
+      "title": "Sprievodca DPH na Slovensku",
+      "description": "Porozumenie sadzbám DPH a požiadavkám na Slovensku"
+    },
+    "rates": {
+      "title": "Prehľad sadzieb DPH",
+      "examples": "Príklady",
+      "applies_to": "Platí pre",
+      "includes": "Zahŕňa",
+      "standard": {
+        "title": "Základná sadzba: 23%",
+        "description": "Platí pre väčšinu tovarov a služieb",
+        "items": {
+          "electronics": "Elektronika",
+          "clothing": "Oblečenie",
+          "services": "Väčšina služieb",
+          "luxury": "Luxusné produkty"
+        }
+      },
+      "reduced": {
+        "title": "Znížená sadzba: 19%",
+        "description": "Položky špecialnej kategórie",
+        "items": {
+          "vinegar": "Ocot",
+          "salt": "Soľ",
+          "energy": "Elektrická energia",
+          "food": "Niektoré potravinové produkty"
+        }
+      },
+      "special": {
+        "title": "Špeciálna sadzba: 5%",
+        "description": "Základné potraviny",
+        "items": {
+          "bread": "Čerstvý chlieb",
+          "milk": "Mlieko a mliečne výrobky",
+          "fruits": "Čerstvé ovocie",
+          "vegetables": "Čerstvá zelenina"
+        }
+      },
+      "zero": {
+        "title": "Nulová sadzba: 0%",
+        "description": "Špeciálne transakcie",
+        "items": {
+          "export": "Vývoz tovaru",
+          "intra_eu": "Dodávky v rámci EÚ",
+          "transport": "Medzinárodná doprava"
+        }
+      },
+      "exempt": {
+        "title": "Oslobodené od DPH",
+        "description": "DPH sa neúčtuje",
+        "items": {
+          "postal": "Poštové služby",
+          "financial": "Finančné služby",
+          "insurance": "Poistenie",
+          "education": "Vzdelávanie"
+        }
+      }
+    },
+    "registration": {
+      "title": "Registrácia k DPH",
+      "requirements": {
+        "title": "Požiadavky na registráciu",
+        "mandatory": {
+          "title": "Povinná registrácia",
+          "items": {
+            "turnover": "Obrat presahuje 49 790 € za 12 po sebe nasledujúcich mesiacov",
+            "business": "Nadobudnutie podniku ako fungujúceho celku od platiteľa DPH",
+            "successor": "Právny nástupca platiteľa DPH"
+          }
+        },
+        "voluntary": {
+          "title": "Dobrovoľná registrácia",
+          "items": {
+            "threshold": "Dostupná pred dosiahnutím limitu",
+            "proof": "Vyžaduje dôkaz o podnikateľskej činnosti",
+            "approval": "Podlieha schváleniu daňovým úradom"
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "Dôležité informácie",
+      "filing": {
+        "title": "Požiadavky na podávanie DPH",
+        "items": {
+          "monthly": "Mesačné podávanie pre nových platiteľov DPH (prvých 12 mesiacov)",
+          "quarterly": "Možnosť štvrťročného podávania, ak je obrat nižší ako 100 000 €",
+          "due": "Daňové priznania k DPH sú splatné do 25. dňa nasledujúceho mesiaca",
+          "lists": "Pre dodávky v rámci EÚ sa vyžadujú zoznamy EC Sales"
+        }
+      },
+      "records": {
+        "title": "Vedenie záznamov",
+        "items": {
+          "maintain": "Udržiavanie záznamov po dobu 10 rokov",
+          "invoice": "Podrobné požiadavky na faktúry",
+          "separate": "Samostatné záznamy pre rôzne sadzby DPH",
+          "digital": "Požiadavky na digitálne ukladanie"
+        }
+      },
+      "penalties": {
+        "title": "Pokuty a sankcie",
+        "items": {
+          "registration": "Late registration: up to €20,000",
+          "filing": "Late filing: from €30 to €16,000",
+          "interest": "Interest on late payments",
+          "additional": "Additional penalties for serious violations"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tipy a osvedčené postupy k DPH",
+      "cash_flow": {
+        "title": "Peňažný tok",
+        "items": {
+          "monitor": "Sledujte termíny platieb DPH",
+          "plan": "Plánujte platby DPH",
+          "account": "Zvážte účet na platby DPH",
+          "receivables": "Starostlivo sledujte pohľadávky"
+        }
+      },
+      "international": {
+        "title": "Medzinárodný obchod",
+        "items": {
+          "rules": "Pochopte pravidlá DPH v EÚ",
+          "verify": "Overte čísla DPH zákazníkov",
+          "export": "Uchovávajte dokumentáciu k vývozu",
+          "representation": "Zvážte fiškálne zastúpenie"
+        }
+      },
+      "mistakes": {
+        "title": "Časté chyby",
+        "items": {
+          "registration": "Late registration",
+          "rate": "Nesprávne použitie sadzby",
+          "documentation": "Chýbajúca dokumentácia",
+          "filing": "Oneskorené podanie priznaní"
+        }
+      }
+    }
+  },
+  "TAXES_INDEX": {
+    "hero": {
+      "title": "Slovenský Daňový Sprievodca",
+      "description": "Porozumenie slovenskému daňovému systému a stratégiám optimalizácie"
+    },
+    "tax_types": {
+      "title": "Hlavné Typy Daní",
+      "income": {
+        "title": "Daň z Príjmu",
+        "description": "Progresívne daňové sadzby",
+        "items": {
+          "rate_19": "19% do 38 553,01 €",
+          "rate_25": "25% nad 38 553,01 €",
+          "allowance": "Nezdaniteľná časť: 4 519,92 € (2024)"
+        }
+      },
+      "vat": {
+        "title": "DPH",
+        "description": "Tri sadzby DPH",
+        "items": {
+          "standard": "20% základná sadzba",
+          "reduced": "10% znížená sadzba",
+          "threshold": "Registračný limit: 49 790 €"
+        }
+      },
+      "corporate": {
+        "title": "Daň Právnických Osôb",
+        "description": "Daň z príjmu právnických osôb",
+        "items": {
+          "rate_15": "15% pre príjmy do 49 790 €",
+          "rate_21": "21% pre príjmy nad 49 790 €"
+        }
+      }
+    },
+    "business_entities": {
+      "title": "Podnikateľské Subjekty",
+      "advantages": "Výhody",
+      "disadvantages": "Nevýhody",
+      "szco": {
+        "title": "SZČO (Živnostník)",
+        "subtitle": "Živnosť / Samostatný podnikateľ",
+        "advantages": {
+          "simple": "Jednoduchá registrácia",
+          "lower_admin": "Nižšia administratívna záťaž",
+          "flat_rate": "Možnosť paušálnych výdavkov",
+          "quick": "Rýchle založenie (do 3 dní)"
+        },
+        "disadvantages": {
+          "liability": "Osobná zodpovednosť",
+          "limited_tax": "Obmedzená daňová optimalizácia",
+          "social": "Vyššie sociálne odvody"
+        }
+      },
+      "sro": {
+        "title": "s.r.o. (Spoločnosť s ručením obmedzeným)",
+        "subtitle": "Spoločnosť s ručením obmedzeným",
+        "advantages": {
+          "liability": "Obmedzené ručenie",
+          "tax": "Lepšia daňová optimalizácia",
+          "image": "Profesionálny imidž",
+          "income": "Viacero zdrojov príjmov"
+        },
+        "disadvantages": {
+          "setup": "Vyššie zriaďovacie náklady",
+          "admin": "Viac administratívnej práce",
+          "taxation": "Možnosť dvojitého zdanenia"
+        }
+      }
+    },
+    "optimization": {
+      "title": "Stratégie Daňovej Optimalizácie",
+      "szco": {
+        "title": "Stratégie pre SZČO",
+        "items": {
+          "flat_rate": "Využitie paušálnych výdavkov (60%)",
+          "timing": "Načasovanie príjmov/výdavkov",
+          "home_office": "Odpočet za domácu kanceláriu",
+          "vehicle": "Optimalizácia výdavkov na vozidlo"
+        }
+      },
+      "sro": {
+        "title": "Stratégie pre s.r.o.",
+        "items": {
+          "salary": "Optimalizácia mzdy vs. dividendy",
+          "investment": "Daňové výhody investícií",
+          "rd": "Odpočty na výskum a vývoj",
+          "depreciation": "Plánovanie odpisovania majetku"
+        }
+      },
+      "general": {
+        "title": "Všeobecné Tipy",
+        "items": {
+          "deductible": "Daňovo uznateľné výdavky",
+          "benefits": "Zamestnanecké benefity",
+          "education": "Náklady na vzdelávanie a školenia",
+          "charitable": "Charitatívne príspevky"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Slovensko vs. Česká republika",
+      "table": {
+        "feature": "Vlastnosť",
+        "slovakia": "Slovensko",
+        "czech": "Česká republika",
+        "income_tax": "Daň z príjmu",
+        "corporate_tax": "Firemná daň",
+        "vat": "DPH",
+        "flat_rate": "Paušálne výdavky",
+        "social": "Sociálne poistenie",
+        "sk_income": "19% / 25%",
+        "cz_income": "15% / 23%",
+        "sk_corporate": "15% / 21%",
+        "cz_corporate": "19%",
+        "sk_vat": "20% / 10%",
+        "cz_vat": "21% / 15% / 10%",
+        "sk_flat": "60%",
+        "cz_flat": "40% - 80%",
+        "sk_social": "33,15%",
+        "cz_social": "31,3%"
+      },
+      "sk_advantages": {
+        "title": "Slovenské výhody",
+        "items": {
+          "corporate": "Nižšia firemná daň pre malé podniky",
+          "vat": "Jednoduchšia štruktúra DPH",
+          "system": "Priamočiarejší daňový systém",
+          "admin": "Nižšia administratívna záťaž"
+        }
+      },
+      "cz_advantages": {
+        "title": "České výhody",
+        "items": {
+          "income": "Nižšie sadzby dane z príjmu fyzických osôb",
+          "flat": "Výhodnejšie paušálne výdavky",
+          "social": "Nižšie sadzby sociálneho poistenia",
+          "deduction": "Viac možností daňových odpočtov"
+        }
+      }
+    },
+    "final": {
+      "title": "Potrebujete Profesionálnu Radu?",
+      "description": "Daňové zákony sa často menia. Zvážte konzultáciu s daňovým poradcom pre personalizované stratégie optimalizácie.",
+      "button": "Nájsť Daňového Poradcu"
+    }
+  },
+  "BE": {
+    "country": {
+      "luxembourg": "Luxembursko",
+      "denmark": "Dánsko",
+      "ireland": "Írsko",
+      "belgium": "Belgicko",
+      "austria": "Rakúsko",
+      "germany": "Nemecko",
+      "france": "Francúzsko",
+      "sweden": "Švédsko",
+      "netherlands": "Holandsko",
+      "slovenia": "Slovinsko",
+      "italy": "Taliansko",
+      "spain": "Španielsko",
+      "malta": "Malta",
+      "lithuania": "Litva",
+      "cyprus": "Cyprus",
+      "estonia": "Estónsko",
+      "czechia": "Česko",
+      "portugal": "Portugalsko",
+      "latvia": "Lotyšsko",
+      "croatia": "Chorvátsko",
+      "slovakia": "Slovensko",
+      "poland": "Poľsko",
+      "romania": "Rumunsko",
+      "greece": "Grécko",
+      "hungary": "Maďarsko",
+      "bulgaria": "Bulharsko"
+    }
+  }
+}
